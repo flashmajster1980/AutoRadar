@@ -12,6 +12,7 @@ const CONFIG = {
     MIN_SAMPLES: 1,           // Minimum number of listings to calculate median (lowered for demo)
     MAX_SAMPLES: 100,         // Maximum number of listings per model/year
     MIN_YEAR: 2000,           // Minimum valid year
+    HISTORY_FILE: path.join(__dirname, 'market_history.json'),
 };
 
 // ========================================
@@ -156,6 +157,48 @@ function filterExtremes(listings, year) {
 }
 
 // ========================================
+// HISTORY FUNCTIONS
+// ========================================
+
+function updateHistory(marketValues) {
+    let history = {};
+    if (fs.existsSync(CONFIG.HISTORY_FILE)) {
+        try {
+            history = JSON.parse(fs.readFileSync(CONFIG.HISTORY_FILE, 'utf-8'));
+        } catch (e) {
+            console.warn('⚠️ Could not parse history file, starting fresh.');
+        }
+    }
+
+    const timestamp = new Date().toISOString();
+
+    for (const [make, models] of Object.entries(marketValues)) {
+        if (!history[make]) history[make] = {};
+        for (const [model, years] of Object.entries(models)) {
+            if (!history[make][model]) history[make][model] = {};
+            for (const [year, stats] of Object.entries(years)) {
+                if (!history[make][model][year]) history[make][model][year] = [];
+
+                // Add new entry
+                history[make][model][year].push({
+                    date: timestamp,
+                    median: stats.medianPrice,
+                    count: stats.count
+                });
+
+                // Keep only last 30 entries
+                if (history[make][model][year].length > 30) {
+                    history[make][model][year] = history[make][model][year].slice(-30);
+                }
+            }
+        }
+    }
+
+    fs.writeFileSync(CONFIG.HISTORY_FILE, JSON.stringify(history, null, 2));
+    console.log(`📈 History updated in ${CONFIG.HISTORY_FILE}`);
+}
+
+// ========================================
 // MARKET VALUE CALCULATION
 // ========================================
 
@@ -277,6 +320,9 @@ function run() {
     // Save market values database
     fs.writeFileSync(CONFIG.MARKET_VALUES_FILE, JSON.stringify(marketValues, null, 2));
     console.log(`\n💾 Market values saved to ${CONFIG.MARKET_VALUES_FILE}`);
+
+    // Update history
+    updateHistory(marketValues);
 
     // Display most common models
     const topModels = Object.entries(modelStats)

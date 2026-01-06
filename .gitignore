@@ -11,6 +11,7 @@ node_modules/
 # Database files (will be regenerated)
 listings.json
 market_values.json
+market_history.json
 scored_listings.json
 notified_deals.json
 cookies.json

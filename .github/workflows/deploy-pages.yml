@@ -34,6 +34,7 @@ jobs:
       - name: Copy dashboard HTML
         run: |
           cp dashboard.html ./public/index.html
+          cp market_history.json ./public/market_history.json || true
       
       - name: Setup Pages
         uses: actions/configure-pages@v4

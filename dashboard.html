@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BazosBot Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         * {
             margin: 0;
@@ -224,6 +225,45 @@
                 padding: 10px;
             }
         }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 20px;
+            width: 80%;
+            max-width: 900px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .chart-container {
+            margin-top: 20px;
+            height: 400px;
+        }
     </style>
 </head>
 
@@ -280,6 +320,7 @@
                         <th onclick="sortTable('medianPrice')">Medián</th>
                         <th onclick="sortTable('discount')">Zľava %</th>
                         <th onclick="sortTable('dealType')">Typ</th>
+                        <th>Trend</th>
                         <th>Link</th>
                     </tr>
                 </thead>
@@ -289,9 +330,23 @@
         </div>
     </div>
 
+    <!-- Trend Modal -->
+    <div id="trendModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Trend ceny</h2>
+            <div class="chart-container">
+                <canvas id="trendChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+
     <script>
         let allData = [];
+        let historyData = {};
         let currentSort = { column: 'discount', ascending: false };
+        let trendChart = null;
 
         async function loadData() {
             try {
@@ -300,6 +355,15 @@
                 if (!response.ok) throw new Error('Failed to load data');
 
                 allData = await response.json();
+
+                // Try to load history
+                try {
+                    const histResp = await fetch('market_history.json?t=' + new Date().getTime());
+                    if (histResp.ok) historyData = await histResp.json();
+                } catch (e) {
+                    console.warn('History not available');
+                }
+
                 updateStats();
                 renderTable(allData);
 
@@ -365,9 +429,83 @@
                     item.dealType === 'GOOD DEAL' ? 'good' : 'fair';
                 dealCell.innerHTML = `<span class="deal-badge ${badgeClass}">${item.dealType}</span>`;
 
+                const trendCell = row.insertCell();
+                const hasTrend = historyData[item.make]?.[item.model]?.[item.year];
+                if (hasTrend) {
+                    trendCell.innerHTML = `<button onclick="showTrend('${item.make}', '${item.model}', '${item.year}')" style="padding: 5px 10px; font-size: 0.8rem;">📈 Trend</button>`;
+                } else {
+                    trendCell.textContent = '-';
+                }
+
                 const linkCell = row.insertCell();
                 linkCell.innerHTML = `<a href="${item.url}" target="_blank" class="link-btn">Zobraziť</a>`;
             });
+        }
+
+        function showTrend(make, model, year) {
+            const history = historyData[make]?.[model]?.[year];
+            if (!history) return;
+
+            document.getElementById('modalTitle').textContent = `Trend ceny: ${make} ${model} (${year})`;
+            document.getElementById('trendModal').style.display = 'block';
+
+            const ctx = document.getElementById('trendChart').getContext('2d');
+
+            if (trendChart) trendChart.destroy();
+
+            const labels = history.map(h => new Date(h.date).toLocaleDateString());
+            const prices = history.map(h => h.median);
+
+            trendChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Medián ceny (€)',
+                        data: prices,
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 5,
+                        pointHoverRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            grid: {
+                                color: 'rgba(0,0,0,0.05)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        }
+
+        function closeModal() {
+            document.getElementById('trendModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            const modal = document.getElementById('trendModal');
+            if (event.target == modal) {
+                closeModal();
+            }
         }
 
         function filterData() {
