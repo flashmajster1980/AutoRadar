@@ -45,7 +45,7 @@ jobs:
             libxtst6
       
       - name: Restore previous data
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             listings.json
@@ -75,7 +75,7 @@ jobs:
         run: node scoring_agent.js
       
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: bazos-data

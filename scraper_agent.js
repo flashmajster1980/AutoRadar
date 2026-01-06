@@ -148,124 +148,190 @@ async function scrapeBazos() {
         console.log(`🍪 Loaded ${cookies.length} cookies (returning visitor)`);
     }
 
-    // Navigate to Bazos.sk
-    const searchUrl = CONFIG.SEARCH_QUERY
-        ? `${CONFIG.BASE_URL}?hledat=${encodeURIComponent(CONFIG.SEARCH_QUERY)}`
-        : CONFIG.BASE_URL;
+    let allNewListings = [];
+    const MAX_PAGES = 5; // Scrape 5 pages per run
+    const startPage = process.argv[2] ? parseInt(process.argv[2]) : 0;
 
-    console.log(`🌐 Navigating to: ${searchUrl}`);
-    await page.goto(searchUrl, { waitUntil: 'networkidle2', timeout: 60000 });
+    for (let pageNum = startPage; pageNum < startPage + MAX_PAGES; pageNum++) {
+        const offset = pageNum * 20;
+        let searchUrl;
+        if (CONFIG.SEARCH_QUERY) {
+            searchUrl = `${CONFIG.BASE_URL}?hledat=${encodeURIComponent(CONFIG.SEARCH_QUERY)}`;
+            if (offset > 0) {
+                searchUrl += `&strana=${offset}`;
+            }
+        } else {
+            // Path based pagination for homepage: https://auto.bazos.sk/20/
+            searchUrl = offset > 0 ? `${CONFIG.BASE_URL}${offset}/` : CONFIG.BASE_URL;
+        }
 
-    // Random delay after page load (human-like)
-    await randomDelay(1000, 2500);
+        console.log(`\n🌐 [Page ${pageNum + 1}/${MAX_PAGES}] Navigating to: ${searchUrl}`);
 
-    // Human-like scrolling
-    await humanScroll(page);
+        try {
+            await page.goto(searchUrl, { waitUntil: 'networkidle2', timeout: 60000 });
+        } catch (e) {
+            console.log(`⚠️ Error loading page ${pageNum + 1}: ${e.message}`);
+            continue;
+        }
 
-    // Wait for listings
-    try {
-        await page.waitForSelector('.inzeraty', { timeout: 10000 });
-    } catch (e) {
-        console.log('⚠️ No listings found on page');
-    }
+        // Random delay after page load (human-like)
+        await randomDelay(1000, 2500);
 
-    // Extract listings
-    console.log('📍 Extracting listings...');
-    const newListings = await page.evaluate(() => {
-        const items = Array.from(document.querySelectorAll('div.inzeraty'));
-        const results = [];
+        // Human-like scrolling
+        await humanScroll(page);
 
-        items.forEach(item => {
-            try {
-                // Extract title and link
-                const titleElem = item.querySelector('h2.nadpis a') || item.querySelector('.inzeratynadpis a');
-                if (!titleElem) return;
+        // Wait for listings
+        try {
+            await page.waitForSelector('.inzeraty', { timeout: 10000 });
+        } catch (e) {
+            console.log('⚠️ No listings found on page');
+            break; // Stop if no listings found
+        }
 
-                const title = titleElem.innerText.trim();
-                const link = titleElem.href.startsWith('http')
-                    ? titleElem.href
-                    : 'https://auto.bazos.sk' + titleElem.getAttribute('href');
+        // Extract listings
+        console.log(`📍 Extracting listings from page ${pageNum + 1}...`);
+        const extracted = await page.evaluate(() => {
+            const items = Array.from(document.querySelectorAll('div.inzeraty'));
+            const results = [];
 
-                // Extract ID from URL (e.g., /inzerat/123456789/...)
-                const idMatch = link.match(/\/inzerat\/(\d+)\//);
-                if (!idMatch) return;
-                const id = idMatch[1];
+            items.forEach(item => {
+                try {
+                    // Extract title and link
+                    const titleElem = item.querySelector('h2.nadpis a') || item.querySelector('.inzeratynadpis a');
+                    if (!titleElem) return;
 
-                // Extract price
-                const priceElem = item.querySelector('div.inzeratycena');
-                if (!priceElem) return;
-                const priceText = priceElem.innerText.replace(/\s/g, '').replace('€', '').replace(/\D/g, '');
-                const price = parseInt(priceText);
-                if (!price || price < 1000) return;
+                    const title = titleElem.innerText.trim();
+                    const link = titleElem.href.startsWith('http')
+                        ? titleElem.href
+                        : 'https://auto.bazos.sk' + titleElem.getAttribute('href');
 
-                // Extract description for year and km
-                const descElem = item.querySelector('div.popis');
-                const fullText = descElem ? descElem.innerText : '';
-                const combinedText = title + ' ' + fullText;
+                    // Extract ID from URL (e.g., /inzerat/123456789/...)
+                    const idMatch = link.match(/\/inzerat\/(\d+)\//);
+                    if (!idMatch) return;
+                    const id = idMatch[1];
 
-                // Extract year
-                let year = null;
-                const yearMatches = [
-                    combinedText.match(/rok?\s*(\d{4})/i),
-                    combinedText.match(/r\.?v\.?\s*(\d{4})/i),
-                    combinedText.match(/\b(20\d{2})\b/),
-                    combinedText.match(/(\d{4})\s*$/m)
-                ];
+                    // Extract price
+                    const priceElem = item.querySelector('div.inzeratycena');
+                    if (!priceElem) return;
+                    const priceText = priceElem.innerText.replace(/\s/g, '').replace('€', '').replace(/\D/g, '');
+                    const price = parseInt(priceText);
+                    if (!price || price < 1000) return;
 
-                for (const match of yearMatches) {
-                    if (match) {
-                        const y = parseInt(match[1]);
-                        if (y >= 2000 && y <= 2026) {
-                            year = y;
-                            break;
-                        }
-                    }
-                }
+                    // Extract description for year and km
+                    const descElem = item.querySelector('div.popis');
+                    const fullText = descElem ? descElem.innerText : '';
+                    const combinedText = title + ' ' + fullText;
+                    const lowerText = combinedText.toLowerCase();
 
-                // Extract km
-                let km = null;
-                const kmMatches = [
-                    combinedText.match(/(?:najazdené|nájazd|najazd)[\s:]*(\d[\d\s.]*)(\s*)km/i),
-                    combinedText.match(/(\d[\d\s.]*)\s*(?:tis\.|tisíc)\s*km/i),
-                    combinedText.match(/(\d{4,6})\s*km/i),
-                    combinedText.match(/(\d[\d\s.]+)\s*km/i)
-                ];
+                    // Extract Location
+                    const locElem = item.querySelector('div.inzeratylok');
+                    const location = locElem ? locElem.innerText.replace(/\n/g, ' ').trim() : null;
 
-                for (const match of kmMatches) {
-                    if (match) {
-                        let kmValue = parseInt(match[1].replace(/[\s.]/g, ''));
+                    // Extract VIN
+                    const vinMatch = combinedText.match(/\b[A-HJ-NPR-Z0-9]{17}\b/);
+                    const vin = vinMatch ? vinMatch[0] : null;
 
-                        if (combinedText.toLowerCase().includes('tis.') || combinedText.toLowerCase().includes('tisíc')) {
-                            if (kmValue < 1000) {
-                                kmValue = kmValue * 1000;
+                    // Extract Transmission
+                    let transmission = null;
+                    if (lowerText.match(/automat|dsg|tiptronic|s-tronic|stronic|7g-tronic|9g-tronic/)) transmission = 'Automat';
+                    else if (lowerText.match(/manuál|manual|6st\.|5st\./)) transmission = 'Manuál';
+
+                    // Extract Fuel
+                    let fuel = null;
+                    if (lowerText.match(/diesel|nafta|tdi|crd|cdti/)) fuel = 'Diesel';
+                    else if (lowerText.match(/benzín|benzin|tsi|tfsi|fsi|mpi/)) fuel = 'Benzín';
+                    else if (lowerText.match(/elektro|electric|ev/)) fuel = 'Elektro';
+                    else if (lowerText.match(/hybrid/)) fuel = 'Hybrid';
+                    else if (lowerText.match(/lpg/)) fuel = 'LPG';
+
+                    // Extract Drive
+                    let drive = null;
+                    if (lowerText.match(/4x4|4wd|awd|quattro|4motion|x-drive|xdrive|allgrip/)) drive = '4x4';
+                    else if (lowerText.match(/zadný|zadny|rwd/)) drive = 'Zadný';
+                    else drive = 'Predný'; // Default assumption
+
+                    // Extract Power
+                    const powerMatch = lowerText.match(/(\d{2,3})\s*(kw|k|ps|hp)\b/);
+                    const power = powerMatch ? powerMatch[1] + ' kW' : null;
+
+                    // Extract year
+                    let year = null;
+                    const yearMatches = [
+                        combinedText.match(/rok?\s*(\d{4})/i),
+                        combinedText.match(/r\.?v\.?\s*(\d{4})/i),
+                        combinedText.match(/\b(20\d{2})\b/),
+                        combinedText.match(/(\d{4})\s*$/m)
+                    ];
+
+                    for (const match of yearMatches) {
+                        if (match) {
+                            const y = parseInt(match[1]);
+                            if (y >= 2000 && y <= 2026) {
+                                year = y;
+                                break;
                             }
                         }
+                    }
 
-                        if (kmValue > 0 && kmValue < 1000000) {
-                            km = kmValue;
-                            break;
+                    // Extract km
+                    let km = null;
+                    const kmMatches = [
+                        combinedText.match(/(?:najazdené|nájazd|najazd)[\s:]*(\d[\d\s.]*)(\s*)km/i),
+                        combinedText.match(/(\d[\d\s.]*)\s*(?:tis\.|tisíc)\s*km/i),
+                        combinedText.match(/(\d{4,6})\s*km/i),
+                        combinedText.match(/(\d[\d\s.]+)\s*km/i)
+                    ];
+
+                    for (const match of kmMatches) {
+                        if (match) {
+                            let kmValue = parseInt(match[1].replace(/[\s.]/g, ''));
+
+                            if (combinedText.toLowerCase().includes('tis.') || combinedText.toLowerCase().includes('tisíc')) {
+                                if (kmValue < 1000) {
+                                    kmValue = kmValue * 1000;
+                                }
+                            }
+
+                            if (kmValue > 0 && kmValue < 1000000) {
+                                km = kmValue;
+                                break;
+                            }
                         }
                     }
+
+                    results.push({
+                        id,
+                        title,
+                        price,
+                        year,
+                        km,
+                        url: link,
+                        location,
+                        vin,
+                        transmission,
+                        fuel,
+                        drive,
+                        power
+                    });
+
+                } catch (e) {
+                    console.error('Error extracting item:', e.message);
                 }
+            });
 
-                results.push({
-                    id,
-                    title,
-                    price,
-                    year,
-                    km,
-                    url: link
-                });
-
-            } catch (e) {
-                console.error('Error extracting item:', e.message);
-            }
+            return results;
         });
 
-        return results;
-    });
+        console.log(`✅ Found ${extracted.length} listings on page ${pageNum + 1}`);
+        allNewListings.push(...extracted);
 
-    console.log(`✅ Extracted ${newListings.length} listings from page`);
+        // Pause between pages to be safe
+        if (pageNum < MAX_PAGES - 1) {
+            const delay = randomInt(3000, 7000);
+            console.log(`⏸️  Waiting ${delay}ms before next page...`);
+            await new Promise(resolve => setTimeout(resolve, delay));
+        }
+    }
 
     // Save cookies for next session
     const currentCookies = await page.cookies();
@@ -278,7 +344,7 @@ async function scrapeBazos() {
     const existingIds = new Set(existingListings.map(l => l.id));
 
     let newCount = 0;
-    newListings.forEach(listing => {
+    allNewListings.forEach(listing => {
         if (!existingIds.has(listing.id)) {
             listing.scrapedAt = new Date().toISOString();
             existingListings.push(listing);
@@ -286,15 +352,16 @@ async function scrapeBazos() {
             newCount++;
             console.log(`✨ NEW: [${listing.id}] ${listing.title} - €${listing.price} | ${listing.year || 'N/A'} | ${listing.km ? listing.km.toLocaleString() + ' km' : 'N/A'}`);
         } else {
-            console.log(`⏭️ SKIP: [${listing.id}] ${listing.title} (duplicate)`);
+            // Don't log skips to reduce noise when scraping multiple pages
+            // console.log(`⏭️ SKIP: [${listing.id}] ${listing.title} (duplicate)`);
         }
     });
 
     if (newCount > 0) {
         saveListings(existingListings);
-        console.log(`💾 Saved ${newCount} new listing(s). Total in database: ${existingListings.length}`);
+        console.log(`\n💾 Saved ${newCount} new listing(s). Total in database: ${existingListings.length}`);
     } else {
-        console.log(`📊 No new listings. Total in database: ${existingListings.length}`);
+        console.log(`\n📊 No new listings found across ${MAX_PAGES} pages. Total in database: ${existingListings.length}`);
     }
 }
 

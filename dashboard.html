@@ -274,6 +274,8 @@
                         <th onclick="sortTable('make')">Značka</th>
                         <th onclick="sortTable('model')">Model</th>
                         <th onclick="sortTable('year')">Rok</th>
+                        <th>Špecifikácia</th>
+                        <th>Lokácia</th>
                         <th onclick="sortTable('price')">Cena</th>
                         <th onclick="sortTable('medianPrice')">Medián</th>
                         <th onclick="sortTable('discount')">Zľava %</th>
@@ -294,7 +296,7 @@
         async function loadData() {
             try {
                 // Try to load from GitHub Actions artifacts first, fallback to local
-                const response = await fetch('scored_listings.json');
+                const response = await fetch('scored_listings.json?t=' + new Date().getTime());
                 if (!response.ok) throw new Error('Failed to load data');
 
                 allData = await response.json();
@@ -341,6 +343,14 @@
                 row.insertCell().textContent = item.make || '-';
                 row.insertCell().textContent = item.model || '-';
                 row.insertCell().textContent = item.year || '-';
+
+                // Spec column
+                const specParts = [item.fuel, item.power, item.transmission, item.drive].filter(Boolean);
+                row.insertCell().textContent = specParts.length > 0 ? specParts.join(', ') : '-';
+
+                // Location column
+                row.insertCell().textContent = item.location || '-';
+
                 row.insertCell().textContent = '€' + (item.price || 0).toLocaleString();
                 row.insertCell().textContent = '€' + (item.medianPrice || 0).toLocaleString();
 

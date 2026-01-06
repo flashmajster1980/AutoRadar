@@ -178,20 +178,16 @@ function scoreListings(listings, marketValues) {
         }
 
         const scoredListing = {
-            id: listing.id,
-            title: listing.title,
-            price: listing.price,
-            year: listing.year,
+            ...listing, // Preserve all original fields (including location, vin, etc.)
             km: listing.km,
             make,
             model,
             medianPrice,
-            discount: Math.round(discount * 10) / 10, // Round to 1 decimal
+            discount: Math.round(discount * 10) / 10,
             dealType: dealInfo.type,
             score: finalScore,
             isFiltered: keywordCheck.isFiltered,
             filteredKeywords: keywordCheck.keywords,
-            url: listing.url,
             scoredAt: new Date().toISOString()
         };
 

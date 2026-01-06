@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Download artifact from scraper workflow
-        uses: dawidd6/action-download-artifact@v3
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: main.yml
           name: bazos-data
