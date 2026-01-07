@@ -31,6 +31,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-body);
@@ -307,15 +311,120 @@
             }
         }
 
+        /* ABOUT SECTION */
+        .about-section {
+            padding: 5rem 5%;
+            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.02));
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-header h2 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-header p {
+            color: var(--text-main);
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 3rem;
+        }
+
+        .about-card {
+            background: var(--bg-card);
+            padding: 35px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .about-card h3 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.3rem;
+        }
+
+        .about-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        footer {
+            padding: 3rem 5%;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            background: #050608;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.2s;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
         @media (max-width: 600px) {
             header {
                 flex-direction: column;
                 gap: 15px;
+                text-align: center;
             }
 
             .filter-row {
                 flex-direction: column;
                 align-items: stretch;
+            }
+
+            .about-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-link {
+                margin: 10px 0;
             }
         }
     </style>
@@ -328,7 +437,11 @@
 
     <header>
         <div class="logo"><span>📡</span> AutoRadar</div>
-        <div class="stats" id="stats-summary"></div>
+        <nav>
+            <div class="stats" id="stats-summary"
+                style="display:inline-flex; vertical-align:middle; margin-right:20px;"></div>
+            <a href="#about" class="nav-link">O nás</a>
+        </nav>
     </header>
 
     <div class="filters-container">
@@ -404,6 +517,67 @@
     </div>
 
     <main id="listings-grid"></main>
+
+    <div id="about" class="about-section">
+        <div class="about-content">
+            <div class="about-header">
+                <h2>🛰️ O projekte AutoRadar</h2>
+                <p>AutoRadar nie je len obyčajný vyhľadávač. Je to váš inteligentný asistent, ktorý v reálnom čase
+                    monitoruje slovenský trh s ojazdenými vozidlami. Naším cieľom je vniesť transparentnosť do nákupu a
+                    predaja áut a pomôcť vám nájsť tie najlepšie ponuky skôr, než zmiznú z internetu.</p>
+            </div>
+
+            <div class="about-header" style="margin-top: 5rem; margin-bottom: 2rem;">
+                <h3 style="font-size: 1.8rem; color: var(--text-main);">Ako to funguje?</h3>
+                <p style="font-size: 1rem; opacity: 0.7;">Náš algoritmus pracuje 24 hodín denne, 7 dní v týždni. Každý
+                    inzerát prechádza prísnou analýzou:</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>📊 Analýza trhovej ceny</h3>
+                    <p>Systém porovnáva každú ponuku s tisíckami podobných inzerátov na základe modelu, roku výroby,
+                        stavu kilometrov a výbavy.</p>
+                </div>
+                <div class="about-card">
+                    <h3>✨ Identifikácia „Golden Deals“</h3>
+                    <p>Naše unikátne označenie získavajú len vozidlá, ktorých cena je výrazne nižšia oproti aktuálnemu
+                        trhovému priemeru.</p>
+                </div>
+                <div class="about-card">
+                    <h3>⚡ Okamžité vyhodnotenie</h3>
+                    <p>Už nemusíte manuálne porovnávať desiatky stránok. AutoRadar vám povie percentuálnu zľavu a
+                        potenciálnu úsporu v priebehu sekúnd.</p>
+                </div>
+            </div>
+
+            <div class="about-header" style="margin-top: 6rem; margin-bottom: 2rem;">
+                <h3 style="font-size: 1.8rem; color: var(--text-main);">Prečo používať AutoRadar?</h3>
+            </div>
+
+            <div class="about-grid" style="margin-top: 0;">
+                <div class="about-card">
+                    <h3>🚀 Rýchlosť</h3>
+                    <p>Na trhu, kde sa najlepšie autá predajú v priebehu hodín, vám dávame potrebný náskok.</p>
+                </div>
+                <div class="about-card">
+                    <h3>📉 Dáta namiesto pocitov</h3>
+                    <p>Naše odporúčania sú založené na číslach a štatistike, nie na subjektívnom odhade.</p>
+                </div>
+                <div class="about-card">
+                    <h3>🛡️ Súkromie a bezpečnosť</h3>
+                    <p>AutoRadar nespracováva vaše osobné údaje ani kontaktné údaje predajcov. Sme čistý analytický most
+                        medzi vami a vaším budúcim autom.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 AutoRadar Slovakia. Všetky práva vyhradené.</p>
+        <p style="margin-top:10px; opacity:0.5; font-size:0.75rem;">Dáta sú čerpané z verejne dostupných zdrojov a sú
+            pravidelne aktualizované.</p>
+    </footer>
 
     <script src="scored_listings_data.js"></script>
     <script>
