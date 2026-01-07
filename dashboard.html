@@ -167,6 +167,29 @@
             border-color: rgba(255, 255, 255, 0.1);
         }
 
+        /* WARNING STYLES */
+        .card-warning {
+            background: linear-gradient(145deg, #2a2222, #1a1515);
+            border-color: rgba(255, 77, 77, 0.15);
+            opacity: 0.9;
+        }
+
+        .card-zombie {
+            background: linear-gradient(145deg, #1e1e1e, #1a1a1a);
+            border-color: rgba(255, 77, 77, 0.3);
+            filter: grayscale(0.4);
+            opacity: 0.75;
+        }
+
+        .card-warning .title,
+        .card-zombie .title {
+            color: #bbb;
+        }
+
+        .card-zombie .price {
+            color: #888;
+        }
+
         .card-header {
             padding: 20px;
             padding-bottom: 10px;
@@ -770,6 +793,13 @@
             const badgeClass = l.dealType.toLowerCase().split(' ')[0];
             const isAwd = (l.drive || '').toLowerCase().includes('4x4') || (l.features && l.features.includes('4x4'));
 
+            // Visual warning classes
+            let extraClass = '';
+            if (l.mileageWarning) {
+                if (l.mileageWarning.includes('💀')) extraClass = 'card-zombie';
+                else extraClass = 'card-warning';
+            }
+
             let featuresHtml = (l.features || []).map(f => `<span class="feature-tag">${f}</span>`).join('');
             if (!featuresHtml) featuresHtml = '<span class="feature-tag" style="opacity:0.3">Základná výbava</span>';
 
@@ -777,7 +807,7 @@
             const median = (l.correctedMedian || 0).toLocaleString();
 
             return `
-                <div class="card">
+                <div class="card ${extraClass}">
                     ${l.discount >= 10 ? `<div class="discount-label">-${l.discount}%</div>` : ''}
                     <div class="card-header">
                         <span class="badge badge-${badgeClass}">${l.dealType}</span>
