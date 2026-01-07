@@ -31,10 +31,15 @@ jobs:
           name: bazos-data
           path: ./public
       
-      - name: Copy dashboard HTML
+      - name: Copy dashboard and data files
         run: |
+          mkdir -p ./public
           cp dashboard.html ./public/index.html
+          cp novy_dashboard.html ./public/novy_dashboard.html || true
+          cp scored_listings.json ./public/scored_listings.json || true
+          cp scored_listings_data.js ./public/scored_listings_data.js || true
           cp market_history.json ./public/market_history.json || true
+          cp market_values.json ./public/market_values.json || true
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
