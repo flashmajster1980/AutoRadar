@@ -478,11 +478,23 @@
 
         async function init() {
             try {
-                if (window.scoredListingsData) {
+                // Prioritize fetching fresh JSON with cache buster on GitHub
+                const isGitHub = window.location.hostname.includes('github.io');
+
+                if (isGitHub) {
+                    console.log('Force fetching fresh data from JSON (GitHub)...');
+                    const response = await fetch('scored_listings.json?t=' + Date.now());
+                    allListings = await response.json();
+                } else if (window.scoredListingsData) {
                     allListings = window.scoredListingsData;
                 } else {
                     const response = await fetch('scored_listings.json');
                     allListings = await response.json();
+                }
+
+                // If data is still empty, throw error
+                if (!allListings || allListings.length === 0) {
+                    throw new Error('Data set is empty or not found.');
                 }
 
                 populateMakeFilter();
