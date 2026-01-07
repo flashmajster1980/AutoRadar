@@ -794,6 +794,16 @@
                         ${l.dealReason ? `<div class="deal-reason" style="font-size: 0.75rem; color: var(--accent); margin-top: 5px; font-weight: 600;">💡 ${l.dealReason}</div>` : ''}
                         ${l.mileageWarning ? `<div class="mileage-warning" style="font-size: 0.75rem; color: #ff4d4d; margin-top: 3px; font-weight: 700;">${l.mileageWarning}</div>` : ''}
                         ${l.isSold && l.soldTimeStr ? `<div style="font-size: 0.75rem; color: #00ff88; margin-top: 4px; font-weight: 700;">⏱️ Zmizlo z trhu za ${l.soldTimeStr}</div>` : ''}
+                        
+                        ${l.seller ? `
+                        <div style="display: flex; align-items: center; gap: 8px; margin-top: 10px; padding: 6px 10px; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <span style="font-size: 1rem;">${l.seller.icon}</span>
+                            <div>
+                                <div style="font-size: 0.7rem; font-weight: 700; color: ${l.seller.color}">${l.seller.type}</div>
+                                <div style="font-size: 0.6rem; color: var(--text-muted); opacity: 0.8;">Aktívnych inzerátov: ${l.seller.listingsCount}</div>
+                            </div>
+                        </div>
+                        ` : ''}
                     </div>
                     <div class="features">${featuresHtml}</div>
                     <div class="price-row">
@@ -814,6 +824,16 @@
                             <span style="font-size: 0.65rem; color: var(--text-muted); min-width: 20px; text-align: right;">${l.liquidity.score}%</span>
                         </div>
                         <p style="font-size: 0.6rem; color: var(--text-muted); margin-top: 2px; opacity: 0.7;">⏱️ Odhad: <b>${l.liquidity.estimate}</b></p>
+                        
+                        <div style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed rgba(255,255,255,0.1);">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Potenciál zjednávania</span>
+                                <span style="font-size: 0.7rem; font-weight: 700; color: ${l.negotiationScore >= 70 ? '#00ff88' : (l.negotiationScore >= 40 ? '#fdda25' : '#ff4d4d')}">${l.negotiationScore}%</span>
+                            </div>
+                            <div style="margin-top: 4px; height: 3px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden;">
+                                <div style="width: ${l.negotiationScore}%; height: 100%; background: ${l.negotiationScore >= 70 ? '#00ff88' : (l.negotiationScore >= 40 ? '#fdda25' : '#ff4d4d')};"></div>
+                            </div>
+                        </div>
                     </div>
                     ` : ''}
                     <div class="card-footer">

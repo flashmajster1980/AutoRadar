@@ -287,6 +287,42 @@ function calculateLiquidity(listing, discount, age) {
     };
 }
 
+function analyzeSeller(listing, allListings) {
+    const sellerId = listing.phone || listing.author || 'Unknown';
+    const listingsCount = allListings.filter(l => (l.phone && l.phone === listing.phone) || (l.author && l.author === listing.author)).length;
+
+    const text = (listing.title + ' ' + (listing.description || '')).toLowerCase();
+    const dealerKeywords = ['možný odpočet dph', 'mozny odpocet dph', 'možný leasing', 'mozny leasing', 'možný úver', 'mozny uver', 'záruka na vozidlo', 'zaruka na vozidlo', 'volať v pracovných hodinách', 'volat v pracovnych hodinach'];
+    const hasDealerKeywords = dealerKeywords.some(k => text.includes(k));
+
+    let type = 'Súkromná osoba';
+    let icon = '👤';
+    let color = '#00ff88'; // Green
+
+    if (listingsCount > 10 || hasDealerKeywords) {
+        type = 'Profesionálny autobazár';
+        icon = '🏭';
+        color = '#3498db'; // blue
+    } else if (listingsCount >= 3) {
+        type = 'Malý kšeftár';
+        icon = '🏭';
+        color = '#bdc3c7'; // gray
+    }
+
+    return { type, icon, color, listingsCount, isPrivate: type === 'Súkromná osoba' };
+}
+
+function calculateNegotiationScore(listing, seller, discount, isGoldenDeal) {
+    const isCashOnly = (listing.description || '').toLowerCase().includes('iba hotovosť') || (listing.description || '').toLowerCase().includes('len hotovost');
+
+    let score = 0;
+    if (seller.isPrivate) score += 40;
+    if (isGoldenDeal) score += 40;
+    if (isCashOnly) score += 20;
+
+    return Math.min(100, score);
+}
+
 // ========================================
 // SCORING LOGIC
 // ========================================
@@ -438,6 +474,10 @@ function scoreListings(listings, marketValues) {
         // 6. Liquidity Score Engine
         const liquidity = calculateLiquidity(listing, discount, age);
 
+        // 6.5 Seller Analysis & Negotiation
+        const seller = analyzeSeller(listing, listings);
+        const negotiationScore = calculateNegotiationScore(listing, seller, discount, dealInfo.type === 'GOLDEN DEAL');
+
         // 7. Calculate Final Score & Deal Type (existing logic)
         let finalScore = dealInfo.score;
         if (keywordCheck.isFiltered) {
@@ -470,6 +510,8 @@ function scoreListings(listings, marketValues) {
             dealReason,
             mileageWarning,
             liquidity,
+            seller,
+            negotiationScore,
             dealType: dealInfo.type,
             score: finalScore,
             isFiltered: keywordCheck.isFiltered,
