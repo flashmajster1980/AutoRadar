@@ -313,10 +313,15 @@ function analyzeMarketValues(listings) {
         const engine = extractEngine(listing);
         const equip = extractEquipmentScore(listing);
 
-        // Mileage segmentation
-        let kmSegment = 'mid'; // 100k-200k (default)
+        // Mileage Tiers
+        let kmSegment = 'mid';
         if (listing.km < 100000) kmSegment = 'low';
-        else if (listing.km > 200000) kmSegment = 'high';
+        else if (listing.km < 200000) kmSegment = 'mid';
+        else if (listing.km < 250000) kmSegment = 'high1';
+        else if (listing.km < 300000) kmSegment = 'high2';
+        else if (listing.km < 400000) kmSegment = 'level300';
+        else if (listing.km < 500000) kmSegment = 'level400';
+        else kmSegment = 'zombie';
 
         // Group keys
         const broadKey = `${make}|${model}|${listing.year}|${kmSegment}`;

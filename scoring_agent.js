@@ -261,15 +261,38 @@ function scoreListings(listings, marketValues) {
         let matchAccuracy = 'broad';
         let refKm = 0;
 
-        // Listing's mileage segment mapping
+        // Listing's mileage segment mapping (Tiers)
         let kmSegmentKey = 'mid';
-        let kmSegmentLabel = 'Mid-km (100k-200k)';
+        let kmSegmentLabel = 'Mid (100k-200k)';
+
         if (listing.km < 100000) {
             kmSegmentKey = 'low';
-            kmSegmentLabel = 'Low-km (0-100k)';
-        } else if (listing.km > 200000) {
-            kmSegmentKey = 'high';
-            kmSegmentLabel = 'High-km (nad 200k)';
+            kmSegmentLabel = 'Low (0-100k)';
+            refKm = 60000;
+        } else if (listing.km < 200000) {
+            kmSegmentKey = 'mid';
+            kmSegmentLabel = 'Mid (100k-200k)';
+            refKm = 150000;
+        } else if (listing.km < 250000) {
+            kmSegmentKey = 'high1';
+            kmSegmentLabel = 'High-Tier 1 (200k-250k)';
+            refKm = 225000;
+        } else if (listing.km < 300000) {
+            kmSegmentKey = 'high2';
+            kmSegmentLabel = 'High-Tier 2 (250k-300k)';
+            refKm = 275000;
+        } else if (listing.km < 400000) {
+            kmSegmentKey = 'level300';
+            kmSegmentLabel = 'Level 300 (300k-400k)';
+            refKm = 350000;
+        } else if (listing.km < 500000) {
+            kmSegmentKey = 'level400';
+            kmSegmentLabel = 'Level 400 (400k-500k)';
+            refKm = 450000;
+        } else {
+            kmSegmentKey = 'zombie';
+            kmSegmentLabel = 'Level 500 (Zombie Tier)';
+            refKm = 550000;
         }
 
         // Check specific match including kmSegmentKey
@@ -277,23 +300,22 @@ function scoreListings(listings, marketValues) {
         if (specificMatch) {
             medianPrice = specificMatch.medianPrice;
             matchAccuracy = 'specific';
-            refKm = specificMatch.avgKm || (kmSegmentKey === 'low' ? 60000 : kmSegmentKey === 'mid' ? 150000 : 250000);
+            refKm = specificMatch.avgKm || refKm;
         } else {
-            // Fallback to broad match
             const broadMatch = marketValues.broad?.[make]?.[model]?.[listing.year]?.[kmSegmentKey];
             if (broadMatch) {
                 medianPrice = broadMatch.medianPrice;
-                refKm = broadMatch.avgKm || (kmSegmentKey === 'low' ? 60000 : kmSegmentKey === 'mid' ? 150000 : 250000);
+                refKm = broadMatch.avgKm || refKm;
             }
         }
 
-        // Final fallback to any kmSegment in broad
+        // Final fallback to any kmSegment in broad if specific one failed
         if (!medianPrice) {
-            const anySegment = marketValues.broad?.[make]?.[model]?.[listing.year];
-            if (anySegment) {
-                const firstSeg = Object.values(anySegment)[0];
-                medianPrice = firstSeg.medianPrice;
-                refKm = firstSeg.avgKm || 150000;
+            const anyYearData = marketValues.broad?.[make]?.[model]?.[listing.year];
+            if (anyYearData) {
+                const firstFound = Object.values(anyYearData)[0];
+                medianPrice = firstFound.medianPrice;
+                // Since we fall back to a different segment, we keep our tier's refKm
             }
         }
 
@@ -301,26 +323,25 @@ function scoreListings(listings, marketValues) {
 
         let correctedMedian = medianPrice;
 
-        // 2. KM PENALTY: -2.5% for every 10,000 km above segment average
+        // 2. APPLY SPECIFIC TIER PENALTIES
+        if (kmSegmentKey === 'high2') {
+            correctedMedian *= 0.85; // -15%
+        } else if (kmSegmentKey === 'level400') {
+            correctedMedian *= 0.50; // -50%
+        } else if (kmSegmentKey === 'zombie') {
+            correctedMedian = 1000; // Fixed scrap price rule
+        }
+
+        // 3. KM PENALTY (Dynamic): -2.5% for every 10,000 km above ref
         const kmAboveRef = (listing.km || refKm) - refKm;
-        if (kmAboveRef > 0) {
+        if (kmAboveRef > 0 && kmSegmentKey !== 'zombie') {
             const penaltySteps = kmAboveRef / 10000;
-            const penaltyPercent = penaltySteps * 0.025; // 2.5% per 10k km
+            const penaltyPercent = penaltySteps * 0.025;
             correctedMedian *= (1 - penaltyPercent);
-        } else if (kmAboveRef < 0) {
-            // Bonus for lower km: +1.5% per 10k km
-            const bonusSteps = Math.abs(kmAboveRef) / 10000;
-            const bonusPercent = bonusSteps * 0.015;
-            correctedMedian *= (1 + bonusPercent);
         }
 
-        // 3. PSYCHOLOGICAL THRESHOLD: -10% for cars over 200,000 km
-        if (listing.km > 200000) {
-            correctedMedian *= 0.90;
-        }
-
-        // 4. Apply Equipment Bonus (only if using broad median)
-        if (matchAccuracy === 'broad') {
+        // 4. EQUIPMENT BONUS (Skip if Level 400 or Zombie)
+        if (matchAccuracy === 'broad' && kmSegmentKey !== 'level400' && kmSegmentKey !== 'zombie') {
             if (equip.level === 'Full') correctedMedian *= 1.12;
             else if (equip.level === 'Medium') correctedMedian *= 1.05;
         }
@@ -331,12 +352,17 @@ function scoreListings(listings, marketValues) {
             correctedMedian = nextYearData.medianPrice * 1.05;
         }
 
-        // ENSURE POSITIVE: Median should never be less than 40% of original
-        correctedMedian = Math.max(medianPrice * 0.4, correctedMedian);
+        // ENSURE POSITIVE
+        correctedMedian = Math.max(kmSegmentKey === 'zombie' ? 1000 : medianPrice * 0.2, correctedMedian);
 
-        // 6. Calculate Final Score
+        // 6. Calculate Final Score & Deal Type
         const discount = ((correctedMedian - listing.price) / correctedMedian) * 100;
-        const dealInfo = calculateDealType(discount);
+        let dealInfo = calculateDealType(discount);
+
+        // DISABLE GOLDEN DEAL FOR ZOMBIE
+        if (kmSegmentKey === 'zombie' && dealInfo.type === 'GOLDEN DEAL') {
+            dealInfo = { type: 'FAIR PRICE', emoji: '⚖️', score: 50 };
+        }
 
         let finalScore = dealInfo.score;
         if (keywordCheck.isFiltered) {
@@ -344,8 +370,8 @@ function scoreListings(listings, marketValues) {
             filtered++;
         }
 
-        // Explanation string for UI
-        const dealReason = `Cena o ${Math.round(discount)} % nižšia ako medián v kategórii ${kmSegmentLabel}`;
+        // Explanation string
+        const dealReason = `Segment: ${kmSegmentLabel} | Cena vs upravený medián: ${Math.round(discount)} %`;
 
         scoredListings.push({
             ...listing,
