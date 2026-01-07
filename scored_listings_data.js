@@ -27,10 +27,17 @@ window.scoredListingsData = [
     "discount": 12.5,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 70,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.101Z"
+    "scoredAt": "2026-01-07T15:53:06.144Z"
   },
   {
     "id": "186948416",
@@ -65,10 +72,17 @@ window.scoredListingsData = [
     "discount": 19.6,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 20 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 84,
+      "label": "🔥 Horúci tovar",
+      "color": "#00ff88",
+      "category": "Vysoká",
+      "estimate": "do 3 dní"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.104Z"
+    "scoredAt": "2026-01-07T15:53:06.146Z"
   },
   {
     "id": "186948690",
@@ -100,10 +114,17 @@ window.scoredListingsData = [
     "discount": 23.2,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 23 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 91,
+      "label": "🔥 Horúci tovar",
+      "color": "#00ff88",
+      "category": "Vysoká",
+      "estimate": "do 3 dní"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.104Z"
+    "scoredAt": "2026-01-07T15:53:06.146Z"
   },
   {
     "id": "187066901",
@@ -133,10 +154,17 @@ window.scoredListingsData = [
     "discount": 15.2,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 15 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 75,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.110Z"
+    "scoredAt": "2026-01-07T15:53:06.154Z"
   },
   {
     "id": "eu_AmP6NzwG41u",
@@ -163,40 +191,17 @@ window.scoredListingsData = [
     "discount": 24.5,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 25 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 94,
+      "label": "🔥 Horúci tovar",
+      "color": "#00ff88",
+      "category": "Vysoká",
+      "estimate": "do 3 dní"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
-  },
-  {
-    "id": "eu_Ae89cFLavFH",
-    "title": "Volkswagen Passat 2.0 TDI BMT Highline DSG 103kW140HP A6",
-    "price": 5800,
-    "year": 2012,
-    "km": 263000,
-    "url": "https://www.autobazar.eu/detail/volkswagen-passat-20-tdi-bmt-highline-dsg-103kw140hp-a6/Ae89cFLavFH/",
-    "transmission": "Automat",
-    "fuel": "Diesel",
-    "portal": "Autobazar.eu",
-    "scrapedAt": "2026-01-06T20:12:38.369Z",
-    "otherPortals": [],
-    "make": "Volkswagen",
-    "model": "Passat",
-    "engine": "Diesel",
-    "equipLevel": "Basic",
-    "features": [],
-    "kmSegment": "High-Tier 2 (250k-300k)",
-    "matchAccuracy": "specific",
-    "originalMedian": 7990,
-    "correctedMedian": 6792,
-    "kmReference": 275000,
-    "discount": 14.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: 15 %",
-    "mileageWarning": null,
-    "dealType": "GOLDEN DEAL",
-    "score": 95,
-    "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
+    "scoredAt": "2026-01-07T15:53:06.159Z"
   },
   {
     "id": "eu_Aertym64EpY",
@@ -229,10 +234,17 @@ window.scoredListingsData = [
     "discount": 23.6,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 24 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 92,
+      "label": "🔥 Horúci tovar",
+      "color": "#00ff88",
+      "category": "Vysoká",
+      "estimate": "do 3 dní"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_AmHFw9GvxNM",
@@ -265,10 +277,17 @@ window.scoredListingsData = [
     "discount": 27.3,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 27 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 100,
+      "label": "🔥 Horúci tovar",
+      "color": "#00ff88",
+      "category": "Vysoká",
+      "estimate": "do 3 dní"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_lzoyxqujw",
@@ -308,10 +327,17 @@ window.scoredListingsData = [
     "discount": 24.1,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 24 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 93,
+      "label": "🔥 Horúci tovar",
+      "color": "#00ff88",
+      "category": "Vysoká",
+      "estimate": "do 3 dní"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.163Z"
   },
   {
     "id": "eu_AmTsfCm2sh5",
@@ -338,10 +364,17 @@ window.scoredListingsData = [
     "discount": 20.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 20 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 71,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.165Z"
   },
   {
     "id": "eu_AmPGy43vXce",
@@ -368,10 +401,17 @@ window.scoredListingsData = [
     "discount": 17.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 17 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 65,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.165Z"
   },
   {
     "id": "eu_Amj4FaHUKzm",
@@ -400,10 +440,17 @@ window.scoredListingsData = [
     "discount": 22.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 22 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 75,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_AeAxJHNjDqk",
@@ -438,10 +485,17 @@ window.scoredListingsData = [
     "discount": 22.2,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 22 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 89,
+      "label": "🔥 Horúci tovar",
+      "color": "#00ff88",
+      "category": "Vysoká",
+      "estimate": "do 3 dní"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.168Z"
   },
   {
     "id": "eu_AmczXnARwjT",
@@ -476,10 +530,17 @@ window.scoredListingsData = [
     "discount": 17.9,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 18 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 81,
+      "label": "🔥 Horúci tovar",
+      "color": "#00ff88",
+      "category": "Vysoká",
+      "estimate": "do 3 dní"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.168Z"
   },
   {
     "id": "eu_b88bs0yqm",
@@ -524,10 +585,17 @@ window.scoredListingsData = [
     "discount": 15.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 16 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 52,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.168Z"
   },
   {
     "id": "autovia_AenmKh24fj2",
@@ -554,10 +622,17 @@ window.scoredListingsData = [
     "discount": 12.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 54,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AeFTkDj2PYH",
@@ -586,42 +661,17 @@ window.scoredListingsData = [
     "discount": 13.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 13 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 71,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
-  },
-  {
-    "id": "autovia_AbUL89ZgvWi",
-    "title": "VW Tiguan 2.0 TDI Automat, Serv.kniha, Navigácia",
-    "price": 5000,
-    "year": 2010,
-    "km": 280157,
-    "url": "https://www.autovia.sk/detail/vw-tiguan-20-tdi-automat-servkniha-navigacia/AbUL89ZgvWi/",
-    "fuel": "Diesel",
-    "transmission": "7-st. automatická",
-    "portal": "Autovia.sk",
-    "scrapedAt": "2026-01-07T10:36:35.230Z",
-    "otherPortals": [],
-    "make": "Volkswagen",
-    "model": "Tiguan",
-    "engine": "Diesel",
-    "equipLevel": "Basic",
-    "features": [
-      "Navigácia"
-    ],
-    "kmSegment": "High-Tier 2 (250k-300k)",
-    "matchAccuracy": "specific",
-    "originalMedian": 7990,
-    "correctedMedian": 6616,
-    "kmReference": 275000,
-    "discount": 24.4,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: 24 %",
-    "mileageWarning": null,
-    "dealType": "GOLDEN DEAL",
-    "score": 95,
-    "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "autovia_AeS8J7L0Qff",
@@ -650,10 +700,17 @@ window.scoredListingsData = [
     "discount": 14.3,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 14 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 74,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "eu_AmgKFTWlHhZ",
@@ -683,10 +740,17 @@ window.scoredListingsData = [
     "discount": 14.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 14 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 73,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOLDEN DEAL",
     "score": 95,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.135Z"
+    "scoredAt": "2026-01-07T15:53:06.183Z"
   },
   {
     "id": "187064228",
@@ -716,10 +780,17 @@ window.scoredListingsData = [
     "discount": 6.1,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 6 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 57,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.110Z"
+    "scoredAt": "2026-01-07T15:53:06.154Z"
   },
   {
     "id": "eu_Ae1M5Uh4vYI",
@@ -746,10 +817,17 @@ window.scoredListingsData = [
     "discount": 6.3,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 6 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 33,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_AmcImolRGKpP",
@@ -784,10 +862,17 @@ window.scoredListingsData = [
     "discount": 7.2,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 59,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_Aeno16r2Eh0",
@@ -822,10 +907,17 @@ window.scoredListingsData = [
     "discount": 9.8,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 65,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_sap53as4d",
@@ -865,10 +957,17 @@ window.scoredListingsData = [
     "discount": 6.6,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 33,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_Ae79ZEcrdQg",
@@ -903,10 +1002,17 @@ window.scoredListingsData = [
     "discount": 9.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 38,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.163Z"
   },
   {
     "id": "eu_7ssowpqfw",
@@ -949,10 +1055,17 @@ window.scoredListingsData = [
     "discount": 9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 48,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.165Z"
   },
   {
     "id": "eu_AmR0A54kzej",
@@ -981,10 +1094,17 @@ window.scoredListingsData = [
     "discount": 11,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 11 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 67,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_Amm2ILMWUh0",
@@ -1019,10 +1139,17 @@ window.scoredListingsData = [
     "discount": 9.7,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 64,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.168Z"
   },
   {
     "id": "eu_fwlucp478",
@@ -1049,10 +1176,17 @@ window.scoredListingsData = [
     "discount": 11.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 11 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 42,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_AexqnDB7vxo",
@@ -1079,10 +1213,17 @@ window.scoredListingsData = [
     "discount": 9.6,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 64,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AmuGoPvyQ7P",
@@ -1111,10 +1252,17 @@ window.scoredListingsData = [
     "discount": 8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 46,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_Am5KBwfjCHT",
@@ -1141,10 +1289,17 @@ window.scoredListingsData = [
     "discount": 10,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 65,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_Am9NcN61WQJ",
@@ -1171,10 +1326,17 @@ window.scoredListingsData = [
     "discount": 7.5,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 60,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AmdufXWSI5b",
@@ -1201,10 +1363,17 @@ window.scoredListingsData = [
     "discount": 7.6,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 60,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AmtUuKaDt5Z",
@@ -1231,10 +1400,17 @@ window.scoredListingsData = [
     "discount": 11,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 11 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 67,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AemPeh_RsoT",
@@ -1263,10 +1439,56 @@ window.scoredListingsData = [
     "discount": 9.4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 64,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
+  },
+  {
+    "id": "autovia_AbUL89ZgvWi",
+    "title": "VW Tiguan 2.0 TDI Automat, Serv.kniha, Navigácia",
+    "price": 5000,
+    "year": 2010,
+    "km": 280157,
+    "url": "https://www.autovia.sk/detail/vw-tiguan-20-tdi-automat-servkniha-navigacia/AbUL89ZgvWi/",
+    "fuel": "Diesel",
+    "transmission": "7-st. automatická",
+    "portal": "Autovia.sk",
+    "scrapedAt": "2026-01-07T10:36:35.230Z",
+    "otherPortals": [],
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "engine": "Diesel",
+    "equipLevel": "Basic",
+    "features": [
+      "Navigácia"
+    ],
+    "kmSegment": "High-Tier 2 (250k-300k)",
+    "matchAccuracy": "specific",
+    "originalMedian": 7990,
+    "correctedMedian": 5449,
+    "kmReference": 275000,
+    "discount": 8.2,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: 8 %",
+    "mileageWarning": null,
+    "liquidity": {
+      "score": 16,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
+    "dealType": "GOOD DEAL",
+    "score": 75,
+    "isFiltered": false,
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "eu_1mk8csysr",
@@ -1296,10 +1518,17 @@ window.scoredListingsData = [
     "discount": 9.8,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 65,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "GOOD DEAL",
     "score": 75,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.135Z"
+    "scoredAt": "2026-01-07T15:53:06.183Z"
   },
   {
     "id": "187218477",
@@ -1331,10 +1560,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.100Z"
+    "scoredAt": "2026-01-07T15:53:06.143Z"
   },
   {
     "id": "187188007",
@@ -1364,10 +1600,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.100Z"
+    "scoredAt": "2026-01-07T15:53:06.143Z"
   },
   {
     "id": "186472345",
@@ -1397,10 +1640,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.101Z"
+    "scoredAt": "2026-01-07T15:53:06.143Z"
   },
   {
     "id": "187192253",
@@ -1430,10 +1680,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.101Z"
+    "scoredAt": "2026-01-07T15:53:06.143Z"
   },
   {
     "id": "187179984",
@@ -1463,10 +1720,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.102Z"
+    "scoredAt": "2026-01-07T15:53:06.144Z"
   },
   {
     "id": "186983162",
@@ -1496,10 +1760,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.102Z"
+    "scoredAt": "2026-01-07T15:53:06.144Z"
   },
   {
     "id": "187188254",
@@ -1529,10 +1800,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.102Z"
+    "scoredAt": "2026-01-07T15:53:06.144Z"
   },
   {
     "id": "187180734",
@@ -1562,10 +1840,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 15,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.102Z"
+    "scoredAt": "2026-01-07T15:53:06.144Z"
   },
   {
     "id": "186988259",
@@ -1595,10 +1880,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.102Z"
+    "scoredAt": "2026-01-07T15:53:06.144Z"
   },
   {
     "id": "186983759",
@@ -1630,10 +1922,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.102Z"
+    "scoredAt": "2026-01-07T15:53:06.145Z"
   },
   {
     "id": "186982632",
@@ -1663,10 +1962,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.103Z"
+    "scoredAt": "2026-01-07T15:53:06.145Z"
   },
   {
     "id": "187136866",
@@ -1698,10 +2004,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.103Z"
+    "scoredAt": "2026-01-07T15:53:06.145Z"
   },
   {
     "id": "186966588",
@@ -1731,10 +2044,17 @@ window.scoredListingsData = [
     "discount": 2.4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 50,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.103Z"
+    "scoredAt": "2026-01-07T15:53:06.145Z"
   },
   {
     "id": "187149240",
@@ -1764,10 +2084,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.103Z"
+    "scoredAt": "2026-01-07T15:53:06.145Z"
   },
   {
     "id": "186951386",
@@ -1797,10 +2124,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.103Z"
+    "scoredAt": "2026-01-07T15:53:06.145Z"
   },
   {
     "id": "186921237",
@@ -1830,10 +2164,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.103Z"
+    "scoredAt": "2026-01-07T15:53:06.145Z"
   },
   {
     "id": "186942246",
@@ -1863,10 +2204,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.105Z"
+    "scoredAt": "2026-01-07T15:53:06.146Z"
   },
   {
     "id": "186515773",
@@ -1896,10 +2244,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.105Z"
+    "scoredAt": "2026-01-07T15:53:06.146Z"
   },
   {
     "id": "186996939",
@@ -1929,10 +2284,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.105Z"
+    "scoredAt": "2026-01-07T15:53:06.146Z"
   },
   {
     "id": "186924940",
@@ -1962,10 +2324,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.105Z"
+    "scoredAt": "2026-01-07T15:53:06.146Z"
   },
   {
     "id": "186924816",
@@ -1995,10 +2364,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.105Z"
+    "scoredAt": "2026-01-07T15:53:06.146Z"
   },
   {
     "id": "186818266",
@@ -2031,10 +2407,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.105Z"
+    "scoredAt": "2026-01-07T15:53:06.147Z"
   },
   {
     "id": "186892268",
@@ -2066,10 +2449,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.106Z"
+    "scoredAt": "2026-01-07T15:53:06.148Z"
   },
   {
     "id": "186896699",
@@ -2099,10 +2489,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.106Z"
+    "scoredAt": "2026-01-07T15:53:06.148Z"
   },
   {
     "id": "187155531",
@@ -2132,10 +2529,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.106Z"
+    "scoredAt": "2026-01-07T15:53:06.148Z"
   },
   {
     "id": "186893567",
@@ -2167,10 +2571,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.106Z"
+    "scoredAt": "2026-01-07T15:53:06.148Z"
   },
   {
     "id": "186891847",
@@ -2200,10 +2611,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.106Z"
+    "scoredAt": "2026-01-07T15:53:06.148Z"
   },
   {
     "id": "186884073",
@@ -2235,10 +2653,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.106Z"
+    "scoredAt": "2026-01-07T15:53:06.148Z"
   },
   {
     "id": "186886041",
@@ -2268,10 +2693,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.106Z"
+    "scoredAt": "2026-01-07T15:53:06.148Z"
   },
   {
     "id": "187041881",
@@ -2301,10 +2733,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.106Z"
+    "scoredAt": "2026-01-07T15:53:06.149Z"
   },
   {
     "id": "186713183",
@@ -2336,10 +2775,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.106Z"
+    "scoredAt": "2026-01-07T15:53:06.149Z"
   },
   {
     "id": "186867184",
@@ -2371,10 +2817,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.107Z"
+    "scoredAt": "2026-01-07T15:53:06.149Z"
   },
   {
     "id": "187191479",
@@ -2406,10 +2859,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.107Z"
+    "scoredAt": "2026-01-07T15:53:06.149Z"
   },
   {
     "id": "186863861",
@@ -2439,10 +2899,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.107Z"
+    "scoredAt": "2026-01-07T15:53:06.149Z"
   },
   {
     "id": "186854684",
@@ -2472,10 +2939,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.107Z"
+    "scoredAt": "2026-01-07T15:53:06.149Z"
   },
   {
     "id": "186705161",
@@ -2505,10 +2979,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.107Z"
+    "scoredAt": "2026-01-07T15:53:06.150Z"
   },
   {
     "id": "186856160",
@@ -2540,10 +3021,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.107Z"
+    "scoredAt": "2026-01-07T15:53:06.150Z"
   },
   {
     "id": "186849918",
@@ -2573,10 +3061,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.107Z"
+    "scoredAt": "2026-01-07T15:53:06.150Z"
   },
   {
     "id": "186849716",
@@ -2606,10 +3101,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.107Z"
+    "scoredAt": "2026-01-07T15:53:06.150Z"
   },
   {
     "id": "187197764",
@@ -2642,10 +3144,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.107Z"
+    "scoredAt": "2026-01-07T15:53:06.151Z"
   },
   {
     "id": "186364536",
@@ -2675,10 +3184,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.108Z"
+    "scoredAt": "2026-01-07T15:53:06.151Z"
   },
   {
     "id": "186837052",
@@ -2708,10 +3224,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.108Z"
+    "scoredAt": "2026-01-07T15:53:06.151Z"
   },
   {
     "id": "186831087",
@@ -2741,10 +3264,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.108Z"
+    "scoredAt": "2026-01-07T15:53:06.151Z"
   },
   {
     "id": "187189218",
@@ -2774,10 +3304,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.108Z"
+    "scoredAt": "2026-01-07T15:53:06.151Z"
   },
   {
     "id": "185727507",
@@ -2809,10 +3346,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.108Z"
+    "scoredAt": "2026-01-07T15:53:06.151Z"
   },
   {
     "id": "186761709",
@@ -2842,10 +3386,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.108Z"
+    "scoredAt": "2026-01-07T15:53:06.151Z"
   },
   {
     "id": "186831194",
@@ -2875,10 +3426,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.108Z"
+    "scoredAt": "2026-01-07T15:53:06.152Z"
   },
   {
     "id": "186829425",
@@ -2908,10 +3466,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.108Z"
+    "scoredAt": "2026-01-07T15:53:06.152Z"
   },
   {
     "id": "187177425",
@@ -2944,10 +3509,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 15,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.108Z"
+    "scoredAt": "2026-01-07T15:53:06.152Z"
   },
   {
     "id": "187021056",
@@ -2979,10 +3551,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.109Z"
+    "scoredAt": "2026-01-07T15:53:06.152Z"
   },
   {
     "id": "186870147",
@@ -3014,10 +3593,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.109Z"
+    "scoredAt": "2026-01-07T15:53:06.152Z"
   },
   {
     "id": "187116120",
@@ -3047,10 +3633,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.109Z"
+    "scoredAt": "2026-01-07T15:53:06.152Z"
   },
   {
     "id": "187181412",
@@ -3082,10 +3675,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.109Z"
+    "scoredAt": "2026-01-07T15:53:06.152Z"
   },
   {
     "id": "187098843",
@@ -3117,10 +3717,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.109Z"
+    "scoredAt": "2026-01-07T15:53:06.153Z"
   },
   {
     "id": "187169201",
@@ -3150,10 +3757,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.109Z"
+    "scoredAt": "2026-01-07T15:53:06.153Z"
   },
   {
     "id": "187147545",
@@ -3185,10 +3799,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.109Z"
+    "scoredAt": "2026-01-07T15:53:06.153Z"
   },
   {
     "id": "187142282",
@@ -3218,10 +3839,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.109Z"
+    "scoredAt": "2026-01-07T15:53:06.153Z"
   },
   {
     "id": "187148948",
@@ -3253,10 +3881,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.109Z"
+    "scoredAt": "2026-01-07T15:53:06.153Z"
   },
   {
     "id": "187101516",
@@ -3286,10 +3921,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.110Z"
+    "scoredAt": "2026-01-07T15:53:06.153Z"
   },
   {
     "id": "187096797",
@@ -3322,10 +3964,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.110Z"
+    "scoredAt": "2026-01-07T15:53:06.154Z"
   },
   {
     "id": "187094829",
@@ -3355,10 +4004,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.110Z"
+    "scoredAt": "2026-01-07T15:53:06.154Z"
   },
   {
     "id": "187084028",
@@ -3388,10 +4044,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.110Z"
+    "scoredAt": "2026-01-07T15:53:06.154Z"
   },
   {
     "id": "187080985",
@@ -3421,10 +4084,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.110Z"
+    "scoredAt": "2026-01-07T15:53:06.154Z"
   },
   {
     "id": "187073110",
@@ -3454,10 +4124,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.110Z"
+    "scoredAt": "2026-01-07T15:53:06.154Z"
   },
   {
     "id": "187072939",
@@ -3489,10 +4166,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.110Z"
+    "scoredAt": "2026-01-07T15:53:06.154Z"
   },
   {
     "id": "187072125",
@@ -3522,10 +4206,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.110Z"
+    "scoredAt": "2026-01-07T15:53:06.154Z"
   },
   {
     "id": "187065855",
@@ -3557,10 +4248,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.111Z"
+    "scoredAt": "2026-01-07T15:53:06.155Z"
   },
   {
     "id": "186588701",
@@ -3590,10 +4288,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.111Z"
+    "scoredAt": "2026-01-07T15:53:06.155Z"
   },
   {
     "id": "187037687",
@@ -3626,10 +4331,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.111Z"
+    "scoredAt": "2026-01-07T15:53:06.155Z"
   },
   {
     "id": "187019488",
@@ -3659,10 +4371,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.111Z"
+    "scoredAt": "2026-01-07T15:53:06.155Z"
   },
   {
     "id": "186525476",
@@ -3694,10 +4413,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 15,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.111Z"
+    "scoredAt": "2026-01-07T15:53:06.155Z"
   },
   {
     "id": "187012888",
@@ -3729,10 +4455,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.111Z"
+    "scoredAt": "2026-01-07T15:53:06.155Z"
   },
   {
     "id": "187012808",
@@ -3764,10 +4497,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.111Z"
+    "scoredAt": "2026-01-07T15:53:06.155Z"
   },
   {
     "id": "187009719",
@@ -3799,10 +4539,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.112Z"
+    "scoredAt": "2026-01-07T15:53:06.156Z"
   },
   {
     "id": "186995806",
@@ -3834,10 +4581,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 15,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.112Z"
+    "scoredAt": "2026-01-07T15:53:06.156Z"
   },
   {
     "id": "186993235",
@@ -3867,10 +4621,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.112Z"
+    "scoredAt": "2026-01-07T15:53:06.156Z"
   },
   {
     "id": "187185715",
@@ -3900,10 +4661,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.112Z"
+    "scoredAt": "2026-01-07T15:53:06.156Z"
   },
   {
     "id": "187189301",
@@ -3933,10 +4701,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 15,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.112Z"
+    "scoredAt": "2026-01-07T15:53:06.156Z"
   },
   {
     "id": "186669980",
@@ -3968,10 +4743,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.112Z"
+    "scoredAt": "2026-01-07T15:53:06.156Z"
   },
   {
     "id": "eu_j6lp04wix",
@@ -4000,10 +4782,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.112Z"
+    "scoredAt": "2026-01-07T15:53:06.156Z"
   },
   {
     "id": "eu_wtaeg7fur",
@@ -4030,10 +4819,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.113Z"
+    "scoredAt": "2026-01-07T15:53:06.157Z"
   },
   {
     "id": "eu_AmvSO72y2nB",
@@ -4062,10 +4858,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.113Z"
+    "scoredAt": "2026-01-07T15:53:06.157Z"
   },
   {
     "id": "eu_Am4pB5GNVkt",
@@ -4092,10 +4895,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.113Z"
+    "scoredAt": "2026-01-07T15:53:06.157Z"
   },
   {
     "id": "eu_AezZhnzQHbn",
@@ -4122,10 +4932,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.113Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_AmcSaF4l3kh",
@@ -4152,10 +4969,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_ab2ieh33d",
@@ -4182,10 +5006,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_AmigfxIWFad",
@@ -4212,10 +5043,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_gfvmq1wqd",
@@ -4244,10 +5082,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_AmpPC5U7hvu",
@@ -4274,10 +5119,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_xv6gt9ina",
@@ -4304,10 +5156,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_AekLRC1Y7NB",
@@ -4334,10 +5193,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_Aec51g3eLu3",
@@ -4364,10 +5230,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.159Z"
   },
   {
     "id": "eu_Ami2eXLAw0h1",
@@ -4396,10 +5269,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
+    "scoredAt": "2026-01-07T15:53:06.159Z"
   },
   {
     "id": "eu_AeVdTi2Bt7E",
@@ -4426,10 +5306,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
+    "scoredAt": "2026-01-07T15:53:06.159Z"
   },
   {
     "id": "eu_32hrn8mx4",
@@ -4458,10 +5345,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
+    "scoredAt": "2026-01-07T15:53:06.159Z"
   },
   {
     "id": "eu_Aev6uzgD6ZL",
@@ -4488,10 +5382,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_AeWxR7Rn8uG",
@@ -4518,10 +5419,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_Aeq5AT7q7n1",
@@ -4548,10 +5456,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_AeYE8WzqABY",
@@ -4584,10 +5499,17 @@ window.scoredListingsData = [
     "discount": 0.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 46,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_Ae5o6dF5C0B",
@@ -4614,10 +5536,17 @@ window.scoredListingsData = [
     "discount": 3.9,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 53,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_Aemvuq5K5YG",
@@ -4652,10 +5581,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_AmaI5epqRwU",
@@ -4688,10 +5624,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_AeA7spXIwoe",
@@ -4724,10 +5667,17 @@ window.scoredListingsData = [
     "discount": 4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 53,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_Ae75VUK5jJf",
@@ -4754,10 +5704,17 @@ window.scoredListingsData = [
     "discount": 3.1,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 51,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_AebZflmHJ7g",
@@ -4784,10 +5741,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_Ae08VLh0Jl4",
@@ -4816,10 +5780,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_Aepp9ZMfyg4",
@@ -4848,10 +5819,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_h19v41rnu",
@@ -4891,10 +5869,17 @@ window.scoredListingsData = [
     "discount": 0.9,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 22,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_AbUnrH45P7k",
@@ -4921,10 +5906,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_AmJnN3MalGI",
@@ -4951,10 +5943,17 @@ window.scoredListingsData = [
     "discount": 4.5,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 54,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_AmJVfTdrc8D",
@@ -4989,10 +5988,17 @@ window.scoredListingsData = [
     "discount": 4.6,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 29,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_Am8RG9btcBD",
@@ -5019,10 +6025,17 @@ window.scoredListingsData = [
     "discount": 4.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 55,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_AmcOG62amTN",
@@ -5049,10 +6062,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_uh99m32hw",
@@ -5095,10 +6115,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.163Z"
   },
   {
     "id": "eu_Am7jsscNPRW",
@@ -5127,10 +6154,17 @@ window.scoredListingsData = [
     "discount": 0.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 46,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.163Z"
   },
   {
     "id": "eu_9u2trs3ww",
@@ -5173,10 +6207,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.164Z"
   },
   {
     "id": "eu_AepS74LMGdy",
@@ -5211,10 +6252,17 @@ window.scoredListingsData = [
     "discount": 3.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 41,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.164Z"
   },
   {
     "id": "eu_d6cin29tt",
@@ -5257,10 +6305,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.164Z"
   },
   {
     "id": "eu_AeRnbsaF6ZZ",
@@ -5295,10 +6350,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.165Z"
   },
   {
     "id": "eu_g0ezn8ziu",
@@ -5343,10 +6405,17 @@ window.scoredListingsData = [
     "discount": 0.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 36,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.165Z"
   },
   {
     "id": "eu_Am8WfzyW4N2",
@@ -5379,10 +6448,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_AmSISrNsSMt",
@@ -5417,10 +6493,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_AmPnPOOtpx7",
@@ -5447,10 +6530,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_AbKhS4njBXg",
@@ -5485,10 +6575,17 @@ window.scoredListingsData = [
     "discount": 0.6,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 46,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_5heocdud0",
@@ -5533,10 +6630,17 @@ window.scoredListingsData = [
     "discount": 2.3,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 50,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_kzspfqxsm",
@@ -5581,10 +6685,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_AbBv9PZd9X4",
@@ -5619,10 +6730,17 @@ window.scoredListingsData = [
     "discount": 3,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 51,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_8bin7ypvq",
@@ -5657,10 +6775,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_1hefrvyqh",
@@ -5695,10 +6820,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_a7hmh8agy",
@@ -5738,10 +6870,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_AeR9ranDuFUa",
@@ -5771,10 +6910,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_lsa7lf0es",
@@ -5814,10 +6960,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_r4xi4rre6",
@@ -5862,10 +7015,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_AeCG3v6KWmi",
@@ -5900,10 +7060,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.168Z"
   },
   {
     "id": "eu_1o2geuw2o",
@@ -5943,10 +7110,17 @@ window.scoredListingsData = [
     "discount": 4.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 29,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.168Z"
   },
   {
     "id": "eu_AmzO6UEsPVN",
@@ -5981,10 +7155,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.168Z"
   },
   {
     "id": "sk_lhleqpi1d",
@@ -6011,10 +7192,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_esm6z1o6m",
@@ -6041,10 +7229,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_yxmfa4a8t",
@@ -6071,10 +7266,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_fjfn0c9p6",
@@ -6101,10 +7303,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_k629k9mhk",
@@ -6131,10 +7340,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_8lv1atg5a",
@@ -6161,10 +7377,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_9erv0jqzw",
@@ -6191,10 +7414,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_b62qx1sr4",
@@ -6221,10 +7451,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_gyhmbd4ka",
@@ -6251,10 +7488,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_2o82icd7c",
@@ -6297,10 +7541,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_nlplozjcr",
@@ -6327,10 +7578,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_qpgge9myj",
@@ -6357,10 +7615,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_5wetj13on",
@@ -6389,10 +7654,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_gbvnnd2th",
@@ -6419,10 +7691,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_2geelmqwu",
@@ -6455,10 +7734,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.171Z"
   },
   {
     "id": "sk_i6117wha3",
@@ -6485,10 +7771,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.171Z"
   },
   {
     "id": "sk_up5930io9",
@@ -6515,10 +7808,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.171Z"
   },
   {
     "id": "sk_8c1kprgbl",
@@ -6561,10 +7861,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.171Z"
   },
   {
     "id": "sk_hfxtdqlue",
@@ -6607,10 +7914,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.123Z"
+    "scoredAt": "2026-01-07T15:53:06.172Z"
   },
   {
     "id": "sk_6cgzomyzy",
@@ -6648,10 +7962,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.123Z"
+    "scoredAt": "2026-01-07T15:53:06.172Z"
   },
   {
     "id": "sk_kmc90395p",
@@ -6689,10 +8010,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.123Z"
+    "scoredAt": "2026-01-07T15:53:06.172Z"
   },
   {
     "id": "sk_wy5ulc9cr",
@@ -6732,10 +8060,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.123Z"
+    "scoredAt": "2026-01-07T15:53:06.172Z"
   },
   {
     "id": "sk_b8p70j8wy",
@@ -6773,10 +8108,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.124Z"
+    "scoredAt": "2026-01-07T15:53:06.172Z"
   },
   {
     "id": "sk_qt90hvo41",
@@ -6816,10 +8158,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.124Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "sk_616wyppo0",
@@ -6857,10 +8206,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.124Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "sk_72muwc5ga",
@@ -6900,10 +8256,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.124Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "sk_gj86z7wyo",
@@ -6943,10 +8306,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.124Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "sk_pxgyye4qf",
@@ -6984,10 +8354,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.124Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "sk_oiuiijhrs",
@@ -7025,10 +8402,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.124Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "sk_groe23q7v",
@@ -7066,10 +8450,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.124Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "sk_kg15qhcpy",
@@ -7109,10 +8500,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "sk_kk3u79nry",
@@ -7145,10 +8543,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "sk_xghqzhuzt",
@@ -7183,10 +8588,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "eu_Ae8skdyEI76",
@@ -7213,10 +8625,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "eu_AbWgcXgE8aM",
@@ -7243,10 +8662,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "eu_AmXbaGK9I1I",
@@ -7273,10 +8699,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "eu_AmDYGYa2mmF",
@@ -7305,10 +8738,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "eu_AeVQBu5ZuFl",
@@ -7335,10 +8775,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "eu_AeRSX05yJRy",
@@ -7365,10 +8812,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "eu_AeUualIUehJ",
@@ -7395,10 +8849,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_5twdgock1",
@@ -7427,10 +8888,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_AmZqs2cDEBL",
@@ -7459,10 +8927,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_Amma9zo0vkI",
@@ -7491,10 +8966,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_Am02uWIjhOF",
@@ -7521,10 +9003,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_2d23e4zqg",
@@ -7551,10 +9040,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_nb76ejdcf",
@@ -7583,10 +9079,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_AmPpXOCCrFkZ",
@@ -7615,10 +9118,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_AeTlu5Is2um",
@@ -7645,10 +9155,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_AeS4UWmiQjG",
@@ -7675,10 +9192,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_AeaUZh2W97J",
@@ -7707,10 +9231,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_AeQSAlgAXxW",
@@ -7737,10 +9268,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_AmuEzaP91eE",
@@ -7767,10 +9305,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "eu_334dyzwmg",
@@ -7797,10 +9342,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "eu_Ae2BRxzW8rm",
@@ -7827,10 +9379,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "eu_AeMXM4BkjvU",
@@ -7857,10 +9416,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "eu_fjdtpbq6u",
@@ -7898,10 +9464,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_Ae6muYwVFOW",
@@ -7928,10 +9501,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_AeEDm_xRTh-",
@@ -7958,10 +9538,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_AepvKmfSeaK",
@@ -7988,10 +9575,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_AedYBoP_lha",
@@ -8018,10 +9612,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_Aew3vr_TR4d",
@@ -8048,10 +9649,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_AelaL2p_p8c",
@@ -8078,10 +9686,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_AeFOa5TDMrO",
@@ -8108,10 +9723,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AetWpXvT0bN",
@@ -8138,10 +9760,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeZ3J-VcmQN",
@@ -8170,10 +9799,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeVdTi2Bt7E",
@@ -8200,10 +9836,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeTV4kGAvJW",
@@ -8230,10 +9873,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeU4mPGQdQI",
@@ -8262,10 +9912,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_Aepk8J-tmy8",
@@ -8292,10 +9949,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_Ae9hCROg5tq",
@@ -8324,10 +9988,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AegCEh5r2fQ",
@@ -8354,10 +10025,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeqrvqtKs3X",
@@ -8384,10 +10062,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeaDKLWkyUh",
@@ -8414,10 +10099,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeTBTbX9aGl",
@@ -8444,10 +10136,17 @@ window.scoredListingsData = [
     "discount": 4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 53,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeF94glhvFV",
@@ -8476,10 +10175,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AebZflmHJ7g",
@@ -8506,10 +10212,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AmzR3XV_wO-",
@@ -8536,10 +10249,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AmXJD_ecxdz",
@@ -8566,10 +10286,17 @@ window.scoredListingsData = [
     "discount": 4.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 39,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AbVjvVMvGN_",
@@ -8596,10 +10323,17 @@ window.scoredListingsData = [
     "discount": 4.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 40,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AeIgJGPGo_r",
@@ -8626,10 +10360,17 @@ window.scoredListingsData = [
     "discount": 5.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 55,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_Am9QVS9giJ1",
@@ -8656,10 +10397,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_Amn9OwCOdBX",
@@ -8686,10 +10434,17 @@ window.scoredListingsData = [
     "discount": 2.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 50,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AmccS8-pxYc",
@@ -8716,10 +10471,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_AejVCL7b8at",
@@ -8746,10 +10508,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_Aeo7tcYB3Ad",
@@ -8776,10 +10545,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_AeQPN2v-6u_",
@@ -8808,10 +10584,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "autovia_AbyZeIs2oo3",
@@ -8838,10 +10621,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 15,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "autovia_Ae1w4qbTfBT",
@@ -8870,10 +10660,17 @@ window.scoredListingsData = [
     "discount": 4.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 54,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "autovia_AeikhSp818D",
@@ -8902,10 +10699,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_AeYNSCmK62j",
@@ -8934,10 +10738,17 @@ window.scoredListingsData = [
     "discount": 5.3,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 56,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_AeDny5a7pf2",
@@ -8966,10 +10777,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.133Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_AeVlNPQeNGr",
@@ -8998,10 +10816,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.133Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_AeBNA_Z6UUT",
@@ -9030,10 +10855,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.133Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_AeGiaOVlFjVd",
@@ -9062,10 +10894,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.133Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_AeF_Q2Cpk-T",
@@ -9094,10 +10933,17 @@ window.scoredListingsData = [
     "discount": 3.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 53,
+      "label": "✅ Štandard",
+      "color": "#fdda25",
+      "category": "Dobrá",
+      "estimate": "do 2 týždňov"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.133Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_AmdfkPAFWi9",
@@ -9126,10 +10972,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 15,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.133Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_AeYTxt22mCn",
@@ -9156,10 +11009,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.133Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_AmoaO7Ka6LN",
@@ -9188,10 +11048,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.133Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_AmFsySsPr7p",
@@ -9218,10 +11085,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.134Z"
+    "scoredAt": "2026-01-07T15:53:06.181Z"
   },
   {
     "id": "eu_Ae73B379kGr",
@@ -9249,10 +11123,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.134Z"
+    "scoredAt": "2026-01-07T15:53:06.182Z"
   },
   {
     "id": "eu_AmR00b0Ea1Z",
@@ -9282,10 +11163,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.135Z"
+    "scoredAt": "2026-01-07T15:53:06.183Z"
   },
   {
     "id": "eu_Aeaco4Ac6qt",
@@ -9313,10 +11201,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.135Z"
+    "scoredAt": "2026-01-07T15:53:06.183Z"
   },
   {
     "id": "eu_ebe716jf3",
@@ -9347,10 +11242,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.135Z"
+    "scoredAt": "2026-01-07T15:53:06.183Z"
   },
   {
     "id": "eu_drju1aahx",
@@ -9378,10 +11280,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.135Z"
+    "scoredAt": "2026-01-07T15:53:06.183Z"
   },
   {
     "id": "eu_Am1dJ2xiAwX",
@@ -9409,10 +11318,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.135Z"
+    "scoredAt": "2026-01-07T15:53:06.183Z"
   },
   {
     "id": "eu_AmP2cuY6mQI",
@@ -9442,10 +11358,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.135Z"
+    "scoredAt": "2026-01-07T15:53:06.183Z"
   },
   {
     "id": "eu_wedeanp3r",
@@ -9475,10 +11398,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.135Z"
+    "scoredAt": "2026-01-07T15:53:06.184Z"
   },
   {
     "id": "eu_AmnQGNPil1d",
@@ -9508,10 +11438,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.136Z"
+    "scoredAt": "2026-01-07T15:53:06.184Z"
   },
   {
     "id": "eu_AmN0gnp8yYG",
@@ -9541,10 +11478,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.136Z"
+    "scoredAt": "2026-01-07T15:53:06.184Z"
   },
   {
     "id": "eu_AmyjPQtdiSc",
@@ -9572,10 +11516,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.136Z"
+    "scoredAt": "2026-01-07T15:53:06.184Z"
   },
   {
     "id": "autovia_AexGr4mz7LO",
@@ -9603,10 +11554,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: 0 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "FAIR PRICE",
     "score": 50,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.136Z"
+    "scoredAt": "2026-01-07T15:53:06.184Z"
   },
   {
     "id": "187221482",
@@ -9638,10 +11596,17 @@ window.scoredListingsData = [
     "discount": -3.1,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.099Z"
+    "scoredAt": "2026-01-07T15:53:06.142Z"
   },
   {
     "id": "186798913",
@@ -9668,15 +11633,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 4750,
-    "correctedMedian": 4038,
+    "correctedMedian": 3325,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.100Z"
+    "scoredAt": "2026-01-07T15:53:06.143Z"
   },
   {
     "id": "187196548",
@@ -9706,10 +11678,17 @@ window.scoredListingsData = [
     "discount": -51,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -51 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.101Z"
+    "scoredAt": "2026-01-07T15:53:06.143Z"
   },
   {
     "id": "187179463",
@@ -9739,10 +11718,17 @@ window.scoredListingsData = [
     "discount": -9.5,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.101Z"
+    "scoredAt": "2026-01-07T15:53:06.144Z"
   },
   {
     "id": "187179595",
@@ -9772,10 +11758,17 @@ window.scoredListingsData = [
     "discount": -6.5,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.101Z"
+    "scoredAt": "2026-01-07T15:53:06.144Z"
   },
   {
     "id": "187179737",
@@ -9805,10 +11798,17 @@ window.scoredListingsData = [
     "discount": -3.5,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.101Z"
+    "scoredAt": "2026-01-07T15:53:06.144Z"
   },
   {
     "id": "187179863",
@@ -9838,10 +11838,17 @@ window.scoredListingsData = [
     "discount": -8.7,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.102Z"
+    "scoredAt": "2026-01-07T15:53:06.144Z"
   },
   {
     "id": "187184588",
@@ -9871,10 +11878,17 @@ window.scoredListingsData = [
     "discount": -4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.102Z"
+    "scoredAt": "2026-01-07T15:53:06.144Z"
   },
   {
     "id": "186978995",
@@ -9906,10 +11920,17 @@ window.scoredListingsData = [
     "discount": -4.3,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.102Z"
+    "scoredAt": "2026-01-07T15:53:06.144Z"
   },
   {
     "id": "186523648",
@@ -9939,10 +11960,17 @@ window.scoredListingsData = [
     "discount": -19.5,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -19 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.103Z"
+    "scoredAt": "2026-01-07T15:53:06.145Z"
   },
   {
     "id": "186893684",
@@ -9972,10 +12000,17 @@ window.scoredListingsData = [
     "discount": -1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.103Z"
+    "scoredAt": "2026-01-07T15:53:06.145Z"
   },
   {
     "id": "186956306",
@@ -10005,10 +12040,17 @@ window.scoredListingsData = [
     "discount": -6.6,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.103Z"
+    "scoredAt": "2026-01-07T15:53:06.145Z"
   },
   {
     "id": "186940956",
@@ -10040,10 +12082,17 @@ window.scoredListingsData = [
     "discount": -12.3,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.103Z"
+    "scoredAt": "2026-01-07T15:53:06.145Z"
   },
   {
     "id": "186947069",
@@ -10077,10 +12126,17 @@ window.scoredListingsData = [
     "discount": -13.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -14 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.103Z"
+    "scoredAt": "2026-01-07T15:53:06.146Z"
   },
   {
     "id": "186917268",
@@ -10112,10 +12168,17 @@ window.scoredListingsData = [
     "discount": -9.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.106Z"
+    "scoredAt": "2026-01-07T15:53:06.147Z"
   },
   {
     "id": "186916322",
@@ -10148,10 +12211,17 @@ window.scoredListingsData = [
     "discount": -1.2,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.106Z"
+    "scoredAt": "2026-01-07T15:53:06.148Z"
   },
   {
     "id": "186135423",
@@ -10181,10 +12251,17 @@ window.scoredListingsData = [
     "discount": -5.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.106Z"
+    "scoredAt": "2026-01-07T15:53:06.148Z"
   },
   {
     "id": "186908508",
@@ -10214,10 +12291,17 @@ window.scoredListingsData = [
     "discount": -48.3,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -48 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.106Z"
+    "scoredAt": "2026-01-07T15:53:06.148Z"
   },
   {
     "id": "186717133",
@@ -10249,10 +12333,17 @@ window.scoredListingsData = [
     "discount": -5.4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.106Z"
+    "scoredAt": "2026-01-07T15:53:06.148Z"
   },
   {
     "id": "186882345",
@@ -10286,10 +12377,17 @@ window.scoredListingsData = [
     "discount": -12.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.106Z"
+    "scoredAt": "2026-01-07T15:53:06.149Z"
   },
   {
     "id": "186879810",
@@ -10321,10 +12419,17 @@ window.scoredListingsData = [
     "discount": -4.8,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.106Z"
+    "scoredAt": "2026-01-07T15:53:06.149Z"
   },
   {
     "id": "186868321",
@@ -10356,10 +12461,17 @@ window.scoredListingsData = [
     "discount": -2.4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.107Z"
+    "scoredAt": "2026-01-07T15:53:06.149Z"
   },
   {
     "id": "187213494",
@@ -10384,15 +12496,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 7990,
-    "correctedMedian": 6792,
+    "correctedMedian": 5593,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.107Z"
+    "scoredAt": "2026-01-07T15:53:06.150Z"
   },
   {
     "id": "186848316",
@@ -10424,10 +12543,17 @@ window.scoredListingsData = [
     "discount": -13.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -14 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.107Z"
+    "scoredAt": "2026-01-07T15:53:06.150Z"
   },
   {
     "id": "186848033",
@@ -10459,10 +12585,17 @@ window.scoredListingsData = [
     "discount": -4.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.107Z"
+    "scoredAt": "2026-01-07T15:53:06.150Z"
   },
   {
     "id": "186847888",
@@ -10495,10 +12628,17 @@ window.scoredListingsData = [
     "discount": -3.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.107Z"
+    "scoredAt": "2026-01-07T15:53:06.150Z"
   },
   {
     "id": "186846703",
@@ -10528,10 +12668,17 @@ window.scoredListingsData = [
     "discount": -7.7,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.107Z"
+    "scoredAt": "2026-01-07T15:53:06.150Z"
   },
   {
     "id": "186840134",
@@ -10561,10 +12708,17 @@ window.scoredListingsData = [
     "discount": -4.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.107Z"
+    "scoredAt": "2026-01-07T15:53:06.150Z"
   },
   {
     "id": "186834845",
@@ -10594,10 +12748,17 @@ window.scoredListingsData = [
     "discount": -8.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.108Z"
+    "scoredAt": "2026-01-07T15:53:06.151Z"
   },
   {
     "id": "186825017",
@@ -10627,10 +12788,17 @@ window.scoredListingsData = [
     "discount": -4.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.108Z"
+    "scoredAt": "2026-01-07T15:53:06.151Z"
   },
   {
     "id": "186827568",
@@ -10660,10 +12828,17 @@ window.scoredListingsData = [
     "discount": -7.5,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.108Z"
+    "scoredAt": "2026-01-07T15:53:06.152Z"
   },
   {
     "id": "186544922",
@@ -10693,10 +12868,17 @@ window.scoredListingsData = [
     "discount": -1.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.109Z"
+    "scoredAt": "2026-01-07T15:53:06.152Z"
   },
   {
     "id": "187224783",
@@ -10726,10 +12908,17 @@ window.scoredListingsData = [
     "discount": -9.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.109Z"
+    "scoredAt": "2026-01-07T15:53:06.152Z"
   },
   {
     "id": "186870158",
@@ -10761,10 +12950,17 @@ window.scoredListingsData = [
     "discount": -7.5,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.109Z"
+    "scoredAt": "2026-01-07T15:53:06.152Z"
   },
   {
     "id": "187141769",
@@ -10794,10 +12990,17 @@ window.scoredListingsData = [
     "discount": -3.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.109Z"
+    "scoredAt": "2026-01-07T15:53:06.153Z"
   },
   {
     "id": "187141267",
@@ -10827,10 +13030,17 @@ window.scoredListingsData = [
     "discount": -10,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.109Z"
+    "scoredAt": "2026-01-07T15:53:06.153Z"
   },
   {
     "id": "187136248",
@@ -10860,10 +13070,17 @@ window.scoredListingsData = [
     "discount": -1,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.109Z"
+    "scoredAt": "2026-01-07T15:53:06.153Z"
   },
   {
     "id": "187117109",
@@ -10893,10 +13110,17 @@ window.scoredListingsData = [
     "discount": -7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.109Z"
+    "scoredAt": "2026-01-07T15:53:06.153Z"
   },
   {
     "id": "187097162",
@@ -10926,10 +13150,17 @@ window.scoredListingsData = [
     "discount": -10.2,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.110Z"
+    "scoredAt": "2026-01-07T15:53:06.154Z"
   },
   {
     "id": "187073992",
@@ -10959,10 +13190,17 @@ window.scoredListingsData = [
     "discount": -3.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.110Z"
+    "scoredAt": "2026-01-07T15:53:06.154Z"
   },
   {
     "id": "187071941",
@@ -10992,10 +13230,17 @@ window.scoredListingsData = [
     "discount": -30.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -31 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.110Z"
+    "scoredAt": "2026-01-07T15:53:06.154Z"
   },
   {
     "id": "185272395",
@@ -11025,10 +13270,17 @@ window.scoredListingsData = [
     "discount": -2.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.110Z"
+    "scoredAt": "2026-01-07T15:53:06.154Z"
   },
   {
     "id": "187061297",
@@ -11058,10 +13310,17 @@ window.scoredListingsData = [
     "discount": -10.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -11 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.111Z"
+    "scoredAt": "2026-01-07T15:53:06.154Z"
   },
   {
     "id": "187062092",
@@ -11091,10 +13350,17 @@ window.scoredListingsData = [
     "discount": -12.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.111Z"
+    "scoredAt": "2026-01-07T15:53:06.155Z"
   },
   {
     "id": "187032172",
@@ -11126,10 +13392,17 @@ window.scoredListingsData = [
     "discount": -9.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.111Z"
+    "scoredAt": "2026-01-07T15:53:06.155Z"
   },
   {
     "id": "187041893",
@@ -11159,10 +13432,17 @@ window.scoredListingsData = [
     "discount": -6.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.111Z"
+    "scoredAt": "2026-01-07T15:53:06.155Z"
   },
   {
     "id": "187017309",
@@ -11194,10 +13474,17 @@ window.scoredListingsData = [
     "discount": -12.4,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.111Z"
+    "scoredAt": "2026-01-07T15:53:06.155Z"
   },
   {
     "id": "186993014",
@@ -11224,15 +13511,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 8990,
-    "correctedMedian": 7642,
+    "correctedMedian": 6293,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.111Z"
+    "scoredAt": "2026-01-07T15:53:06.155Z"
   },
   {
     "id": "187012689",
@@ -11262,10 +13556,17 @@ window.scoredListingsData = [
     "discount": -12.5,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -13 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.111Z"
+    "scoredAt": "2026-01-07T15:53:06.155Z"
   },
   {
     "id": "187214274",
@@ -11295,10 +13596,17 @@ window.scoredListingsData = [
     "discount": -2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.111Z"
+    "scoredAt": "2026-01-07T15:53:06.156Z"
   },
   {
     "id": "186969198",
@@ -11328,10 +13636,17 @@ window.scoredListingsData = [
     "discount": -100,
     "dealReason": "Segment: Level 400 (400k-500k) | Cena vs upravený medián: -100 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.112Z"
+    "scoredAt": "2026-01-07T15:53:06.156Z"
   },
   {
     "id": "eu_baa4dihhe",
@@ -11358,10 +13673,17 @@ window.scoredListingsData = [
     "discount": -8.4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.112Z"
+    "scoredAt": "2026-01-07T15:53:06.157Z"
   },
   {
     "id": "eu_AmTyxZhgPgC",
@@ -11390,10 +13712,17 @@ window.scoredListingsData = [
     "discount": -4.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.113Z"
+    "scoredAt": "2026-01-07T15:53:06.157Z"
   },
   {
     "id": "eu_AmIRekQy7ZD",
@@ -11425,10 +13754,17 @@ window.scoredListingsData = [
     "discount": -7.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.113Z"
+    "scoredAt": "2026-01-07T15:53:06.157Z"
   },
   {
     "id": "eu_AmtH8Ibe022",
@@ -11457,10 +13793,17 @@ window.scoredListingsData = [
     "discount": -83.2,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -83 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.113Z"
+    "scoredAt": "2026-01-07T15:53:06.157Z"
   },
   {
     "id": "eu_AmzfVoaKEbs",
@@ -11489,10 +13832,17 @@ window.scoredListingsData = [
     "discount": -15.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -16 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.113Z"
+    "scoredAt": "2026-01-07T15:53:06.157Z"
   },
   {
     "id": "eu_AmpgG9lim8d",
@@ -11521,10 +13871,17 @@ window.scoredListingsData = [
     "discount": -31.7,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -32 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.113Z"
+    "scoredAt": "2026-01-07T15:53:06.157Z"
   },
   {
     "id": "eu_AmlXJwVtCKn",
@@ -11553,10 +13910,17 @@ window.scoredListingsData = [
     "discount": -1.1,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.113Z"
+    "scoredAt": "2026-01-07T15:53:06.157Z"
   },
   {
     "id": "eu_nj0a5euhi",
@@ -11583,10 +13947,17 @@ window.scoredListingsData = [
     "discount": -12.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.113Z"
+    "scoredAt": "2026-01-07T15:53:06.157Z"
   },
   {
     "id": "eu_4uf8v9q5p",
@@ -11615,10 +13986,17 @@ window.scoredListingsData = [
     "discount": -4.4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.113Z"
+    "scoredAt": "2026-01-07T15:53:06.157Z"
   },
   {
     "id": "eu_AmwjW91iAts",
@@ -11642,15 +14020,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 7990,
-    "correctedMedian": 6792,
+    "correctedMedian": 5593,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.113Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_hs2cu2w3z",
@@ -11677,10 +14062,17 @@ window.scoredListingsData = [
     "discount": -4.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_rqkia5e3g",
@@ -11713,10 +14105,17 @@ window.scoredListingsData = [
     "discount": -8.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_Ae0mMITEEfu",
@@ -11769,10 +14168,17 @@ window.scoredListingsData = [
     "discount": -0.5,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_AeZZ6oT1j2Z",
@@ -11799,10 +14205,17 @@ window.scoredListingsData = [
     "discount": -2.6,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_p1pngyv91",
@@ -11832,10 +14245,17 @@ window.scoredListingsData = [
     "discount": -3.6,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_fj5y59s0m",
@@ -11878,10 +14298,17 @@ window.scoredListingsData = [
     "discount": -20.9,
     "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -21 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_AemUPKx9jfo",
@@ -11908,10 +14335,17 @@ window.scoredListingsData = [
     "discount": -10.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -11 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_Ae3bCQG3Vo9",
@@ -11946,10 +14380,17 @@ window.scoredListingsData = [
     "discount": -14,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -14 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_AeSIPtXnn8p",
@@ -11978,10 +14419,17 @@ window.scoredListingsData = [
     "discount": -7.5,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.158Z"
   },
   {
     "id": "eu_AmuHzHfZpPB",
@@ -12010,10 +14458,17 @@ window.scoredListingsData = [
     "discount": -11.1,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -11 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.114Z"
+    "scoredAt": "2026-01-07T15:53:06.159Z"
   },
   {
     "id": "eu_llrcxcad2",
@@ -12040,10 +14495,17 @@ window.scoredListingsData = [
     "discount": -11.5,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -11 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
+    "scoredAt": "2026-01-07T15:53:06.159Z"
   },
   {
     "id": "eu_AekEhrDJA7r",
@@ -12076,10 +14538,17 @@ window.scoredListingsData = [
     "discount": -11.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -11 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
+    "scoredAt": "2026-01-07T15:53:06.159Z"
   },
   {
     "id": "eu_do3iy1sia",
@@ -12106,10 +14575,17 @@ window.scoredListingsData = [
     "discount": -23.5,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -23 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
+    "scoredAt": "2026-01-07T15:53:06.159Z"
   },
   {
     "id": "eu_AeHYKYQ6OH5",
@@ -12136,10 +14612,17 @@ window.scoredListingsData = [
     "discount": -0.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
+    "scoredAt": "2026-01-07T15:53:06.159Z"
   },
   {
     "id": "eu_t9v3fy8hm",
@@ -12166,10 +14649,17 @@ window.scoredListingsData = [
     "discount": -32,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -32 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
+    "scoredAt": "2026-01-07T15:53:06.159Z"
   },
   {
     "id": "eu_t7ipmyavs",
@@ -12196,10 +14686,54 @@ window.scoredListingsData = [
     "discount": -4.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
+    "scoredAt": "2026-01-07T15:53:06.159Z"
+  },
+  {
+    "id": "eu_Ae89cFLavFH",
+    "title": "Volkswagen Passat 2.0 TDI BMT Highline DSG 103kW140HP A6",
+    "price": 5800,
+    "year": 2012,
+    "km": 263000,
+    "url": "https://www.autobazar.eu/detail/volkswagen-passat-20-tdi-bmt-highline-dsg-103kw140hp-a6/Ae89cFLavFH/",
+    "transmission": "Automat",
+    "fuel": "Diesel",
+    "portal": "Autobazar.eu",
+    "scrapedAt": "2026-01-06T20:12:38.369Z",
+    "otherPortals": [],
+    "make": "Volkswagen",
+    "model": "Passat",
+    "engine": "Diesel",
+    "equipLevel": "Basic",
+    "features": [],
+    "kmSegment": "High-Tier 2 (250k-300k)",
+    "matchAccuracy": "specific",
+    "originalMedian": 7990,
+    "correctedMedian": 5593,
+    "kmReference": 275000,
+    "discount": -3.7,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -4 %",
+    "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
+    "dealType": "OVERPRICED",
+    "score": 20,
+    "isFiltered": false,
+    "scoredAt": "2026-01-07T15:53:06.159Z"
   },
   {
     "id": "eu_Aegb2qk0Rwl",
@@ -12226,10 +14760,17 @@ window.scoredListingsData = [
     "discount": -7.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
+    "scoredAt": "2026-01-07T15:53:06.159Z"
   },
   {
     "id": "eu_Ae1fV5KDb2m",
@@ -12251,15 +14792,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 2490,
-    "correctedMedian": 2117,
+    "correctedMedian": 1743,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
+    "scoredAt": "2026-01-07T15:53:06.159Z"
   },
   {
     "id": "eu_AeAXIzNP0Qy",
@@ -12288,10 +14836,17 @@ window.scoredListingsData = [
     "discount": -0.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
+    "scoredAt": "2026-01-07T15:53:06.159Z"
   },
   {
     "id": "eu_Aeey8fmJwDn",
@@ -12318,10 +14873,17 @@ window.scoredListingsData = [
     "discount": -6.7,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 15,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.115Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_Aeemw0tF2li",
@@ -12343,15 +14905,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 10199,
-    "correctedMedian": 8669,
+    "correctedMedian": 7139,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_AmyxkfnSKrt",
@@ -12378,10 +14947,17 @@ window.scoredListingsData = [
     "discount": -9.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_AeVBwaKwr1V",
@@ -12408,10 +14984,17 @@ window.scoredListingsData = [
     "discount": -4.5,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_AmCvk7myuD2O",
@@ -12438,10 +15021,17 @@ window.scoredListingsData = [
     "discount": -3.2,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_Amw6Qdzi00K",
@@ -12468,10 +15058,17 @@ window.scoredListingsData = [
     "discount": -0.4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_Am0OtagTww3",
@@ -12500,10 +15097,17 @@ window.scoredListingsData = [
     "discount": -10.4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.160Z"
   },
   {
     "id": "eu_Aez40xKxV5L",
@@ -12530,10 +15134,17 @@ window.scoredListingsData = [
     "discount": -5.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_AeyKwQYcbp4",
@@ -12566,10 +15177,17 @@ window.scoredListingsData = [
     "discount": -9.8,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.116Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_AmqyoVsbwhUi",
@@ -12602,10 +15220,17 @@ window.scoredListingsData = [
     "discount": -0.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_Am6DuIeEWn4",
@@ -12632,10 +15257,17 @@ window.scoredListingsData = [
     "discount": -4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_AexqnDB7vxo",
@@ -12662,10 +15294,17 @@ window.scoredListingsData = [
     "discount": -3.1,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_AmFw3JzrhgC",
@@ -12694,10 +15333,17 @@ window.scoredListingsData = [
     "discount": -24.6,
     "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -25 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_AmhICoi0gB8",
@@ -12726,10 +15372,17 @@ window.scoredListingsData = [
     "discount": -4.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_p8ctga2h6",
@@ -12758,10 +15411,17 @@ window.scoredListingsData = [
     "discount": -12.6,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -13 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_AmUdtynF10D",
@@ -12790,10 +15450,17 @@ window.scoredListingsData = [
     "discount": -26.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -26 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_eo7u8apt9",
@@ -12833,10 +15500,17 @@ window.scoredListingsData = [
     "discount": -9,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_AeZFDCAXP2h",
@@ -12865,10 +15539,17 @@ window.scoredListingsData = [
     "discount": -6.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_AeoARTsxMQg",
@@ -12897,10 +15578,17 @@ window.scoredListingsData = [
     "discount": -18.4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -18 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_igbxsilu2",
@@ -12938,10 +15626,17 @@ window.scoredListingsData = [
     "discount": -24.2,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -24 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.161Z"
   },
   {
     "id": "eu_AeEpf2vDiTF",
@@ -12970,10 +15665,17 @@ window.scoredListingsData = [
     "discount": -4.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_5kzm278w6",
@@ -13013,10 +15715,17 @@ window.scoredListingsData = [
     "discount": -9.6,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_9ui3pxlop",
@@ -13056,10 +15765,17 @@ window.scoredListingsData = [
     "discount": -29.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -30 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.117Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_AmrLM5DV6GG",
@@ -13088,10 +15804,17 @@ window.scoredListingsData = [
     "discount": -34.1,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -34 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_AmH9SFB6x05",
@@ -13120,10 +15843,17 @@ window.scoredListingsData = [
     "discount": -15.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -15 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_AmbcsKn0JFg",
@@ -13152,10 +15882,17 @@ window.scoredListingsData = [
     "discount": -8.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_Amc5FzvNwQB",
@@ -13184,10 +15921,17 @@ window.scoredListingsData = [
     "discount": -10.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -11 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_yl0drm95e",
@@ -13225,10 +15969,17 @@ window.scoredListingsData = [
     "discount": -8.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.162Z"
   },
   {
     "id": "eu_Am2L5NXqOrF",
@@ -13261,10 +16012,17 @@ window.scoredListingsData = [
     "discount": -4.9,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.163Z"
   },
   {
     "id": "eu_ikffgdic9",
@@ -13304,10 +16062,17 @@ window.scoredListingsData = [
     "discount": -29.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -29 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.163Z"
   },
   {
     "id": "eu_AbhemBLOz1R",
@@ -13334,10 +16099,17 @@ window.scoredListingsData = [
     "discount": -0.6,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.163Z"
   },
   {
     "id": "eu_AezHtSKSsfZ",
@@ -13366,10 +16138,17 @@ window.scoredListingsData = [
     "discount": -9.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.163Z"
   },
   {
     "id": "eu_uwo9zjt9z",
@@ -13412,10 +16191,17 @@ window.scoredListingsData = [
     "discount": -3.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.163Z"
   },
   {
     "id": "eu_Am1DgB5jnDZ",
@@ -13450,10 +16236,17 @@ window.scoredListingsData = [
     "discount": -23.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -23 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.163Z"
   },
   {
     "id": "eu_Am4dE0bg5Hf",
@@ -13482,10 +16275,17 @@ window.scoredListingsData = [
     "discount": -8.6,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.118Z"
+    "scoredAt": "2026-01-07T15:53:06.163Z"
   },
   {
     "id": "eu_AevHgSmC2Df",
@@ -13518,10 +16318,17 @@ window.scoredListingsData = [
     "discount": -5.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.163Z"
   },
   {
     "id": "eu_Aem4W0UopsD",
@@ -13554,10 +16361,17 @@ window.scoredListingsData = [
     "discount": -5.5,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -6 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.163Z"
   },
   {
     "id": "eu_AeLS7Nr2Tiv",
@@ -13590,10 +16404,17 @@ window.scoredListingsData = [
     "discount": -2.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.163Z"
   },
   {
     "id": "eu_Aej4yMpnnXS",
@@ -13628,10 +16449,17 @@ window.scoredListingsData = [
     "discount": -4.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.163Z"
   },
   {
     "id": "eu_AezyMlaVzxt",
@@ -13664,10 +16492,17 @@ window.scoredListingsData = [
     "discount": -4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.163Z"
   },
   {
     "id": "eu_AetoV379WjN",
@@ -13694,10 +16529,17 @@ window.scoredListingsData = [
     "discount": -17.6,
     "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.164Z"
   },
   {
     "id": "eu_Aeur4uL0V3F",
@@ -13732,10 +16574,17 @@ window.scoredListingsData = [
     "discount": -31.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -31 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.164Z"
   },
   {
     "id": "eu_AexSM2QxEos",
@@ -13763,15 +16612,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 8200,
-    "correctedMedian": 6970,
+    "correctedMedian": 5740,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.164Z"
   },
   {
     "id": "eu_AedMrW7WJsS",
@@ -13806,10 +16662,17 @@ window.scoredListingsData = [
     "discount": -5.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.164Z"
   },
   {
     "id": "eu_Ae0ZSNlX7fx",
@@ -13842,10 +16705,17 @@ window.scoredListingsData = [
     "discount": -8.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.164Z"
   },
   {
     "id": "eu_9xpvpxssa",
@@ -13885,10 +16755,17 @@ window.scoredListingsData = [
     "discount": -8.9,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.164Z"
   },
   {
     "id": "eu_Ae94uJzrDln",
@@ -13923,10 +16800,17 @@ window.scoredListingsData = [
     "discount": -43.8,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -44 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.164Z"
   },
   {
     "id": "eu_Aec4SbsYTEw",
@@ -13961,10 +16845,17 @@ window.scoredListingsData = [
     "discount": -14.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -15 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.165Z"
   },
   {
     "id": "eu_AmlxDVH4rIW",
@@ -13993,10 +16884,17 @@ window.scoredListingsData = [
     "discount": -18.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -19 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.165Z"
   },
   {
     "id": "eu_j503l3nwo",
@@ -14041,10 +16939,17 @@ window.scoredListingsData = [
     "discount": -1,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.165Z"
   },
   {
     "id": "eu_Abd21zB3c9V",
@@ -14071,10 +16976,17 @@ window.scoredListingsData = [
     "discount": -21.6,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -22 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.165Z"
   },
   {
     "id": "eu_AesCz3vlDwl",
@@ -14107,10 +17019,17 @@ window.scoredListingsData = [
     "discount": -7.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.165Z"
   },
   {
     "id": "eu_AeLjvnxEmvC",
@@ -14143,10 +17062,17 @@ window.scoredListingsData = [
     "discount": -2.6,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.165Z"
   },
   {
     "id": "eu_Am9k0v841PR",
@@ -14175,10 +17101,17 @@ window.scoredListingsData = [
     "discount": -16.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -16 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.165Z"
   },
   {
     "id": "eu_j3d3zpmdy",
@@ -14218,15 +17151,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 7990,
-    "correctedMedian": 6308,
+    "correctedMedian": 5195,
     "kmReference": 275000,
-    "discount": -26.7,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -27 %",
+    "discount": -53.8,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -54 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.165Z"
   },
   {
     "id": "eu_AmCr0PuI6Dm",
@@ -14254,15 +17194,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 8990,
-    "correctedMedian": 7642,
+    "correctedMedian": 6293,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.165Z"
   },
   {
     "id": "eu_AmUygHvT3ow",
@@ -14295,10 +17242,17 @@ window.scoredListingsData = [
     "discount": -3,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.119Z"
+    "scoredAt": "2026-01-07T15:53:06.165Z"
   },
   {
     "id": "eu_3x0hh5zoa",
@@ -14341,10 +17295,17 @@ window.scoredListingsData = [
     "discount": -16.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -16 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_AmdzGBSggCt",
@@ -14377,10 +17338,17 @@ window.scoredListingsData = [
     "discount": -4.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_Am0EPNKUauj",
@@ -14407,10 +17375,17 @@ window.scoredListingsData = [
     "discount": -1.5,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_gymq38l77",
@@ -14445,10 +17420,17 @@ window.scoredListingsData = [
     "discount": -0.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_AmxitQGujI2",
@@ -14477,10 +17459,17 @@ window.scoredListingsData = [
     "discount": -3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_AmHLMsLIly1",
@@ -14509,10 +17498,17 @@ window.scoredListingsData = [
     "discount": -7.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_AbcHlMGpsdY",
@@ -14547,10 +17543,17 @@ window.scoredListingsData = [
     "discount": -9.4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_45470dlgw",
@@ -14585,10 +17588,17 @@ window.scoredListingsData = [
     "discount": -0.3,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_AbbMOtqPk8zy",
@@ -14623,10 +17633,17 @@ window.scoredListingsData = [
     "discount": -3.1,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_AbCgxsBhEbru",
@@ -14661,10 +17678,17 @@ window.scoredListingsData = [
     "discount": -2,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_AbxLP5SR20p",
@@ -14699,10 +17723,17 @@ window.scoredListingsData = [
     "discount": -8,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_AbKuZQZjmlo",
@@ -14737,10 +17768,17 @@ window.scoredListingsData = [
     "discount": -2.3,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.166Z"
   },
   {
     "id": "eu_AbzN6YOhKWW",
@@ -14775,10 +17813,17 @@ window.scoredListingsData = [
     "discount": -2.3,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_AeZo7u0z7wB",
@@ -14808,10 +17853,17 @@ window.scoredListingsData = [
     "discount": -4.8,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_AeCAHFwgj00",
@@ -14836,15 +17888,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 11000,
-    "correctedMedian": 9350,
+    "correctedMedian": 7700,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_Amczxo6orFA",
@@ -14873,10 +17932,17 @@ window.scoredListingsData = [
     "discount": -1.7,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_AeQUh6n2SIx",
@@ -14909,10 +17975,17 @@ window.scoredListingsData = [
     "discount": -100,
     "dealReason": "Segment: Level 400 (400k-500k) | Cena vs upravený medián: -100 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_AeWzKVvdSjy",
@@ -14939,10 +18012,17 @@ window.scoredListingsData = [
     "discount": -8.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_AeaitRkEK6F",
@@ -14971,10 +18051,17 @@ window.scoredListingsData = [
     "discount": -1.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_Aehu4qvv3gI",
@@ -15007,10 +18094,17 @@ window.scoredListingsData = [
     "discount": -3.9,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_AeeHFarYT55",
@@ -15039,10 +18133,17 @@ window.scoredListingsData = [
     "discount": -3.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_k90y2sfx7",
@@ -15087,10 +18188,17 @@ window.scoredListingsData = [
     "discount": -4.9,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_1xppb8i5f",
@@ -15135,10 +18243,17 @@ window.scoredListingsData = [
     "discount": -10.5,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.120Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_hxy4pn4k7",
@@ -15183,10 +18298,17 @@ window.scoredListingsData = [
     "discount": -8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.167Z"
   },
   {
     "id": "eu_AeLgs98JtDK",
@@ -15222,10 +18344,17 @@ window.scoredListingsData = [
     "discount": -1.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.168Z"
   },
   {
     "id": "eu_AepDMHryV69",
@@ -15258,10 +18387,17 @@ window.scoredListingsData = [
     "discount": -1.6,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.168Z"
   },
   {
     "id": "eu_AeZt7iKaN6M",
@@ -15296,10 +18432,17 @@ window.scoredListingsData = [
     "discount": -8.1,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.168Z"
   },
   {
     "id": "eu_Ae96NYKpBPN",
@@ -15334,10 +18477,17 @@ window.scoredListingsData = [
     "discount": -7.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.168Z"
   },
   {
     "id": "eu_AbAcIcwQZCV",
@@ -15366,10 +18516,17 @@ window.scoredListingsData = [
     "discount": -6,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -6 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.168Z"
   },
   {
     "id": "eu_imhaludmz",
@@ -15409,10 +18566,17 @@ window.scoredListingsData = [
     "discount": -17.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -17 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.168Z"
   },
   {
     "id": "eu_15gf6hmja",
@@ -15455,10 +18619,17 @@ window.scoredListingsData = [
     "discount": -34.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -35 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.168Z"
   },
   {
     "id": "eu_AmKIE8xi0Tj",
@@ -15518,10 +18689,17 @@ window.scoredListingsData = [
     "discount": -9.6,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.168Z"
   },
   {
     "id": "eu_y6bqetqzm",
@@ -15566,10 +18744,17 @@ window.scoredListingsData = [
     "discount": -1,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.168Z"
   },
   {
     "id": "sk_hfpl6n7ib",
@@ -15596,10 +18781,17 @@ window.scoredListingsData = [
     "discount": -0.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_xbavswtmw",
@@ -15628,10 +18820,17 @@ window.scoredListingsData = [
     "discount": -4.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_q8emd5drn",
@@ -15660,10 +18859,17 @@ window.scoredListingsData = [
     "discount": -34.1,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -34 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_idsb495sl",
@@ -15690,10 +18896,17 @@ window.scoredListingsData = [
     "discount": -6.8,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_vjbhaowdf",
@@ -15720,10 +18933,17 @@ window.scoredListingsData = [
     "discount": -5.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_ovo26rnev",
@@ -15750,10 +18970,17 @@ window.scoredListingsData = [
     "discount": -29.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -29 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_motpz840f",
@@ -15780,10 +19007,17 @@ window.scoredListingsData = [
     "discount": -17.6,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -18 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_z4gwstvrr",
@@ -15812,10 +19046,17 @@ window.scoredListingsData = [
     "discount": -0.2,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_uus63d2rp",
@@ -15842,10 +19083,17 @@ window.scoredListingsData = [
     "discount": -25.2,
     "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -25 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_r2ra0beus",
@@ -15872,10 +19120,17 @@ window.scoredListingsData = [
     "discount": -7.4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.121Z"
+    "scoredAt": "2026-01-07T15:53:06.169Z"
   },
   {
     "id": "sk_gvl64us9h",
@@ -15902,10 +19157,17 @@ window.scoredListingsData = [
     "discount": -7.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_gbled58sx",
@@ -15932,10 +19194,17 @@ window.scoredListingsData = [
     "discount": -4.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_jywly2wbc",
@@ -15964,10 +19233,17 @@ window.scoredListingsData = [
     "discount": -13.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -13 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_jurfzb8p0",
@@ -15996,10 +19272,17 @@ window.scoredListingsData = [
     "discount": -1,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_j77cdxmls",
@@ -16026,10 +19309,17 @@ window.scoredListingsData = [
     "discount": -3,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_249rt4uib",
@@ -16051,15 +19341,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 6450,
-    "correctedMedian": 5483,
+    "correctedMedian": 4515,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_6epu97e1g",
@@ -16086,10 +19383,17 @@ window.scoredListingsData = [
     "discount": -5.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_d67hgnflk",
@@ -16116,10 +19420,17 @@ window.scoredListingsData = [
     "discount": -1.5,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_1f5uf7fow",
@@ -16162,10 +19473,17 @@ window.scoredListingsData = [
     "discount": -2.6,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_utkfp2hs5",
@@ -16192,10 +19510,17 @@ window.scoredListingsData = [
     "discount": -7.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_o6hhf0upk",
@@ -16222,10 +19547,17 @@ window.scoredListingsData = [
     "discount": -2.6,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.170Z"
   },
   {
     "id": "sk_zf5jk1sqv",
@@ -16252,10 +19584,17 @@ window.scoredListingsData = [
     "discount": -8.5,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.171Z"
   },
   {
     "id": "sk_g2bzlbvn3",
@@ -16282,10 +19621,17 @@ window.scoredListingsData = [
     "discount": -11.6,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.171Z"
   },
   {
     "id": "sk_4s8b43j19",
@@ -16314,10 +19660,17 @@ window.scoredListingsData = [
     "discount": -5,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.171Z"
   },
   {
     "id": "sk_qhvstvwyh",
@@ -16344,10 +19697,17 @@ window.scoredListingsData = [
     "discount": -8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.171Z"
   },
   {
     "id": "sk_fktxtol7w",
@@ -16382,10 +19742,17 @@ window.scoredListingsData = [
     "discount": -3.9,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.171Z"
   },
   {
     "id": "sk_386kf6jjl",
@@ -16412,10 +19779,17 @@ window.scoredListingsData = [
     "discount": -15.6,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -16 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.171Z"
   },
   {
     "id": "sk_j3gsvs6em",
@@ -16448,10 +19822,17 @@ window.scoredListingsData = [
     "discount": -22.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -22 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.171Z"
   },
   {
     "id": "sk_3i658arxl",
@@ -16498,10 +19879,17 @@ window.scoredListingsData = [
     "discount": -7.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.122Z"
+    "scoredAt": "2026-01-07T15:53:06.171Z"
   },
   {
     "id": "sk_4mbcvydic",
@@ -16544,10 +19932,17 @@ window.scoredListingsData = [
     "discount": -13.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -14 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.123Z"
+    "scoredAt": "2026-01-07T15:53:06.171Z"
   },
   {
     "id": "sk_az0vm8il3",
@@ -16592,10 +19987,17 @@ window.scoredListingsData = [
     "discount": -31.7,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -32 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.123Z"
+    "scoredAt": "2026-01-07T15:53:06.172Z"
   },
   {
     "id": "sk_z72a2fivd",
@@ -16640,10 +20042,17 @@ window.scoredListingsData = [
     "discount": -100,
     "dealReason": "Segment: Level 400 (400k-500k) | Cena vs upravený medián: -100 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.123Z"
+    "scoredAt": "2026-01-07T15:53:06.172Z"
   },
   {
     "id": "sk_ghzh19lpj",
@@ -16686,10 +20095,17 @@ window.scoredListingsData = [
     "discount": -12.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.123Z"
+    "scoredAt": "2026-01-07T15:53:06.172Z"
   },
   {
     "id": "sk_8k794q9vi",
@@ -16722,15 +20138,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 7990,
-    "correctedMedian": 6792,
+    "correctedMedian": 5593,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.123Z"
+    "scoredAt": "2026-01-07T15:53:06.172Z"
   },
   {
     "id": "sk_rezdljvvf",
@@ -16768,10 +20191,17 @@ window.scoredListingsData = [
     "discount": -4.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.123Z"
+    "scoredAt": "2026-01-07T15:53:06.172Z"
   },
   {
     "id": "sk_o6i1l0nk2",
@@ -16809,10 +20239,17 @@ window.scoredListingsData = [
     "discount": -8.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.124Z"
+    "scoredAt": "2026-01-07T15:53:06.172Z"
   },
   {
     "id": "sk_dh3pva6ul",
@@ -16855,10 +20292,17 @@ window.scoredListingsData = [
     "discount": -11.5,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -11 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.124Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "sk_wiqi7nw2h",
@@ -16898,10 +20342,17 @@ window.scoredListingsData = [
     "discount": -11.1,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -11 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.124Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "sk_by3blijrn",
@@ -16939,10 +20390,17 @@ window.scoredListingsData = [
     "discount": -8.8,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.124Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "sk_w1ud2hp91",
@@ -16980,10 +20438,17 @@ window.scoredListingsData = [
     "discount": -4.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.124Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "sk_7e5n0l7rk",
@@ -17021,10 +20486,17 @@ window.scoredListingsData = [
     "discount": -7.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "sk_q1c7rd4c4",
@@ -17057,10 +20529,17 @@ window.scoredListingsData = [
     "discount": -6.7,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 15,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "eu_39dq87jm7",
@@ -17093,10 +20572,17 @@ window.scoredListingsData = [
     "discount": -1.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "eu_AmX4ZXTtudQ",
@@ -17123,10 +20609,17 @@ window.scoredListingsData = [
     "discount": -7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "eu_Am9cgrA5J2h",
@@ -17150,15 +20643,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 2500,
-    "correctedMedian": 2125,
+    "correctedMedian": 1750,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "eu_AelzQSnofZY",
@@ -17185,10 +20685,17 @@ window.scoredListingsData = [
     "discount": -21.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -21 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "eu_qb848cmnj",
@@ -17215,10 +20722,17 @@ window.scoredListingsData = [
     "discount": -12.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "eu_44a8hn59a",
@@ -17242,15 +20756,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 18900,
-    "correctedMedian": 16065,
+    "correctedMedian": 13230,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.125Z"
+    "scoredAt": "2026-01-07T15:53:06.173Z"
   },
   {
     "id": "eu_Amo2z16UeDb",
@@ -17277,10 +20798,17 @@ window.scoredListingsData = [
     "discount": -1.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_AmFisPc7KJz",
@@ -17307,10 +20835,17 @@ window.scoredListingsData = [
     "discount": -27.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -28 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_AmbXswulYDh",
@@ -17337,10 +20872,17 @@ window.scoredListingsData = [
     "discount": -4.4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_AmQL6ojysIX",
@@ -17367,10 +20909,17 @@ window.scoredListingsData = [
     "discount": -11.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_gddq75urj",
@@ -17397,10 +20946,17 @@ window.scoredListingsData = [
     "discount": -0.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_Amx1LPzoQr4",
@@ -17429,10 +20985,17 @@ window.scoredListingsData = [
     "discount": -5.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -6 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_AmV4L7hxZds",
@@ -17461,10 +21024,20 @@ window.scoredListingsData = [
     "discount": -18,
     "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z",
+    "isSold": true,
+    "soldAt": "2026-01-07T16:30:43.309Z",
+    "soldTimeStr": "0h 37m"
   },
   {
     "id": "eu_AmGhTd1RAVf",
@@ -17491,10 +21064,17 @@ window.scoredListingsData = [
     "discount": -13,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -13 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_AeKOxaVi0qR",
@@ -17521,10 +21101,17 @@ window.scoredListingsData = [
     "discount": -5.2,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_Amaqs2pYD6b",
@@ -17551,10 +21138,17 @@ window.scoredListingsData = [
     "discount": -3.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.126Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_te4tl4gds",
@@ -17576,15 +21170,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 5900,
-    "correctedMedian": 4990,
+    "correctedMedian": 4109,
     "kmReference": 275000,
-    "discount": -18.2,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -43.6,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -44 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_AeuTLXMqPGj",
@@ -17617,10 +21218,17 @@ window.scoredListingsData = [
     "discount": -23.6,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -24 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_Ambqla5HA7P",
@@ -17649,10 +21257,17 @@ window.scoredListingsData = [
     "discount": -26.9,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -27 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_AeuJUezcZ2F",
@@ -17681,10 +21296,17 @@ window.scoredListingsData = [
     "discount": -25,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -25 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_Ae6vYml39iB",
@@ -17713,10 +21335,17 @@ window.scoredListingsData = [
     "discount": -10.5,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_Ae0MRrN2YfB",
@@ -17743,10 +21372,17 @@ window.scoredListingsData = [
     "discount": -1,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: -1 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_AmMRcNM6EnE",
@@ -17773,10 +21409,17 @@ window.scoredListingsData = [
     "discount": -3.1,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_AmOUvrbKuEs",
@@ -17805,10 +21448,17 @@ window.scoredListingsData = [
     "discount": -12.4,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z"
   },
   {
     "id": "eu_Am2Xpv1jF3I",
@@ -17837,10 +21487,17 @@ window.scoredListingsData = [
     "discount": -32.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -32 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "eu_AewYUOyLehW",
@@ -17867,10 +21524,17 @@ window.scoredListingsData = [
     "discount": -11.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -11 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "eu_AeJxDKtv1L6",
@@ -17892,15 +21556,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 2700,
-    "correctedMedian": 2169,
+    "correctedMedian": 1786,
     "kmReference": 275000,
-    "discount": -24.5,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -24 %",
+    "discount": -51.2,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -51 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "eu_AeJrudqi92Z",
@@ -17933,10 +21604,17 @@ window.scoredListingsData = [
     "discount": -8.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "eu_8vvj3h57e",
@@ -17976,10 +21654,17 @@ window.scoredListingsData = [
     "discount": -1.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_Aet22MBAxYy",
@@ -18012,10 +21697,17 @@ window.scoredListingsData = [
     "discount": -116.2,
     "dealReason": "Segment: Level 400 (400k-500k) | Cena vs upravený medián: -116 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_Aei5JAhJ_lY",
@@ -18050,10 +21742,17 @@ window.scoredListingsData = [
     "discount": -7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.127Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_AegNQo9MN5m",
@@ -18082,10 +21781,17 @@ window.scoredListingsData = [
     "discount": -2.3,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_AeJ1RLIKTF0",
@@ -18118,10 +21824,17 @@ window.scoredListingsData = [
     "discount": -17.6,
     "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_AeotMgHp-Dc",
@@ -18148,10 +21861,17 @@ window.scoredListingsData = [
     "discount": -22.1,
     "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -22 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_AeFmovwq4Ro",
@@ -18178,10 +21898,17 @@ window.scoredListingsData = [
     "discount": -4.1,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_AelgWf0kBOk",
@@ -18203,15 +21930,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 6200,
-    "correctedMedian": 5270,
+    "correctedMedian": 4340,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_AepsE99Krvy",
@@ -18238,10 +21972,17 @@ window.scoredListingsData = [
     "discount": -30.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -31 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_Aeu6NK8DCIp",
@@ -18268,10 +22009,17 @@ window.scoredListingsData = [
     "discount": -3.4,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_Ae33huNv_Gf",
@@ -18298,10 +22046,17 @@ window.scoredListingsData = [
     "discount": -6.2,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -6 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_AeGm_zngg-b",
@@ -18330,10 +22085,17 @@ window.scoredListingsData = [
     "discount": -4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_AerXka4Bg_5",
@@ -18360,10 +22122,17 @@ window.scoredListingsData = [
     "discount": -1.9,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.175Z"
   },
   {
     "id": "autovia_AewtqaBTsAk",
@@ -18390,10 +22159,17 @@ window.scoredListingsData = [
     "discount": -0.8,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_Ae0c2BqKzao",
@@ -18420,10 +22196,17 @@ window.scoredListingsData = [
     "discount": -3.9,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeMJcGgrdPa",
@@ -18453,10 +22236,17 @@ window.scoredListingsData = [
     "discount": -21.2,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: -21 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeoeeImZiax",
@@ -18483,10 +22273,17 @@ window.scoredListingsData = [
     "discount": -6.1,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -6 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeGgvq5pHPt",
@@ -18515,10 +22312,17 @@ window.scoredListingsData = [
     "discount": -6.3,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -6 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeLnLOGYOak",
@@ -18540,15 +22344,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 6450,
-    "correctedMedian": 5483,
+    "correctedMedian": 4515,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeWe0pxCEPo",
@@ -18575,10 +22386,17 @@ window.scoredListingsData = [
     "discount": -12.4,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeZZ6oT1j2Z",
@@ -18605,10 +22423,17 @@ window.scoredListingsData = [
     "discount": -2.6,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_Ae7eDnI9YLE",
@@ -18635,10 +22460,17 @@ window.scoredListingsData = [
     "discount": -10.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -11 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeyjJS9TX2I",
@@ -18665,10 +22497,17 @@ window.scoredListingsData = [
     "discount": -24.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -24 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeAZFWB87sj",
@@ -18695,10 +22534,17 @@ window.scoredListingsData = [
     "discount": -9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeHLjFtaXaz",
@@ -18725,10 +22571,17 @@ window.scoredListingsData = [
     "discount": -8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_Ae9F7Ca9LTs",
@@ -18757,10 +22610,17 @@ window.scoredListingsData = [
     "discount": -1.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_Ae0EazZCjKb",
@@ -18787,10 +22647,17 @@ window.scoredListingsData = [
     "discount": -7.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.128Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_Ae2VIGB6Brn",
@@ -18817,10 +22684,17 @@ window.scoredListingsData = [
     "discount": -8.8,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeZTG41bc4Y",
@@ -18847,10 +22721,17 @@ window.scoredListingsData = [
     "discount": -9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_Ae_LaIGeIEc",
@@ -18880,10 +22761,17 @@ window.scoredListingsData = [
     "discount": -16,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -16 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeB_S1WDefQ",
@@ -18912,10 +22800,17 @@ window.scoredListingsData = [
     "discount": -12.4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_Aefh01F4pR5",
@@ -18942,10 +22837,17 @@ window.scoredListingsData = [
     "discount": -9.6,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeeJEkWHrxe",
@@ -18972,10 +22874,17 @@ window.scoredListingsData = [
     "discount": -19.6,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -20 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.129Z"
+    "scoredAt": "2026-01-07T15:53:06.176Z"
   },
   {
     "id": "autovia_AeDbI59_ZTj",
@@ -19002,10 +22911,17 @@ window.scoredListingsData = [
     "discount": -12,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AmPEIKcfUmU",
@@ -19032,10 +22948,17 @@ window.scoredListingsData = [
     "discount": -1.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AeQKYh6iHBB",
@@ -19062,10 +22985,17 @@ window.scoredListingsData = [
     "discount": -1.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AmeA9B8TkOe",
@@ -19092,10 +23022,17 @@ window.scoredListingsData = [
     "discount": -5.3,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AmE7TMjehgq",
@@ -19124,10 +23061,17 @@ window.scoredListingsData = [
     "discount": -11.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AeoGWRjBefJ",
@@ -19156,10 +23100,17 @@ window.scoredListingsData = [
     "discount": 0,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_Ae2ZCjsyzLt",
@@ -19188,10 +23139,17 @@ window.scoredListingsData = [
     "discount": -9.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AbIHJNcmwDA",
@@ -19220,10 +23178,17 @@ window.scoredListingsData = [
     "discount": -8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AmJtWk2PFHw",
@@ -19250,10 +23215,17 @@ window.scoredListingsData = [
     "discount": -2.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_Av_k0PwFAZ8",
@@ -19282,10 +23254,17 @@ window.scoredListingsData = [
     "discount": -10,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_Aee8wFNgPdX",
@@ -19314,10 +23293,17 @@ window.scoredListingsData = [
     "discount": -2.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -3 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AmCTtUn-s2j",
@@ -19344,10 +23330,17 @@ window.scoredListingsData = [
     "discount": -5.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_Ae-wpws3ufU",
@@ -19374,10 +23367,17 @@ window.scoredListingsData = [
     "discount": -5.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -6 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AeCVFdhASUx3",
@@ -19404,10 +23404,17 @@ window.scoredListingsData = [
     "discount": -7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AbicA9b6Dibf",
@@ -19436,10 +23443,17 @@ window.scoredListingsData = [
     "discount": -7.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AmgHNJVIHKO",
@@ -19466,10 +23480,17 @@ window.scoredListingsData = [
     "discount": -5.7,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -6 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AvQrqrseFEL",
@@ -19499,10 +23520,17 @@ window.scoredListingsData = [
     "discount": -4.8,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AmGDTCDSV6D",
@@ -19529,10 +23557,17 @@ window.scoredListingsData = [
     "discount": -8.4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AmdYjeJWiVU",
@@ -19561,10 +23596,17 @@ window.scoredListingsData = [
     "discount": -20,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -20 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_Am1tEgVQ7vo",
@@ -19593,10 +23635,17 @@ window.scoredListingsData = [
     "discount": -8.3,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.177Z"
   },
   {
     "id": "autovia_AmSQbWHRyHW",
@@ -19625,10 +23674,17 @@ window.scoredListingsData = [
     "discount": -1.7,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_AmikCM91AkG",
@@ -19657,10 +23713,17 @@ window.scoredListingsData = [
     "discount": -14.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -14 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_Amrl5jAEYMH",
@@ -19687,10 +23750,17 @@ window.scoredListingsData = [
     "discount": -24.9,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -25 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.130Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_AeYIao3eCht",
@@ -19719,10 +23789,17 @@ window.scoredListingsData = [
     "discount": -15.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -15 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_AezErs4H1NK",
@@ -19751,10 +23828,17 @@ window.scoredListingsData = [
     "discount": -14.3,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -14 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_Am9uovSIBLY",
@@ -19781,10 +23865,17 @@ window.scoredListingsData = [
     "discount": -0.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_AmlnnZHgp2s",
@@ -19811,10 +23902,17 @@ window.scoredListingsData = [
     "discount": -0.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_AewTIN6XfzI",
@@ -19841,10 +23939,17 @@ window.scoredListingsData = [
     "discount": -0.4,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: 0 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_Abz8sUQfd6n",
@@ -19873,10 +23978,17 @@ window.scoredListingsData = [
     "discount": -16.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -16 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_AeVLnKRRGl-",
@@ -19903,10 +24015,20 @@ window.scoredListingsData = [
     "discount": -1.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z",
+    "isSold": true,
+    "soldAt": "2026-01-07T16:30:43.309Z",
+    "soldTimeStr": "0h 37m"
   },
   {
     "id": "autovia_Ae2r9uQ7fvP",
@@ -19933,10 +24055,17 @@ window.scoredListingsData = [
     "discount": -3.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_AeyKfmV0bNH",
@@ -19965,10 +24094,17 @@ window.scoredListingsData = [
     "discount": -1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_Aeh845OJaUN",
@@ -19995,10 +24131,17 @@ window.scoredListingsData = [
     "discount": -15.2,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -15 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_AevwvFO7Dog",
@@ -20027,10 +24170,17 @@ window.scoredListingsData = [
     "discount": -6.6,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_AeouLcpg46Y",
@@ -20057,10 +24207,17 @@ window.scoredListingsData = [
     "discount": -1.8,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -2 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z"
   },
   {
     "id": "autovia_AeHxcUemVlJ",
@@ -20087,10 +24244,17 @@ window.scoredListingsData = [
     "discount": -9.8,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "autovia_AeDTmiP7F-o",
@@ -20119,10 +24283,17 @@ window.scoredListingsData = [
     "discount": -7.5,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "autovia_AeruuRjRGZk",
@@ -20151,10 +24322,17 @@ window.scoredListingsData = [
     "discount": -8.2,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -8 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "autovia_AeZboOrg1nR",
@@ -20181,10 +24359,17 @@ window.scoredListingsData = [
     "discount": -25.5,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -26 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.131Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "autovia_AeCq0DOoYeX",
@@ -20214,10 +24399,17 @@ window.scoredListingsData = [
     "discount": -7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "autovia_Am21Gs-hfwz",
@@ -20246,10 +24438,17 @@ window.scoredListingsData = [
     "discount": -15.7,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -16 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "autovia_AmK_RnCs3nK",
@@ -20271,15 +24470,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 4990,
-    "correctedMedian": 4242,
+    "correctedMedian": 3493,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "autovia_AmxdtJBDXBK",
@@ -20306,10 +24512,17 @@ window.scoredListingsData = [
     "discount": -6,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -6 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "autovia_Amk1j87TNe3",
@@ -20331,15 +24544,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 5600,
-    "correctedMedian": 4760,
+    "correctedMedian": 3920,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "autovia_AeYu6RMbiXc",
@@ -20368,10 +24588,17 @@ window.scoredListingsData = [
     "discount": -12.4,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -12 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "autovia_AeUI-wy8Pwo",
@@ -20400,10 +24627,17 @@ window.scoredListingsData = [
     "discount": -10.2,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "autovia_AeC51P9Jl12",
@@ -20432,10 +24666,17 @@ window.scoredListingsData = [
     "discount": -6,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -6 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.179Z"
   },
   {
     "id": "autovia_Aeco5lVzG5k",
@@ -20464,10 +24705,17 @@ window.scoredListingsData = [
     "discount": -4.8,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_Ae8LQ11stoS",
@@ -20496,10 +24744,17 @@ window.scoredListingsData = [
     "discount": -19,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -19 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_Ae5CjvZPg6z",
@@ -20528,10 +24783,17 @@ window.scoredListingsData = [
     "discount": -11.4,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -11 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.132Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_Ae-BzW8D5f6",
@@ -20560,10 +24822,17 @@ window.scoredListingsData = [
     "discount": -0.8,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.133Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_AeucrMAVIh_",
@@ -20590,10 +24859,17 @@ window.scoredListingsData = [
     "discount": -10.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -11 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.133Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_AmKi4WMfber",
@@ -20617,15 +24893,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 5400,
-    "correctedMedian": 4246,
+    "correctedMedian": 3496,
     "kmReference": 275000,
-    "discount": -27.2,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -27 %",
+    "discount": -54.4,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -54 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.133Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_Aew7QkXtnWO",
@@ -20652,10 +24935,20 @@ window.scoredListingsData = [
     "discount": -16,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -16 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.133Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z",
+    "isSold": true,
+    "soldAt": "2026-01-07T16:30:43.309Z",
+    "soldTimeStr": "0h 37m"
   },
   {
     "id": "autovia_AmcELfbxfFa",
@@ -20682,10 +24975,17 @@ window.scoredListingsData = [
     "discount": -9,
     "dealReason": "Segment: High-Tier 1 (200k-250k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.133Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z"
   },
   {
     "id": "autovia_AmfsBON60ep",
@@ -20707,15 +25007,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 6250,
-    "correctedMedian": 5313,
+    "correctedMedian": 4375,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.134Z"
+    "scoredAt": "2026-01-07T15:53:06.181Z"
   },
   {
     "id": "autovia_Amn3MVbL2a9",
@@ -20744,10 +25051,17 @@ window.scoredListingsData = [
     "discount": -100,
     "dealReason": "Segment: Level 400 (400k-500k) | Cena vs upravený medián: -100 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.134Z"
+    "scoredAt": "2026-01-07T15:53:06.181Z"
   },
   {
     "id": "autovia_AbCTeInF6kT",
@@ -20774,10 +25088,17 @@ window.scoredListingsData = [
     "discount": -8.9,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: -9 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.134Z"
+    "scoredAt": "2026-01-07T15:53:06.181Z"
   },
   {
     "id": "autovia_AeKA0EHD5gb",
@@ -20806,10 +25127,17 @@ window.scoredListingsData = [
     "discount": -3.2,
     "dealReason": "Segment: Level 300 (300k-400k) | Cena vs upravený medián: -3 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.134Z"
+    "scoredAt": "2026-01-07T15:53:06.181Z"
   },
   {
     "id": "eu_AeXwePFKv4w",
@@ -20837,10 +25165,17 @@ window.scoredListingsData = [
     "discount": -7.1,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.134Z"
+    "scoredAt": "2026-01-07T15:53:06.181Z"
   },
   {
     "id": "eu_AmYNB0VsZCD",
@@ -20868,10 +25203,17 @@ window.scoredListingsData = [
     "discount": -5.7,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -6 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.134Z"
+    "scoredAt": "2026-01-07T15:53:06.181Z"
   },
   {
     "id": "eu_AenSK8oGlkC",
@@ -20899,10 +25241,17 @@ window.scoredListingsData = [
     "discount": -10.8,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -11 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.134Z"
+    "scoredAt": "2026-01-07T15:53:06.181Z"
   },
   {
     "id": "eu_AegNkOq40dV",
@@ -20930,10 +25279,17 @@ window.scoredListingsData = [
     "discount": -100,
     "dealReason": "Segment: Level 400 (400k-500k) | Cena vs upravený medián: -100 %",
     "mileageWarning": "⚠️ Vysoký nájazd – preverte servisnú históriu",
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.134Z"
+    "scoredAt": "2026-01-07T15:53:06.182Z"
   },
   {
     "id": "eu_AeNNV0cjR3q",
@@ -20961,10 +25317,20 @@ window.scoredListingsData = [
     "discount": -18.3,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -18 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.134Z"
+    "scoredAt": "2026-01-07T15:53:06.182Z",
+    "isSold": true,
+    "soldAt": "2026-01-07T16:30:43.309Z",
+    "soldTimeStr": "0h 37m"
   },
   {
     "id": "eu_AmkxgFD2el1",
@@ -20994,10 +25360,17 @@ window.scoredListingsData = [
     "discount": -9.8,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -10 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.135Z"
+    "scoredAt": "2026-01-07T15:53:06.182Z"
   },
   {
     "id": "eu_cxa0ost9k",
@@ -21027,10 +25400,17 @@ window.scoredListingsData = [
     "discount": -6.1,
     "dealReason": "Segment: Low (0-100k) | Cena vs upravený medián: -6 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 35,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.135Z"
+    "scoredAt": "2026-01-07T15:53:06.183Z"
   },
   {
     "id": "eu_AmsQE0IZhFd",
@@ -21058,10 +25438,17 @@ window.scoredListingsData = [
     "discount": -4.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -4 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.135Z"
+    "scoredAt": "2026-01-07T15:53:06.183Z"
   },
   {
     "id": "eu_AesqAyjIcoJ",
@@ -21089,10 +25476,17 @@ window.scoredListingsData = [
     "discount": -1.3,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -1 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.135Z"
+    "scoredAt": "2026-01-07T15:53:06.184Z"
   },
   {
     "id": "eu_x71bbhuno",
@@ -21120,10 +25514,17 @@ window.scoredListingsData = [
     "discount": -6.9,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -7 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.135Z"
+    "scoredAt": "2026-01-07T15:53:06.184Z"
   },
   {
     "id": "eu_zw7lase8r",
@@ -21151,10 +25552,17 @@ window.scoredListingsData = [
     "discount": -6.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -6 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.135Z"
+    "scoredAt": "2026-01-07T15:53:06.184Z"
   },
   {
     "id": "eu_AmSNPwzaVcI",
@@ -21184,10 +25592,17 @@ window.scoredListingsData = [
     "discount": -9.1,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -9 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 20,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.135Z"
+    "scoredAt": "2026-01-07T15:53:06.184Z"
   },
   {
     "id": "eu_AmEP1LZsua0",
@@ -21210,15 +25625,22 @@ window.scoredListingsData = [
     "kmSegment": "High-Tier 2 (250k-300k)",
     "matchAccuracy": "specific",
     "originalMedian": 3690,
-    "correctedMedian": 3137,
+    "correctedMedian": 2583,
     "kmReference": 275000,
-    "discount": -17.6,
-    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -18 %",
+    "discount": -42.9,
+    "dealReason": "Segment: High-Tier 2 (250k-300k) | Cena vs upravený medián: -43 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 0,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.136Z"
+    "scoredAt": "2026-01-07T15:53:06.184Z"
   },
   {
     "id": "eu_AmVY3m5miaK",
@@ -21246,10 +25668,17 @@ window.scoredListingsData = [
     "discount": -5.2,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -5 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 30,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.136Z"
+    "scoredAt": "2026-01-07T15:53:06.184Z"
   },
   {
     "id": "eu_Am75Ftt71HW",
@@ -21279,9 +25708,16 @@ window.scoredListingsData = [
     "discount": -16.7,
     "dealReason": "Segment: Mid (100k-200k) | Cena vs upravený medián: -17 %",
     "mileageWarning": null,
+    "liquidity": {
+      "score": 45,
+      "label": "🐌 Ležiak",
+      "color": "#ff4d4d",
+      "category": "Nízka",
+      "estimate": "1 mesiac+"
+    },
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:38:01.136Z"
+    "scoredAt": "2026-01-07T15:53:06.184Z"
   }
 ];

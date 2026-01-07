@@ -11,9 +11,9 @@ echo.
 echo    cd C:\Users\Flash\Documents\test1\BazosBot
 echo    git init
 echo    git add .
-echo    git commit -m "Initial commit: BazosBot"
+echo    git commit -m "Initial commit: AutoRadar"
 echo    git branch -M main
-echo    git remote add origin https://github.com/YOUR_USERNAME/BazosBot.git
+echo    git remote add origin https://github.com/YOUR_USERNAME/AutoRadar.git
 echo    git push -u origin main
 echo.
 echo Replace YOUR_USERNAME with your GitHub username!
@@ -24,9 +24,9 @@ REM If Git is already installed, uncomment these lines:
 REM cd C:\Users\Flash\Documents\test1\BazosBot
 REM git init
 REM git add .
-REM git commit -m "Initial commit: BazosBot"
+REM git commit -m "Initial commit: AutoRadar"
 REM echo.
-REM echo Now create a new repository on GitHub.com named 'BazosBot'
-REM echo Then run: git remote add origin https://github.com/YOUR_USERNAME/BazosBot.git
+REM echo Now create a new repository on GitHub.com named 'AutoRadar'
+REM echo Then run: git remote add origin https://github.com/YOUR_USERNAME/AutoRadar.git
 REM echo Then run: git push -u origin main
 REM pause

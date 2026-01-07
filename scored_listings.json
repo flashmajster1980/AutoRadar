@@ -21034,7 +21034,10 @@
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:53:06.174Z"
+    "scoredAt": "2026-01-07T15:53:06.174Z",
+    "isSold": true,
+    "soldAt": "2026-01-07T16:30:43.309Z",
+    "soldTimeStr": "0h 37m"
   },
   {
     "id": "eu_AmGhTd1RAVf",
@@ -24022,7 +24025,10 @@
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:53:06.178Z"
+    "scoredAt": "2026-01-07T15:53:06.178Z",
+    "isSold": true,
+    "soldAt": "2026-01-07T16:30:43.309Z",
+    "soldTimeStr": "0h 37m"
   },
   {
     "id": "autovia_Ae2r9uQ7fvP",
@@ -24939,7 +24945,10 @@
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:53:06.180Z"
+    "scoredAt": "2026-01-07T15:53:06.180Z",
+    "isSold": true,
+    "soldAt": "2026-01-07T16:30:43.309Z",
+    "soldTimeStr": "0h 37m"
   },
   {
     "id": "autovia_AmcELfbxfFa",
@@ -25318,7 +25327,10 @@
     "dealType": "OVERPRICED",
     "score": 20,
     "isFiltered": false,
-    "scoredAt": "2026-01-07T15:53:06.182Z"
+    "scoredAt": "2026-01-07T15:53:06.182Z",
+    "isSold": true,
+    "soldAt": "2026-01-07T16:30:43.309Z",
+    "soldTimeStr": "0h 37m"
   },
   {
     "id": "eu_AmkxgFD2el1",
