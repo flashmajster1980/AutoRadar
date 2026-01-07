@@ -322,10 +322,15 @@ function scoreListings(listings, marketValues) {
         if (!medianPrice) continue;
 
         let correctedMedian = medianPrice;
+        const age = Math.max(1, currentYear - listing.year);
 
         // 2. APPLY SPECIFIC TIER PENALTIES
         if (kmSegmentKey === 'high2') {
-            correctedMedian *= 0.85; // -15%
+            if (age > 12) {
+                correctedMedian *= 0.70; // -30% for old high-mileage cars (High Risk)
+            } else {
+                correctedMedian *= 0.85; // -15% standard
+            }
         } else if (kmSegmentKey === 'level400') {
             correctedMedian *= 0.50; // -50%
         } else if (kmSegmentKey === 'zombie') {
@@ -335,7 +340,6 @@ function scoreListings(listings, marketValues) {
         // 3. KM PENALTY (Dynamic)
         const kmAboveRef = (listing.km || refKm) - refKm;
         if (kmAboveRef > 0 && kmSegmentKey !== 'zombie') {
-            const age = Math.max(1, currentYear - listing.year);
             const penaltySteps = kmAboveRef / 10000;
             let penaltyPercent = penaltySteps * 0.025;
 
