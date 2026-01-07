@@ -12,7 +12,7 @@ node_modules/
 listings.json
 market_values.json
 market_history.json
-scored_listings.json
+# scored_listings.json (Now allowed for GitHub Pages)
 notified_deals.json
 cookies.json
 
