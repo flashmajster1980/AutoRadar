@@ -1,8 +1,8 @@
-name: Deploy Dashboard to GitHub Pages
+name: Deploy AutoRadar Dashboard to GitHub Pages
 
 on:
   workflow_run:
-    workflows: ["BazosBot Scraper"]
+    workflows: ["AutoRadar Scraper"]
     types:
       - completed
   push:

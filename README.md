@@ -1,4 +1,4 @@
-# BazosBot
+# AutoRadar
 
 🤖 Automatizovaný systém pre monitorovanie a analýzu automobilového trhu na Bazos.sk s Telegram notifikáciami.
 

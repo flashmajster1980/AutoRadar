@@ -1,4 +1,4 @@
-name: BazosBot Scraper
+name: AutoRadar Scraper
 
 on:
   # Run every 2 hours

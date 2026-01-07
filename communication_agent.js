@@ -49,19 +49,28 @@ function extractLocation(url, title) {
 
     return 'Slovensko';
 }
-
 function formatMessage(deal) {
     const location = extractLocation(deal.url, deal.title);
-    const savings = deal.medianPrice - deal.price;
+    const savings = deal.correctedMedian - deal.price;
     const date = new Date().toLocaleDateString('sk-SK');
+    const kmText = deal.km ? `${deal.km.toLocaleString()} km` : 'Neznáme km';
+
+    // Other portals info
+    let portalLine = `📍 Lokalita: ${location}`;
+    if (deal.otherPortals && deal.otherPortals.length > 0) {
+        const others = deal.otherPortals.map(p => p.portal).join(', ');
+        portalLine += `\n🔄 Tiež na: ${others}`;
+    }
 
     return `🌟 *GOLDEN DEAL!* -${deal.discount}%
 
 🚗 *${deal.make} ${deal.model}* (${deal.year})
-💰 Cena: €${deal.price.toLocaleString()}
-📊 Medián: €${deal.medianPrice.toLocaleString()}
-💸 Zľava: -${deal.discount}% (€${savings.toLocaleString()})
-📍 Lokalita: ${location}
+⚙️ ${deal.engine} | ${deal.equipLevel} výbava
+🛣️ ${kmText}
+💰 Cena: *€${deal.price.toLocaleString()}*
+📊 Bench: €${deal.correctedMedian.toLocaleString()}
+💸 Úspora: €${savings.toLocaleString()}
+${portalLine}
 🔗 [Zobraziť inzerát](${deal.url})
 
 ⏰ Nájdené: ${date}`;
@@ -112,7 +121,7 @@ async function run(testMode = false) {
     // Test mode
     if (testMode) {
         console.log('🧪 Test mode: Sending test message...\n');
-        const testMessage = `🧪 *BazosBot Test*
+        const testMessage = `🧪 *AutoRadar Test*
 
 Telegram integration is working! ✅
 
