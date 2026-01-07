@@ -387,6 +387,14 @@ function scoreListings(listings, marketValues) {
         // Explanation string
         const dealReason = `Segment: ${kmSegmentLabel} | Cena vs upravený medián: ${Math.round(discount)} %`;
 
+        // Mileage Warning
+        let mileageWarning = null;
+        if (listing.km >= 500000) {
+            mileageWarning = '💀 Kritický stav životnosti';
+        } else if (listing.km >= 300000) {
+            mileageWarning = '⚠️ Vysoký nájazd – preverte servisnú históriu';
+        }
+
         scoredListings.push({
             ...listing,
             make, model, engine,
@@ -399,6 +407,7 @@ function scoreListings(listings, marketValues) {
             kmReference: Math.round(refKm),
             discount: Math.round(discount * 10) / 10,
             dealReason,
+            mileageWarning,
             dealType: dealInfo.type,
             score: finalScore,
             isFiltered: keywordCheck.isFiltered,
