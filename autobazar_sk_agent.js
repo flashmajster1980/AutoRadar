@@ -75,29 +75,32 @@ async function scrapeAutobazarSK(searchConfig = null) {
 
             const extracted = await page.evaluate(() => {
                 const results = [];
-                const cards = Array.from(document.querySelectorAll('div.item')).filter(c => c.querySelector('.price'));
+                // More specific selector for listings
+                const cards = Array.from(document.querySelectorAll('.item, [class*="ListingItem"]'));
 
                 cards.forEach(card => {
                     try {
-                        const titleLink = card.querySelector('.item-heading a');
+                        const titleLink = card.querySelector('.item-heading a, h2 a');
                         if (!titleLink) return;
 
                         const title = titleLink.innerText.trim();
                         const url = titleLink.href;
 
-                        // ID extraction (usually from URL or data attribute)
+                        // ID extraction from URL
                         const idMatch = url.match(/-id(\d+)\.html/) || url.match(/\/(\d+)\/$/);
                         const id = 'sk_' + (idMatch ? idMatch[1] : Math.random().toString(36).substr(2, 9));
 
-                        // Price
-                        const priceElem = card.querySelector('.price');
+                        // Price - FIX: Extract only the first price found
+                        const priceElem = card.querySelector('.price, [class*="Price"]');
                         let price = null;
                         if (priceElem) {
-                            price = parseInt(priceElem.innerText.replace(/\s/g, '').replace('€', '').replace(/\D/g, ''));
+                            const priceText = priceElem.innerText.replace(/\s/g, '').replace('€', '');
+                            const match = priceText.match(/^\d+/); // Just the first sequence of digits
+                            price = match ? parseInt(match[0]) : null;
                         }
-                        if (!price || price < 500) return;
+                        if (!price || price < 500 || price > 500000) return;
 
-                        // Metadata from .item-teaser or spans
+                        // Metadata from text content
                         const teaserText = card.innerText;
 
                         // Year

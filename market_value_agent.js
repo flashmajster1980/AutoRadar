@@ -8,11 +8,13 @@ const CONFIG = {
     LISTINGS_FILE: path.join(__dirname, 'listings.json'),
     MARKET_VALUES_FILE: path.join(__dirname, 'market_values.json'),
     MIN_PRICE: 500,           // Minimum price to consider (filter extremes)
-    MAX_PRICE: 100000,        // Maximum price to consider (filter extremes)
-    MIN_SAMPLES: 1,           // Minimum number of listings to calculate median (lowered for demo)
-    MAX_SAMPLES: 100,         // Maximum number of listings per model/year
+    MAX_PRICE: 200000,        // Maximum price to consider (filter extremes)
+    MIN_SAMPLES: 1,           // Minimum number of listings to calculate median
+    MAX_SAMPLES: 200,         // Maximum number of listings per model
     MIN_YEAR: 2000,           // Minimum valid year
     HISTORY_FILE: path.join(__dirname, 'market_history.json'),
+    KM_ADJUSTMENT_RATE: 0.05, // 0.05€ per km adjustment
+    REFERENCE_KM_YEARLY: 20000, // Average 20k km per year
 };
 
 // ========================================
@@ -64,6 +66,66 @@ const KNOWN_MODELS = {
     'Seat': ['Ibiza', 'Leon', 'Arona', 'Ateca', 'Tarraco', 'Alhambra'],
 };
 
+// ========================================
+// FEATURE EXTRACTION
+// ========================================
+
+function extractEngine(listing) {
+    let engine = 'Unknown';
+    if (listing.fuel && listing.power) {
+        // Normalize power (e.g., 110 kW)
+        const powerValue = parseInt(listing.power);
+        if (powerValue) {
+            // Group power into buckets to avoid too many small groups
+            // e.g., 0-80, 81-110, 111-150, 151-200, 201+
+            let powerBucket = 'Base';
+            if (powerValue > 200) powerBucket = 'Extreme';
+            else if (powerValue > 150) powerBucket = 'High';
+            else if (powerValue > 110) powerBucket = 'Mid-High';
+            else if (powerValue > 80) powerBucket = 'Mid';
+
+            engine = `${listing.fuel} ${powerBucket} (${powerValue}kW)`;
+        } else {
+            engine = listing.fuel;
+        }
+    } else if (listing.fuel) {
+        engine = listing.fuel;
+    }
+    return engine;
+}
+
+const EQUIPMENT_KEYWORDS = {
+    'LED/Xenon': ['led', 'xenon', 'bixenon', 'matrix', 'laser'],
+    'Navigácia': ['navigácia', 'navigacia', 'navi', 'gps'],
+    'Koža': ['koža', 'koza', 'leather'],
+    'Panoráma': ['panoráma', 'panorama', 'strešné okno', 'siber'],
+    '4x4': ['4x4', '4wd', 'awd', 'quattro', '4motion', 'xdrive'],
+    'Ťažné': ['ťažné', 'tazne', 'hák'],
+    'Webasto': ['webasto', 'nezávislé kúrenie', 'nezavisle kurenie'],
+    'ACC/Tempomat': ['acc', 'adaptívny tempomat', 'adaptivny tempomat', 'distronic'],
+    'Kamera': ['kamera', 'camera', '360'],
+};
+
+function extractEquipmentScore(listing) {
+    const text = (listing.title + ' ' + (listing.description || '')).toLowerCase();
+    let score = 0;
+    const foundFeatures = [];
+
+    for (const [feature, keywords] of Object.entries(EQUIPMENT_KEYWORDS)) {
+        if (keywords.some(k => text.includes(k))) {
+            score++;
+            foundFeatures.push(feature);
+        }
+    }
+
+    // Categorize equipment level
+    let level = 'Basic';
+    if (score >= 5) level = 'Full';
+    else if (score >= 2) level = 'Medium';
+
+    return { score, level, foundFeatures };
+}
+
 function extractMakeModel(title) {
     const titleLower = title.toLowerCase();
 
@@ -94,7 +156,9 @@ function extractMakeModel(title) {
     if (make && KNOWN_MODELS[make]) {
         for (const knownModel of KNOWN_MODELS[make]) {
             const modelLower = knownModel.toLowerCase();
-            if (titleLower.includes(modelLower)) {
+            // Match whole word for model to avoid A3 matching A30
+            const regex = new RegExp(`\\b${modelLower}\\b`, 'i');
+            if (titleLower.match(regex)) {
                 model = knownModel;
                 break;
             }
@@ -108,12 +172,10 @@ function extractMakeModel(title) {
             // Check for multi-word models
             if (words[1] && words[2]) {
                 const twoWords = words[1] + ' ' + words[2];
-                // Common patterns like "Model 3", "Model S", "C trieda"
                 if (twoWords.match(/model [a-z0-9]/i) || twoWords.match(/[a-z] trieda/i) || twoWords.match(/[a-z]-class/i)) {
                     model = twoWords;
                 }
             }
-            // Single word model
             if (!model && words[1] && words[1].length > 1) {
                 model = words[1];
             }
@@ -172,7 +234,7 @@ function updateHistory(marketValues) {
 
     const timestamp = new Date().toISOString();
 
-    for (const [make, models] of Object.entries(marketValues)) {
+    for (const [make, models] of Object.entries(marketValues.broad || {})) {
         if (!history[make]) history[make] = {};
         for (const [model, years] of Object.entries(models)) {
             if (!history[make][model]) history[make][model] = {};
@@ -205,9 +267,12 @@ function updateHistory(marketValues) {
 function analyzeMarketValues(listings) {
     console.log(`📊 Analyzing ${listings.length} listings...`);
 
-    // Group listings by make, model, and year
-    const groups = {};
+    // Group listings by multiple criteria
+    const groups = {}; // Key: make|model|year|engine|equipLevel
+    const broadGroups = {}; // Key: make|model|year
     let skipped = 0;
+
+    const currentYear = new Date().getFullYear();
 
     for (const listing of listings) {
         // Skip if no valid year
@@ -216,80 +281,92 @@ function analyzeMarketValues(listings) {
             continue;
         }
 
-        // Extract make and model
+        // Extract features
         const { make, model } = extractMakeModel(listing.title);
-
         if (!make || !model) {
             skipped++;
             continue;
         }
 
-        // Create group key
-        const key = `${make}|${model}|${listing.year}`;
+        const engine = extractEngine(listing);
+        const equip = extractEquipmentScore(listing);
 
-        if (!groups[key]) {
-            groups[key] = {
-                make,
-                model,
-                year: listing.year,
-                listings: []
-            };
+        // Calculate expected mileage
+        const age = Math.max(1, currentYear - listing.year);
+        const expectedKm = age * CONFIG.REFERENCE_KM_YEARLY;
+
+        // Mileage adjusted price (if we wanted to normalize the baseline, but we'll do it in scorer)
+        // For now, let's just use raw price for groups
+
+        // Group keys
+        const broadKey = `${make}|${model}|${listing.year}`;
+        const specificKey = `${make}|${model}|${listing.year}|${engine}|${equip.level}`;
+
+        // Initialize groups
+        if (!broadGroups[broadKey]) {
+            broadGroups[broadKey] = { make, model, year: listing.year, listings: [] };
+        }
+        if (!groups[specificKey]) {
+            groups[specificKey] = { make, model, year: listing.year, engine, equipLevel: equip.level, listings: [] };
         }
 
-        groups[key].listings.push(listing);
+        broadGroups[broadKey].listings.push(listing);
+        groups[specificKey].listings.push(listing);
     }
 
-    console.log(`✅ Grouped into ${Object.keys(groups).length} categories (skipped ${skipped} invalid)`);
+    console.log(`✅ Grouped into ${Object.keys(groups).length} specific and ${Object.keys(broadGroups).length} broad categories`);
 
     // Calculate market values
-    const marketValues = {};
-    const modelStats = {}; // Track most common models
+    const marketValues = {
+        specific: {},
+        broad: {}
+    };
+    const modelStats = {};
 
-    for (const [key, group] of Object.entries(groups)) {
+    // Process Broad Groups
+    for (const [key, group] of Object.entries(broadGroups)) {
         const { make, model, year } = group;
-
-        // Filter extremes
         const validListings = filterExtremes(group.listings, year);
+        if (validListings.length < CONFIG.MIN_SAMPLES) continue;
 
-        // Need at least MIN_SAMPLES for reliable median
-        if (validListings.length < CONFIG.MIN_SAMPLES) {
-            continue;
-        }
-
-        // Take max MAX_SAMPLES (most recent)
-        const samplesToUse = validListings
-            .sort((a, b) => new Date(b.scrapedAt) - new Date(a.scrapedAt))
-            .slice(0, CONFIG.MAX_SAMPLES);
-
-        const prices = samplesToUse.map(l => l.price);
+        const prices = validListings.map(l => l.price);
         const medianPrice = calculateMedian(prices);
-        const minPrice = Math.min(...prices);
-        const maxPrice = Math.max(...prices);
 
-        // Store in market values database
-        if (!marketValues[make]) {
-            marketValues[make] = {};
-        }
-        if (!marketValues[make][model]) {
-            marketValues[make][model] = {};
-        }
+        if (!marketValues.broad[make]) marketValues.broad[make] = {};
+        if (!marketValues.broad[make][model]) marketValues.broad[make][model] = {};
 
-        marketValues[make][model][year] = {
-            count: samplesToUse.length,
+        marketValues.broad[make][model][year] = {
+            count: validListings.length,
             medianPrice,
-            minPrice,
-            maxPrice,
+            minPrice: Math.min(...prices),
+            maxPrice: Math.max(...prices),
             lastUpdated: new Date().toISOString()
         };
 
-        // Track model stats
         const modelKey = `${make} ${model}`;
-        if (!modelStats[modelKey]) {
-            modelStats[modelKey] = 0;
-        }
-        modelStats[modelKey] += samplesToUse.length;
+        modelStats[modelKey] = (modelStats[modelKey] || 0) + validListings.length;
+    }
 
-        console.log(`  💰 ${make} ${model} (${year}): €${medianPrice.toLocaleString()} (${samplesToUse.length} samples)`);
+    // Process Specific Groups
+    for (const [key, group] of Object.entries(groups)) {
+        const { make, model, year, engine, equipLevel } = group;
+        const validListings = filterExtremes(group.listings, year);
+        if (validListings.length < CONFIG.MIN_SAMPLES) continue;
+
+        const prices = validListings.map(l => l.price);
+        const medianPrice = calculateMedian(prices);
+
+        if (!marketValues.specific[make]) marketValues.specific[make] = {};
+        if (!marketValues.specific[make][model]) marketValues.specific[make][model] = {};
+        if (!marketValues.specific[make][model][year]) marketValues.specific[make][model][year] = {};
+        if (!marketValues.specific[make][model][year][engine]) marketValues.specific[make][model][year][engine] = {};
+
+        marketValues.specific[make][model][year][engine][equipLevel] = {
+            count: validListings.length,
+            medianPrice,
+            minPrice: Math.min(...prices),
+            maxPrice: Math.max(...prices)
+        };
     }
 
     return { marketValues, modelStats };
@@ -336,7 +413,7 @@ function run() {
 
     // Summary statistics
     const totalModels = Object.keys(modelStats).length;
-    const totalEntries = Object.values(marketValues).reduce((sum, make) => {
+    const totalBroadEntries = Object.values(marketValues.broad).reduce((sum, make) => {
         return sum + Object.values(make).reduce((s, model) => {
             return s + Object.keys(model).length;
         }, 0);
@@ -344,7 +421,7 @@ function run() {
 
     console.log(`\n📈 Summary:`);
     console.log(`  - Total unique models: ${totalModels}`);
-    console.log(`  - Total price entries: ${totalEntries}`);
+    console.log(`  - Total broad price entries: ${totalBroadEntries}`);
     console.log(`  - Price range filter: €${CONFIG.MIN_PRICE} - €${CONFIG.MAX_PRICE.toLocaleString()}`);
     console.log(`  - Min samples for median: ${CONFIG.MIN_SAMPLES}`);
 

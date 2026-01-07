@@ -8,8 +8,10 @@ const CONFIG = {
     LISTINGS_FILE: path.join(__dirname, 'listings.json'),
     MARKET_VALUES_FILE: path.join(__dirname, 'market_values.json'),
     SCORED_LISTINGS_FILE: path.join(__dirname, 'scored_listings.json'),
-    GOLDEN_DEAL_THRESHOLD: 15,  // 15% discount or more
-    GOOD_DEAL_THRESHOLD: 8,      // 8% discount or more
+    GOLDEN_DEAL_THRESHOLD: 12,  // Slightly lowered because scoring is stricter now
+    GOOD_DEAL_THRESHOLD: 6,
+    KM_ADJUSTMENT_RATE: 0.05,  // 0.05€ per km
+    REFERENCE_KM_YEARLY: 20000,
 };
 
 // ========================================
@@ -45,31 +47,64 @@ const BAD_KEYWORDS = [
 // HELPER FUNCTIONS
 // ========================================
 
+// Feature extraction matching market_value_agent.js
+function extractEngine(listing) {
+    let engine = 'Unknown';
+    if (listing.fuel && listing.power) {
+        const powerValue = parseInt(listing.power);
+        if (powerValue) {
+            let powerBucket = 'Base';
+            if (powerValue > 200) powerBucket = 'Extreme';
+            else if (powerValue > 150) powerBucket = 'High';
+            else if (powerValue > 110) powerBucket = 'Mid-High';
+            else if (powerValue > 80) powerBucket = 'Mid';
+            engine = `${listing.fuel} ${powerBucket} (${powerValue}kW)`;
+        } else { engine = listing.fuel; }
+    } else if (listing.fuel) { engine = listing.fuel; }
+    return engine;
+}
+
+const EQUIPMENT_KEYWORDS = {
+    'LED/Xenon': ['led', 'xenon', 'bixenon', 'matrix', 'laser'],
+    'Navigácia': ['navigácia', 'navigacia', 'navi', 'gps'],
+    'Koža': ['koža', 'koza', 'leather'],
+    'Panoráma': ['panoráma', 'panorama', 'strešné okno', 'siber'],
+    '4x4': ['4x4', '4wd', 'awd', 'quattro', '4motion', 'xdrive'],
+    'Ťažné': ['ťažné', 'tazne', 'hák'],
+    'Webasto': ['webasto', 'nezávislé kúrenie', 'nezavisle kurenie'],
+    'ACC/Tempomat': ['acc', 'adaptívny tempomat', 'adaptivny tempomat', 'distronic'],
+    'Kamera': ['kamera', 'camera', '360'],
+};
+
+function extractEquipmentScore(listing) {
+    const text = (listing.title + ' ' + (listing.description || '')).toLowerCase();
+    let score = 0;
+    const foundFeatures = [];
+    for (const [feature, keywords] of Object.entries(EQUIPMENT_KEYWORDS)) {
+        if (keywords.some(k => text.includes(k))) {
+            score++;
+            foundFeatures.push(feature);
+        }
+    }
+    let level = 'Basic';
+    if (score >= 5) level = 'Full';
+    else if (score >= 2) level = 'Medium';
+    return { score, level, foundFeatures };
+}
+
 function extractMakeModel(title) {
-    // Same logic as market_value_agent.js
     const BRAND_ALIASES = {
-        'vw': 'Volkswagen',
-        'škoda': 'Škoda',
-        'skoda': 'Škoda',
-        'mercedes-benz': 'Mercedes-Benz',
-        'mercedes': 'Mercedes-Benz',
-        'bmw': 'BMW',
-        'audi': 'Audi',
-        'seat': 'Seat',
-        'tesla': 'Tesla',
-        'hyundai': 'Hyundai',
-        'ford': 'Ford',
-        'opel': 'Opel',
-        'peugeot': 'Peugeot',
-        'renault': 'Renault',
-        'toyota': 'Toyota',
+        'vw': 'Volkswagen', 'škoda': 'Škoda', 'skoda': 'Škoda',
+        'mercedes-benz': 'Mercedes-Benz', 'mercedes': 'Mercedes-Benz',
+        'bmw': 'BMW', 'audi': 'Audi', 'seat': 'Seat', 'tesla': 'Tesla',
+        'hyundai': 'Hyundai', 'ford': 'Ford', 'opel': 'Opel',
+        'peugeot': 'Peugeot', 'renault': 'Renault', 'toyota': 'Toyota',
     };
 
     const titleLower = title.toLowerCase();
     let make = null;
     let model = null;
 
-    // Check for brand aliases
     for (const [alias, fullName] of Object.entries(BRAND_ALIASES)) {
         if (titleLower.startsWith(alias + ' ') || titleLower.includes(' ' + alias + ' ')) {
             make = fullName;
@@ -77,7 +112,6 @@ function extractMakeModel(title) {
         }
     }
 
-    // Fallback: first word
     if (!make) {
         const firstWord = title.split(' ')[0];
         if (firstWord && firstWord.length > 2) {
@@ -87,7 +121,6 @@ function extractMakeModel(title) {
         }
     }
 
-    // Extract model (second word or two words for "Model 3" etc)
     if (make) {
         const words = title.split(' ');
         if (words.length >= 2) {
@@ -135,77 +168,165 @@ function calculateDealType(discount) {
 }
 
 // ========================================
+// DEDUPLICATION LOGIC
+// ========================================
+
+function generateFingerprint(listing) {
+    // 1. If VIN is available, it's the gold standard
+    if (listing.vin && listing.vin.length === 17) {
+        return `VIN:${listing.vin.toUpperCase()}`;
+    }
+
+    // 2. Fuzzy match fingerprint
+    // Identify car precisely enough but allow for small portal differences
+    const { make, model } = extractMakeModel(listing.title);
+    if (!make || !model || !listing.year) return null;
+
+    // Price tolerance: round to nearest 100
+    const roundedPrice = Math.round(listing.price / 100) * 100;
+
+    // KM tolerance: round to nearest 1000
+    const roundedKm = listing.km ? Math.round(listing.km / 1000) * 1000 : 'N/A';
+
+    // Location: first word (usually city or district)
+    const shortLoc = listing.location ? listing.location.split(',')[0].split(' ')[0].trim() : 'N/A';
+
+    return `FUZZY:${make}|${model}|${listing.year}|${roundedPrice}|${roundedKm}|${shortLoc}`;
+}
+
+function deduplicateListings(listings) {
+    console.log(`🔍 Checking for cross-portal duplicates...`);
+    const finalMap = new Map();
+    let duplicatesFound = 0;
+
+    for (const listing of listings) {
+        const fingerprint = generateFingerprint(listing);
+        if (!fingerprint) {
+            // Keep listings that can't be fingerprinted (shouldn't happen with valid car data)
+            finalMap.set(`RAW:${listing.id}`, listing);
+            continue;
+        }
+
+        if (finalMap.has(fingerprint)) {
+            const existing = finalMap.get(fingerprint);
+
+            // Keep the one with better price or newer portal if prices are same
+            if (listing.price < existing.price) {
+                // Listing is cheaper, replace existing but keep record of other portal
+                listing.otherPortals = existing.otherPortals || [];
+                listing.otherPortals.push({ portal: existing.portal, url: existing.url, price: existing.price });
+                finalMap.set(fingerprint, listing);
+            } else {
+                // Existing is better or same, just record this one
+                existing.otherPortals = existing.otherPortals || [];
+                existing.otherPortals.push({ portal: listing.portal, url: listing.url, price: listing.price });
+            }
+            duplicatesFound++;
+        } else {
+            finalMap.set(fingerprint, { ...listing, otherPortals: [] });
+        }
+    }
+
+    console.log(`✅ Deduplication complete: ${duplicatesFound} duplicates filtered out.\n`);
+    return Array.from(finalMap.values());
+}
+
+// ========================================
 // SCORING LOGIC
 // ========================================
 
 function scoreListings(listings, marketValues) {
-    console.log(`📊 Scoring ${listings.length} listings...\n`);
+    console.log(`📊 Scoring ${listings.length} listings with advanced criteria...\n`);
 
     const scoredListings = [];
     let goldenDeals = 0;
     let goodDeals = 0;
     let filtered = 0;
+    const currentYear = new Date().getFullYear();
 
     for (const listing of listings) {
-        // Extract make and model
         const { make, model } = extractMakeModel(listing.title);
+        if (!make || !model || !listing.year) continue;
 
-        if (!make || !model || !listing.year) {
-            console.log(`⏭️  SKIP: ${listing.title} (cannot extract make/model/year)`);
-            continue;
-        }
-
-        // Check for problematic keywords
+        const engine = extractEngine(listing);
+        const equip = extractEquipmentScore(listing);
         const keywordCheck = checkBadKeywords(listing.title);
 
-        // Lookup median price
-        const medianPrice = marketValues[make]?.[model]?.[listing.year]?.medianPrice;
+        // 1. Find Best Match Median
+        let medianPrice = null;
+        let matchAccuracy = 'broad';
 
-        if (!medianPrice) {
-            console.log(`⏭️  SKIP: ${make} ${model} ${listing.year} (no market data)`);
-            continue;
+        // Check specific match (Make+Model+Year+Engine+EquipLevel)
+        const specificMatch = marketValues.specific?.[make]?.[model]?.[listing.year]?.[engine]?.[equip.level];
+        if (specificMatch) {
+            medianPrice = specificMatch.medianPrice;
+            matchAccuracy = 'specific';
+        } else {
+            // Fallback to broad match (Make+Model+Year)
+            medianPrice = marketValues.broad?.[make]?.[model]?.[listing.year]?.medianPrice;
         }
 
-        // Calculate discount percentage
-        const discount = ((medianPrice - listing.price) / medianPrice) * 100;
+        if (!medianPrice) continue;
+
+        // 2. Apply Mileage Adjustment - MORE CONSERVATIVE (0.03 per km)
+        const age = Math.max(1, currentYear - listing.year);
+        const expectedKm = age * CONFIG.REFERENCE_KM_YEARLY;
+        const kmDiff = (listing.km || expectedKm) - expectedKm;
+
+        // KM adjustment - 0.03 is better for older cars
+        const KM_RATE = 0.03;
+        const kmAdjustment = kmDiff * KM_RATE;
+
+        // LIMIT: KM adjustment shouldn't be more than 30% of the median price
+        const maxAdjustment = medianPrice * 0.3;
+        const cappedAdjustment = Math.max(-maxAdjustment, Math.min(maxAdjustment, kmAdjustment));
+
+        let correctedMedian = medianPrice - cappedAdjustment;
+
+        // 3. Apply Equipment Bonus (if using broad median)
+        if (matchAccuracy === 'broad') {
+            if (equip.level === 'Full') correctedMedian *= 1.12; // 12% instead of 15%
+            else if (equip.level === 'Medium') correctedMedian *= 1.05;
+        }
+
+        // 4. YEAR SANITY CHECK: Older cars shouldn't be more expensive than slightly newer ones arbitrarily
+        // Look at next year median if available
+        const nextYearMedian = marketValues.broad?.[make]?.[model]?.[listing.year + 1]?.medianPrice;
+        if (nextYearMedian && correctedMedian > nextYearMedian * 1.1) {
+            correctedMedian = nextYearMedian * 1.05; // Cap it slightly above newer year
+        }
+
+        // ENSURE POSITIVE: Median should never be less than 40% of original
+        correctedMedian = Math.max(medianPrice * 0.4, correctedMedian);
+
+        // 5. Calculate Final Score
+        const discount = ((correctedMedian - listing.price) / correctedMedian) * 100;
         const dealInfo = calculateDealType(discount);
 
-        // Adjust score if filtered
         let finalScore = dealInfo.score;
         if (keywordCheck.isFiltered) {
-            finalScore = Math.max(0, finalScore - 50); // Major penalty
+            finalScore = Math.max(0, finalScore - 50);
             filtered++;
         }
 
-        const scoredListing = {
-            ...listing, // Preserve all original fields (including location, vin, etc.)
-            km: listing.km,
-            make,
-            model,
-            medianPrice,
+        scoredListings.push({
+            ...listing,
+            make, model, engine,
+            equipLevel: equip.level,
+            features: equip.foundFeatures,
+            matchAccuracy,
+            originalMedian: medianPrice,
+            correctedMedian: Math.round(correctedMedian),
+            kmAdjustment: Math.round(kmAdjustment),
             discount: Math.round(discount * 10) / 10,
             dealType: dealInfo.type,
             score: finalScore,
             isFiltered: keywordCheck.isFiltered,
-            filteredKeywords: keywordCheck.keywords,
             scoredAt: new Date().toISOString()
-        };
+        });
 
-        scoredListings.push(scoredListing);
-
-        // Count deals
-        if (dealInfo.type === 'GOLDEN DEAL') goldenDeals++;
-        if (dealInfo.type === 'GOOD DEAL') goodDeals++;
-
-        // Log
-        const filterTag = keywordCheck.isFiltered ? '⚠️ FILTERED' : '';
-        console.log(`${dealInfo.emoji} ${dealInfo.type} ${filterTag}`);
-        console.log(`   ${listing.title}`);
-        console.log(`   Price: €${listing.price.toLocaleString()} | Median: €${medianPrice.toLocaleString()} | Discount: ${discount.toFixed(1)}%`);
-        if (keywordCheck.isFiltered) {
-            console.log(`   ⚠️  Keywords: ${keywordCheck.keywords.join(', ')}`);
-        }
-        console.log();
+        if (dealInfo.type === 'GOLDEN DEAL' && !keywordCheck.isFiltered) goldenDeals++;
+        if (dealInfo.type === 'GOOD DEAL' && !keywordCheck.isFiltered) goodDeals++;
     }
 
     return { scoredListings, goldenDeals, goodDeals, filtered };
@@ -232,13 +353,16 @@ function run() {
     }
 
     const listingsData = fs.readFileSync(CONFIG.LISTINGS_FILE, 'utf-8');
-    const listings = JSON.parse(listingsData);
+    let listings = JSON.parse(listingsData);
 
     const marketValuesData = fs.readFileSync(CONFIG.MARKET_VALUES_FILE, 'utf-8');
     const marketValues = JSON.parse(marketValuesData);
 
-    console.log(`📁 Loaded ${listings.length} listings`);
+    console.log(`📁 Loaded ${listings.length} raw listings`);
     console.log(`📁 Loaded market values database\n`);
+
+    // Cross-portal Deduplication
+    listings = deduplicateListings(listings);
 
     // Score listings
     const { scoredListings, goldenDeals, goodDeals, filtered } = scoreListings(listings, marketValues);
@@ -248,7 +372,13 @@ function run() {
 
     // Save scored listings
     fs.writeFileSync(CONFIG.SCORED_LISTINGS_FILE, JSON.stringify(scoredListings, null, 2));
-    console.log(`💾 Scored listings saved to ${CONFIG.SCORED_LISTINGS_FILE}\n`);
+
+    // Also save as JS variable for local dashboard (to bypass CORS)
+    const jsContent = `window.scoredListingsData = ${JSON.stringify(scoredListings, null, 2)};`;
+    fs.writeFileSync(path.join(__dirname, 'scored_listings_data.js'), jsContent);
+
+    console.log(`💾 Scored listings saved to ${CONFIG.SCORED_LISTINGS_FILE}`);
+    console.log(`💾 JS Data saved to scored_listings_data.js (for local dashboard)\n`);
 
     // Display top deals
     const topDeals = scoredListings
@@ -258,8 +388,8 @@ function run() {
     if (topDeals.length > 0) {
         console.log('🏆 TOP GOLDEN DEALS (not filtered):\n');
         topDeals.forEach((deal, index) => {
-            console.log(`${index + 1}. ${deal.make} ${deal.model} (${deal.year})`);
-            console.log(`   Price: €${deal.price.toLocaleString()} | Median: €${deal.medianPrice.toLocaleString()} | Discount: ${deal.discount}%`);
+            console.log(`${index + 1}. ${deal.make} ${deal.model} (${deal.year}) | ${deal.engine} | ${deal.equipLevel}`);
+            console.log(`   Price: €${deal.price.toLocaleString()} | Corrected Median: €${deal.correctedMedian.toLocaleString()} | Discount: ${deal.discount}%`);
             console.log(`   Score: ${deal.score} | ${deal.url}`);
             console.log();
         });

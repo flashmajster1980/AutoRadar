@@ -68,62 +68,65 @@ async function scrapeAutobazar(searchConfig = null) {
 
             const extracted = await page.evaluate(() => {
                 const results = [];
-                // Find all detail links
-                const detailLinks = Array.from(document.querySelectorAll('a'))
-                    .filter(a => a.href && a.href.includes('/detail') && !a.href.includes('/detail-porovnanie'));
+                // Find all containers that have an H2 (title)
+                const h2s = Array.from(document.querySelectorAll('h2'));
 
-                detailLinks.forEach(link => {
+                h2s.forEach(h2 => {
                     try {
-                        // Find a container that has price and year/km
-                        let card = link.parentElement;
-                        let depth = 0;
-                        while (card && card.tagName !== 'BODY' && depth < 10) {
-                            if (card.innerText.includes('€') && (card.innerText.includes('km') || card.innerText.match(/\d{4}/))) {
-                                break;
-                            }
-                            card = card.parentElement;
-                            depth++;
+                        // Navigate up to the listing container
+                        let container = h2.parentElement;
+                        // Go up until we find a container that has both price and km, or we hit body
+                        while (container && container.tagName !== 'BODY' &&
+                            (!container.innerText.includes('€') || !container.innerText.includes('km'))) {
+                            container = container.parentElement;
                         }
 
-                        if (!card || card.tagName === 'BODY' || depth >= 10) return;
+                        if (!container || container.tagName === 'BODY') return;
 
-                        const titleElem = card.querySelector('h2') || card.querySelector('span.font-semibold');
-                        if (!titleElem) return;
-
-                        const title = titleElem.innerText.trim();
-                        const url = link.href;
+                        const title = h2.innerText.trim();
+                        const linkElem = container.querySelector('a[href*="/detail/"]');
+                        if (!linkElem) return;
+                        const url = linkElem.href;
 
                         // ID extraction
                         const idMatch = url.match(/\/detail.*\/([a-zA-Z0-9]+)\/$/) || url.match(/\/([a-zA-Z0-9]+)\/$/);
                         const id = 'eu_' + (idMatch ? idMatch[1] : Math.random().toString(36).substr(2, 9));
 
-                        // Price
+                        // Price - look for span with font-semibold and €
                         let price = null;
-                        const priceMatch = card.innerText.match(/(\d[\d\s]*)\s*€/);
-                        if (priceMatch) {
-                            price = parseInt(priceMatch[1].replace(/\s/g, ''));
+                        const priceElem = Array.from(container.querySelectorAll('span')).find(s => s.innerText.includes('€'));
+                        if (priceElem) {
+                            price = parseInt(priceElem.innerText.replace(/\s/g, '').replace('€', '').replace(/\D/g, ''));
                         }
                         if (!price || price < 500) return;
 
-                        // Year
-                        const yearMatch = card.innerText.match(/\b(20\d{2}|19\d{2})\b/);
+                        // Details (Year, KM, Fuel, Transmission)
+                        const allInfoSpans = Array.from(container.querySelectorAll('span, a')).map(el => el.innerText.trim());
+                        const containerText = allInfoSpans.join(' | ') + ' ' + container.innerText;
+
+                        // Year - looking for 4 digits starting with 20 or 19
+                        const yearMatch = containerText.match(/\b(20\d{2}|19\d{2})\b/);
                         const year = yearMatch ? parseInt(yearMatch[1]) : null;
 
-                        // KM
-                        const kmMatch = card.innerText.match(/(\d[\d\s]*)\s*km/);
+                        // KM - looking for number followed by km
+                        const kmMatch = containerText.match(/(\d[\d\s]*)\s*km/);
                         const km = kmMatch ? parseInt(kmMatch[1].replace(/\s/g, '')) : null;
+
+                        let location = null;
+                        const locMatch = containerText.match(/([A-Z][a-z]+)\s*kraj/);
+                        if (locMatch) location = locMatch[0];
 
                         // Transmission
                         let transmission = null;
-                        if (card.innerText.match(/Automat/i)) transmission = 'Automat';
-                        else if (card.innerText.match(/Manuál|Manual/i)) transmission = 'Manuál';
+                        if (/Automat/i.test(containerText)) transmission = 'Automat';
+                        else if (/Manuál|Manual/i.test(containerText)) transmission = 'Manuál';
 
                         // Fuel
                         let fuel = null;
-                        if (card.innerText.match(/Diesel/i)) fuel = 'Diesel';
-                        else if (card.innerText.match(/Benzín|Benzin/i)) fuel = 'Benzín';
-                        else if (card.innerText.match(/Elektro|Electric/i)) fuel = 'Elektro';
-                        else if (card.innerText.match(/Hybrid/i)) fuel = 'Hybrid';
+                        if (/Diesel/i.test(containerText)) fuel = 'Diesel';
+                        else if (/Benzín|Benzin/i.test(containerText)) fuel = 'Benzín';
+                        else if (/Elektro|Electric|Elektromotor/i.test(containerText)) fuel = 'Elektro';
+                        else if (/Hybrid/i.test(containerText)) fuel = 'Hybrid';
 
                         results.push({
                             id,
@@ -131,6 +134,7 @@ async function scrapeAutobazar(searchConfig = null) {
                             price,
                             year,
                             km,
+                            location,
                             url,
                             transmission,
                             fuel,
