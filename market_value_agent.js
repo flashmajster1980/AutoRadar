@@ -280,8 +280,71 @@ function updateHistory(marketValues) {
 // MARKET VALUE CALCULATION
 // ========================================
 
+function calculateNewCarBenchmarks(listings) {
+    const prices = {};
+    const currentYear = new Date().getFullYear(); // 2026
+
+    for (const l of listings) {
+        if (!l.price || !l.year) continue;
+
+        // Strategy 1: Real Demo Cars (2024+, < 5000 km)
+        const isDemo = l.year >= currentYear - 2 && l.km < 5000;
+
+        // Strategy 2: "Almost New" (Top of the market for recent years)
+        // Just collect high prices for recent years to find the ceiling
+        const isRecent = l.year >= currentYear - 3;
+
+        if (isDemo || isRecent) {
+            // Exclude high performance / special editions from "base" new price calculation
+            const titleLower = l.title.toLowerCase();
+            if (titleLower.includes('rs') || titleLower.includes('vrs') || titleLower.includes('scout') ||
+                titleLower.includes('amg') || titleLower.includes('m-packet') || titleLower.includes('m packet')) {
+                continue;
+            }
+
+            // Also exclude high power cars (likely RS/GTI/M) to keep "standard" baseline
+            if (l.power) {
+                const power = parseInt(l.power);
+                if (power > 145) continue; // Skip anything above ~197 HP for standard baseline
+            }
+
+            const { make, model } = extractMakeModel(l.title);
+            if (make && model) {
+                if (!prices[make]) prices[make] = {};
+                if (!prices[make][model]) prices[make][model] = [];
+                // Store object to distinguish type later if needed, for now just price
+                prices[make][model].push(l.price);
+            }
+        }
+    }
+
+    const benchmarks = {};
+    for (const make in prices) {
+        benchmarks[make] = {};
+        for (const model in prices[make]) {
+            const modelPrices = prices[make][model].sort((a, b) => a - b); // Ascending sort
+
+            // Heuristic for "New Price":
+            // Take the 60th percentile. This filters out L&K, RS, and fully loaded models
+            // aiming for a "well-equipped standard" baseline.
+            const index60th = Math.floor(modelPrices.length * 0.6);
+            const estimatedNewPrice = modelPrices[Math.min(index60th, modelPrices.length - 1)];
+
+            benchmarks[make][model] = estimatedNewPrice;
+        }
+    }
+    return benchmarks;
+}
+
 function analyzeMarketValues(listings) {
     console.log(`📊 Analyzing ${listings.length} listings...`);
+
+    const newCarBenchmarks = calculateNewCarBenchmarks(listings);
+    console.log(`🆕 Calculated benchmarks for ${Object.keys(newCarBenchmarks).length} makes.`);
+    // Debug specific model
+    if (newCarBenchmarks['Škoda'] && newCarBenchmarks['Škoda']['Octavia']) {
+        console.log(`🔍 DEBUG: Default New Price for Škoda Octavia: €${newCarBenchmarks['Škoda']['Octavia']}`);
+    }
 
     // Group listings by multiple criteria including mileage segments
     const groups = {}; // Key: make|model|year|engine|equipLevel|kmSegment
@@ -351,11 +414,35 @@ function analyzeMarketValues(listings) {
     // Process Broad Groups
     for (const [key, group] of Object.entries(broadGroups)) {
         const { make, model, year, kmSegment } = group;
-        const validListings = filterExtremes(group.listings, year);
+        let validListings = filterExtremes(group.listings, year);
+
+        // STRICT SEGMENTATION: older than 1 year but < 5000 km -> Demo cars, ignore for "Used" median
+        // Years 2020-2023 (approx. 3-6 years old in 2026 context)
+        if (year >= 2020 && year <= 2023) {
+            const beforeCount = validListings.length;
+            validListings = validListings.filter(l => l.km >= 5000);
+            if (validListings.length < beforeCount) {
+                // console.log(`   Filtered ${beforeCount - validListings.length} demo cars from ${make} ${model} ${year}`);
+            }
+        }
+
         if (validListings.length < CONFIG.MIN_SAMPLES) continue;
 
         const prices = validListings.map(l => l.price);
-        const medianPrice = calculateMedian(prices);
+        let medianPrice = calculateMedian(prices);
+
+        // DEPRECIATION CURVE CHECK
+        // If car is > 3 years old, value shouldn't be > 70% of new price
+        const currentYear = new Date().getFullYear();
+        const age = currentYear - year;
+        if (age >= 3 && newCarBenchmarks[make] && newCarBenchmarks[make][model]) {
+            const newPrice = newCarBenchmarks[make][model];
+            const maxAllowed = newPrice * 0.70;
+            if (medianPrice > maxAllowed) {
+                // console.log(`⚠️  Depreciation Cap applied for ${make} ${model} (${year}): €${medianPrice} -> €${Math.round(maxAllowed)} (New: €${newPrice})`);
+                medianPrice = Math.round(maxAllowed);
+            }
+        }
 
         if (!marketValues.broad[make]) marketValues.broad[make] = {};
         if (!marketValues.broad[make][model]) marketValues.broad[make][model] = {};
@@ -381,7 +468,18 @@ function analyzeMarketValues(listings) {
         if (validListings.length < CONFIG.MIN_SAMPLES) continue;
 
         const prices = validListings.map(l => l.price);
-        const medianPrice = calculateMedian(prices);
+        let medianPrice = calculateMedian(prices);
+
+        // DEPRECIATION CURVE CHECK (Specific Group)
+        const currentYear = new Date().getFullYear();
+        const age = currentYear - year;
+        if (age >= 3 && newCarBenchmarks[make] && newCarBenchmarks[make][model]) {
+            const newPrice = newCarBenchmarks[make][model];
+            const maxAllowed = newPrice * 0.70;
+            if (medianPrice > maxAllowed) {
+                medianPrice = Math.round(maxAllowed);
+            }
+        }
 
         if (!marketValues.specific[make]) marketValues.specific[make] = {};
         if (!marketValues.specific[make][model]) marketValues.specific[make][model] = {};

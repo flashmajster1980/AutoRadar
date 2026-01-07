@@ -464,6 +464,20 @@ function scoreListings(listings, marketValues) {
 
         // 6. Calculate Final Score & Deal Type
         const discount = ((correctedMedian - listing.price) / correctedMedian) * 100;
+
+        // OUTLIER VALIDATION
+        // If discount > 30%, check if median is not inflated by outliers
+        if (discount > 30) {
+            // Find other listings in the same group to compare
+            // Quick heuristic: if listing price is < 50% of median, it's suspicious or median is wrong
+            if (listing.price < correctedMedian * 0.5) {
+                // Check if it's a "parts" car that slipped through
+                if (listing.price < 2000 && listing.year > 2015) {
+                    // Force Overpriced because it's likely a scam or parts
+                    correctedMedian = listing.price;
+                }
+            }
+        }
         let dealInfo = calculateDealType(discount);
 
         // DISABLE GOLDEN DEAL FOR ZOMBIE
