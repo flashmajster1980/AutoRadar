@@ -755,6 +755,22 @@
                         <div class="price">${price} €</div>
                         <div class="median">Trhová hodnota <span>${median} €</span></div>
                     </div>
+
+                    ${l.liquidity ? `
+                    <div class="liquidity-box" style="padding: 12px 20px; border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.15)">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                            <span style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Predajná Likvidita</span>
+                            <span style="font-size: 0.7rem; font-weight: 700; color: ${l.liquidity.color}">${l.liquidity.label}</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <div style="flex-grow: 1; height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden;">
+                                <div style="width: ${l.liquidity.score}%; height: 100%; background: ${l.liquidity.color}; box-shadow: 0 0 8px ${l.liquidity.color}55;"></div>
+                            </div>
+                            <span style="font-size: 0.65rem; color: var(--text-muted); min-width: 20px; text-align: right;">${l.liquidity.score}%</span>
+                        </div>
+                        <p style="font-size: 0.6rem; color: var(--text-muted); margin-top: 2px; opacity: 0.7;">⏱️ Odhad: <b>${l.liquidity.estimate}</b></p>
+                    </div>
+                    ` : ''}
                     <div class="card-footer">
                         <div class="portal-name">${l.portal}</div>
                         <a href="${l.url}" target="_blank" class="btn">Pozrieť</a>

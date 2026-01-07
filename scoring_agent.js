@@ -237,6 +237,58 @@ function deduplicateListings(listings) {
 
 // ========================================
 // SCORING LOGIC
+function calculateLiquidity(listing, discount, age) {
+    let score = 20; // Default LOW
+    const make = (listing.make || '').toLowerCase();
+
+    // 1. Base Score by Brand
+    const topBrands = ['škoda', 'skoda', 'volkswagen', 'vw', 'audi', 'toyota', 'hyundai', 'kia'];
+    const midBrands = ['ford', 'opel', 'peugeot', 'renault', 'bmw', 'mercedes-benz', 'mercedes'];
+
+    if (topBrands.includes(make)) score = 80;
+    else if (midBrands.includes(make)) score = 50;
+
+    // 2. Modifiers
+    // Discount: +2 pts per 1% discount
+    if (discount > 0) score += (discount * 2);
+
+    // Kilometers
+    if (listing.km < 150000) score += 15;
+    else if (listing.km > 300000) score -= 30;
+
+    // Age
+    if (age <= 7) score += 10;
+    else if (age > 15) score -= 20;
+
+    // Clamp 0-100
+    score = Math.max(0, Math.min(100, score));
+
+    // 3. Classification
+    let label = '🐌 Ležiak';
+    let color = '#ff4d4d'; // Red (Nízka)
+    let category = 'Nízka';
+
+    if (score >= 80) {
+        label = '🔥 Horúci tovar';
+        color = '#00ff88'; // Green (Vysoká)
+        category = 'Vysoká';
+    } else if (score >= 50) {
+        label = '✅ Štandard';
+        color = '#fdda25'; // Yellow (Dobrá)
+        category = 'Dobrá';
+    }
+
+    return {
+        score: Math.round(score),
+        label,
+        color,
+        category,
+        estimate: score >= 80 ? 'do 3 dní' : (score >= 50 ? 'do 2 týždňov' : '1 mesiac+')
+    };
+}
+
+// ========================================
+// SCORING LOGIC
 // ========================================
 
 function scoreListings(listings, marketValues) {
@@ -383,6 +435,10 @@ function scoreListings(listings, marketValues) {
             dealInfo = { type: 'FAIR PRICE', emoji: '⚖️', score: 50 };
         }
 
+        // 6. Liquidity Score Engine
+        const liquidity = calculateLiquidity(listing, discount, age);
+
+        // 7. Calculate Final Score & Deal Type (existing logic)
         let finalScore = dealInfo.score;
         if (keywordCheck.isFiltered) {
             finalScore = Math.max(0, finalScore - 50);
@@ -413,6 +469,7 @@ function scoreListings(listings, marketValues) {
             discount: Math.round(discount * 10) / 10,
             dealReason,
             mileageWarning,
+            liquidity,
             dealType: dealInfo.type,
             score: finalScore,
             isFiltered: keywordCheck.isFiltered,
