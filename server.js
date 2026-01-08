@@ -10,16 +10,33 @@ const app = express();
 
 const PORT = process.env.PORT || 10000; // Render preferuje 10000
 
-// **PRIORITY START**: Listen immediately to satisfy Render's port binding check
+// **CRITICAL STARTUP SECTION**
+// 1. Dummy Health Check (Render pings this)
+app.get('/', (req, res) => {
+    res.send('OK - AutoRadar Bot is Running');
+});
+
+// 2. Start Server Immediately
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`✅ Server is officially listening on port ${PORT}`);
     console.log('RENDER_READY');
 
-    // Delayed start for scraper (30 seconds) to not block initial boot
+    // 3. Delayed Scraper Start (60 seconds)
     setTimeout(() => {
-        console.log('⏰ Initializing scraper background task...');
-        startScraper().catch(err => console.error("Scraper error:", err));
-    }, 30000);
+        console.log('⏰ Initializing scraper background task (Delayed)...');
+        // Check if function exists before calling, or move definition up
+        if (typeof startScraper === 'function') {
+            startScraper().catch(err => console.error("Scraper error:", err));
+        } else {
+            // Function is hoisted or defined later, should be fine in node scope usually if function funcName(){}
+            // But let's be safe if it's var/const
+            try {
+                startScraper().catch(err => console.error("Scraper error:", err));
+            } catch (e) {
+                console.log("⚠️ startScraper issue:", e.message);
+            }
+        }
+    }, 60000); // 60s delay
 });
 
 app.use(cors());
@@ -289,7 +306,7 @@ app.get('/api/listings/:id/history', async (req, res) => {
     }
 });
 
-app.get('/', (req, res) => {
+app.get('/dashboard', (req, res) => {
     res.sendFile(path.join(__dirname, 'dashboard.html'));
 });
 
