@@ -360,14 +360,14 @@ const { exec } = require('child_process');
 // BACKGROUND SCRAPER TASK (runs every 10 minutes)
 async function startScraper() {
     const run = () => {
-        console.log('⏰ Starting background scrape job...');
+        logActivity('⏰ Starting background scrape job...');
         exec('node scraper_agent.js', (error, stdout, stderr) => {
             if (error) {
-                console.error(`❌ Scraper Error: ${error.message}`);
+                logActivity(`❌ Scraper Error: ${error.message}`);
                 return;
             }
-            if (stderr) console.error(`⚠️ Scraper Stderr: ${stderr}`);
-            console.log(`✅ Scraper Output:\n${stdout}`);
+            if (stderr) logActivity(`⚠️ Scraper Stderr: ${stderr}`);
+            logActivity(`✅ Scraper Output:\n${stdout.substring(0, 500)}... (truncated)`);
         });
     };
 
