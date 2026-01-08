@@ -45,4 +45,8 @@ RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
 USER pptruser
 
 # Default command (can be overridden)
-CMD ["node", "scraper_agent.js"]
+# Expose port for Render
+EXPOSE 10000
+
+# Start server (which handles scraper in background)
+CMD ["node", "server.js"]
