@@ -7,7 +7,7 @@ const session = require('express-session');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // User must provide this in .env
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+// Port configuration moved to bottom
 
 app.use(cors());
 app.use(express.json());
@@ -283,24 +283,32 @@ app.get('/', (req, res) => {
 const { exec } = require('child_process');
 
 // BACKGROUND SCRAPER TASK (runs every 10 minutes)
-function runScraperInBackground() {
-    console.log('⏰ Starting background scrape job...');
-    exec('node scraper_agent.js', (error, stdout, stderr) => {
-        if (error) {
-            console.error(`❌ Scraper Error: ${error.message}`);
-            return;
-        }
-        if (stderr) console.error(`⚠️ Scraper Stderr: ${stderr}`);
-        console.log(`✅ Scraper Output:\n${stdout}`);
-    });
+// BACKGROUND SCRAPER TASK (runs every 10 minutes)
+async function startScraper() {
+    const run = () => {
+        console.log('⏰ Starting background scrape job...');
+        exec('node scraper_agent.js', (error, stdout, stderr) => {
+            if (error) {
+                console.error(`❌ Scraper Error: ${error.message}`);
+                return;
+            }
+            if (stderr) console.error(`⚠️ Scraper Stderr: ${stderr}`);
+            console.log(`✅ Scraper Output:\n${stdout}`);
+        });
+    };
+
+    // Initial run
+    run();
+
+    // Schedule every 10 minutes
+    setInterval(run, 10 * 60 * 1000);
 }
 
-// Run immediately on start (optional, maybe delay 1 min)
-setTimeout(runScraperInBackground, 60000);
-
-// Schedule every 10 minutes
-setInterval(runScraperInBackground, 10 * 60 * 1000);
+const PORT = process.env.PORT || 10000; // Render preferuje 10000
 
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`🚀 AutoRadar Server running at http://0.0.0.0:${PORT}`);
+    console.log(`✅ Server is officially listening on port ${PORT}`);
+
+    // Scraper spusti až POTOM a asynchrónne
+    startScraper().catch(err => console.error("Scraper error:", err));
 });
