@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoRadar</title>
+    <title>AutoRadar Premium</title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📡</text></svg>">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;700&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         :root {
             --bg-body: #0a0c10;
@@ -30,10 +31,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
@@ -73,27 +70,44 @@
             gap: 8px;
         }
 
-        .stats {
+        .user-menu {
             display: flex;
             gap: 15px;
+            align-items: center;
         }
 
-        .stat-item {
-            background: var(--bg-card);
-            padding: 4px 10px;
-            border-radius: 8px;
+        .btn-auth {
+            background: transparent;
             border: 1px solid var(--border);
-            font-size: 0.75rem;
+            color: var(--text-main);
+            padding: 5px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+        }
+
+        .btn-auth:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-premium {
+            background: var(--golden);
+            color: #000;
+            border: none;
+            font-weight: 700;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
         }
 
         /* FILTERS */
         .filters-container {
             padding: 1.5rem 5%;
             background: rgba(255, 255, 255, 0.02);
-            border-bottom: 1px solid var(--border);
             display: flex;
             flex-direction: column;
             gap: 15px;
+            border-bottom: 1px solid var(--border);
         }
 
         .filter-row {
@@ -114,7 +128,6 @@
             text-transform: uppercase;
             font-weight: 700;
             color: var(--text-muted);
-            letter-spacing: 0.5px;
         }
 
         select,
@@ -124,90 +137,15 @@
             color: var(--text-main);
             padding: 8px 12px;
             border-radius: 8px;
-            font-size: 0.85rem;
             outline: none;
-            transition: all 0.2s;
-        }
-
-        select:focus,
-        input:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px var(--accent-glow);
         }
 
         .search-box {
             width: 100%;
             padding: 12px 15px;
-            font-size: 1rem;
         }
 
-        /* TOGGLE SWITCH */
-        .toggle-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 8px 16px;
-            background: rgba(255, 215, 0, 0.05);
-            border: 1px solid rgba(255, 215, 0, 0.1);
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s;
-            user-select: none;
-        }
-
-        .toggle-container:hover {
-            background: rgba(255, 215, 0, 0.1);
-            border-color: rgba(255, 215, 0, 0.3);
-        }
-
-        .toggle-container.active {
-            background: rgba(255, 215, 0, 0.15);
-            border-color: var(--golden);
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
-        }
-
-        .toggle-switch {
-            width: 40px;
-            height: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            position: relative;
-            transition: all 0.3s;
-        }
-
-        .toggle-container.active .toggle-switch {
-            background: var(--golden);
-        }
-
-        .toggle-knob {
-            width: 16px;
-            height: 16px;
-            background: white;
-            border-radius: 50%;
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .toggle-container.active .toggle-knob {
-            left: 22px;
-        }
-
-        .toggle-label {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--text-main);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .toggle-container.active .toggle-label {
-            color: var(--golden);
-        }
-
-        /* GRID */
+        /* CARD */
         main {
             padding: 2rem 5%;
             display: grid;
@@ -220,63 +158,15 @@
             border-radius: 18px;
             overflow: hidden;
             border: 1px solid var(--border);
-            transition: transform 0.3s, box-shadow 0.3s;
             position: relative;
+            transition: transform 0.3s;
             display: flex;
             flex-direction: column;
         }
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        /* WARNING STYLES */
-        .card-warning {
-            background: linear-gradient(145deg, #2a2222, #1a1515);
-            border-color: rgba(255, 77, 77, 0.15);
-            opacity: 0.9;
-        }
-
-        .card-zombie {
-            background: linear-gradient(145deg, #1e1e1e, #1a1a1a);
-            border-color: rgba(255, 77, 77, 0.3);
-            filter: grayscale(0.4);
-            opacity: 0.75;
-        }
-
-        .card-warning .title,
-        .card-zombie .title {
-            color: #bbb;
-        }
-
-        .card-zombie .price {
-            color: #888;
-        }
-
-        .card-sold {
-            filter: grayscale(1);
-            opacity: 0.6;
-            pointer-events: none;
-        }
-
-        .sold-label {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-15deg);
-            background: #ff4d4d;
-            color: white;
-            padding: 8px 16px;
-            font-weight: 900;
-            font-size: 1rem;
-            border: 3px solid white;
-            border-radius: 8px;
-            z-index: 10;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            white-space: nowrap;
-            text-transform: uppercase;
         }
 
         .card-header {
@@ -289,8 +179,8 @@
             font-weight: 700;
             padding: 4px 10px;
             border-radius: 20px;
-            margin-bottom: 8px;
             display: inline-block;
+            margin-bottom: 8px;
         }
 
         .badge-golden {
@@ -298,27 +188,15 @@
             color: #000;
         }
 
-        .badge-good {
-            background: var(--good);
-            color: #fff;
-        }
-
         .title {
             font-size: 1.1rem;
             font-weight: 600;
             margin-bottom: 8px;
-            display: -webkit-box;
-            line-clamp: 2;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            height: 2.7em;
             color: #fff;
         }
 
         .meta {
             display: flex;
-            flex-wrap: wrap;
             gap: 10px;
             font-size: 0.85rem;
             color: var(--text-muted);
@@ -337,35 +215,6 @@
             font-size: 1.4rem;
             font-weight: 700;
             color: var(--accent);
-        }
-
-        .median {
-            text-align: right;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-        }
-
-        .median span {
-            display: block;
-            font-size: 0.9rem;
-            color: var(--text-main);
-            font-weight: 600;
-        }
-
-        .features {
-            padding: 10px 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-            min-height: 55px;
-        }
-
-        .feature-tag {
-            background: rgba(255, 255, 255, 0.04);
-            padding: 3px 8px;
-            border-radius: 6px;
-            font-size: 0.7rem;
-            border: 1px solid var(--border);
         }
 
         .card-footer {
@@ -387,17 +236,121 @@
             font-weight: 700;
         }
 
-        .discount-label {
+        /* LOCKED CONTENT BLUR */
+        .blur-content {
+            filter: blur(6px);
+            user-select: none;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .lock-overlay {
             position: absolute;
-            top: 20px;
-            right: 0;
-            background: #ef4444;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 10;
+            backdrop-filter: blur(2px);
+            border-radius: 18px;
+        }
+
+        .lock-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .lock-text {
             color: white;
-            padding: 4px 12px;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .btn-unlock {
+            background: var(--golden);
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* AUTH MODAL */
+        #auth-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 200;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .modal-content h2 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background: var(--accent);
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .toggle-auth {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            cursor: pointer;
         }
 
         #loader {
@@ -424,220 +377,6 @@
                 transform: rotate(360deg);
             }
         }
-
-        /* ABOUT SECTION */
-        .about-section {
-            padding: 5rem 5%;
-            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.02));
-            border-top: 1px solid var(--border);
-            margin-top: 4rem;
-        }
-
-        .about-content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .about-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .about-header h2 {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 1.5rem;
-        }
-
-        .about-header p {
-            color: var(--text-main);
-            font-size: 1.15rem;
-            max-width: 800px;
-            margin: 0 auto;
-            opacity: 0.9;
-            line-height: 1.7;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 3rem;
-        }
-
-        .about-card {
-            background: var(--bg-card);
-            padding: 35px;
-            border-radius: 24px;
-            border: 1px solid var(--border);
-            transition: all 0.3s;
-        }
-
-        .about-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--accent);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .about-card h3 {
-            color: var(--accent);
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 1.3rem;
-        }
-
-        .about-card p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
-        footer {
-            padding: 3rem 5%;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border);
-            background: #050608;
-        }
-
-        .nav-link {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 600;
-            transition: color 0.2s;
-            cursor: pointer;
-            margin-left: 20px;
-        }
-
-        .nav-link:hover {
-            color: var(--accent);
-        }
-
-        @media (max-width: 600px) {
-            header {
-                padding: 0.6rem 5%;
-                flex-direction: row;
-                gap: 5px;
-                justify-content: space-between;
-            }
-
-            .logo {
-                font-size: 1.1rem;
-            }
-
-            .stats {
-                gap: 5px;
-            }
-
-            .stat-item {
-                padding: 2px 6px;
-                font-size: 0.65rem;
-            }
-
-            .nav-link {
-                display: none;
-                /* Hide 'O nas' on very small mobile to save space */
-            }
-
-            .filter-row {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .about-header h2 {
-                font-size: 1.8rem;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-link {
-                margin: 10px 0;
-            }
-        }
-
-        @keyframes risk-pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
-            }
-
-            70% {
-                box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
-            }
-        }
-
-        .risk-high-alert {
-            animation: risk-pulse 2s infinite;
-            border-color: #ef4444 !important;
-        }
-
-        @keyframes discount-blink {
-            0% {
-                opacity: 1;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 0.7;
-                transform: scale(1.05);
-            }
-
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .fresh-discount-tag {
-            display: inline-block;
-            background: #ef4444;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.6rem;
-            font-weight: 800;
-            margin-left: 5px;
-            animation: discount-blink 1.5s infinite;
-            vertical-align: middle;
-            text-transform: uppercase;
-        }
-
-        .history-chart-container {
-            display: none;
-            margin-top: 15px;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .btn-history {
-            background: transparent;
-            color: var(--text-muted);
-            border: 1px solid var(--border);
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 0.7rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .btn-history:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
     </style>
 </head>
 
@@ -646,189 +385,94 @@
         <div class="spinner"></div>
     </div>
 
+    <!-- AUTH MODAL -->
+    <div id="auth-modal">
+        <div class="modal-content">
+            <h2 id="modal-title">Prihlásenie</h2>
+            <div class="form-group">
+                <input type="text" id="username" placeholder="Používateľské meno">
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Heslo">
+            </div>
+            <button class="btn-submit" onclick="handleAuth()">Pokračovať</button>
+            <div class="toggle-auth" onclick="toggleAuthMode()">Nemáš účet? Zaregistruj sa</div>
+            <div class="toggle-auth" onclick="closeModal()" style="color: #ef4444;">Zatvoriť</div>
+        </div>
+    </div>
+
     <header>
         <div class="logo"><span>📡</span> AutoRadar</div>
-        <nav>
-            <div class="stats" id="stats-summary"
-                style="display:inline-flex; vertical-align:middle; margin-right:20px;"></div>
-            <a href="#about" class="nav-link">O nás</a>
-        </nav>
+        <div class="user-menu" id="user-menu">
+            <!-- Populated by JS -->
+        </div>
     </header>
 
     <div class="filters-container">
         <div class="filter-row">
-            <input type="text" id="search" class="search-box"
-                placeholder="Hľadať v inzerátoch (model, motor, lokalita... )">
+            <input type="text" id="search" class="search-box" placeholder="Hľadať v inzerátoch (model, motor...)">
         </div>
-
         <div class="filter-row">
-            <div class="filter-group">
-                <label>Značka</label>
-                <select id="filter-make">
+            <div class="filter-group"><label>Značka</label><select id="filter-make">
                     <option value="all">Všetky značky</option>
-                </select>
-            </div>
-
-            <div class="filter-group">
-                <label>Rok od-do</label>
-                <div style="display:flex; gap:5px;">
-                    <input type="number" id="year-min" placeholder="Od" style="width:75px;">
-                    <input type="number" id="year-max" placeholder="Do" style="width:75px;">
-                </div>
-            </div>
-
-            <div class="filter-group">
-                <label>Cena od-do</label>
-                <div style="display:flex; gap:5px;">
-                    <input type="number" id="price-min" placeholder="Min €" style="width:90px;">
-                    <input type="number" id="price-max" placeholder="Max €" style="width:90px;">
-                </div>
-            </div>
-
-            <div class="filter-group">
-                <label>Palivo</label>
-                <select id="filter-fuel">
-                    <option value="all">Hocičo</option>
+                </select></div>
+            <div class="filter-group"><label>Palivo</label><select id="filter-fuel">
+                    <option value="all">Všetky</option>
                     <option value="Diesel">Diesel</option>
                     <option value="Benzín">Benzín</option>
-                    <option value="Hybrid">Hybrid</option>
                     <option value="Elektro">Elektro</option>
-                </select>
-            </div>
-
-            <div class="filter-group">
-                <label>Prevodovka</label>
-                <select id="filter-transmission">
-                    <option value="all">Hocičo</option>
-                    <option value="Automat">Automat</option>
-                    <option value="Manuál">Manuál</option>
-                </select>
-            </div>
-
-            <div class="filter-group">
-                <label>Pohon</label>
-                <select id="filter-drive">
-                    <option value="all">Hocičo</option>
-                    <option value="4x4">4x4 / AWD</option>
-                    <option value="Predný">Predný</option>
-                    <option value="Zadný">Zadný</option>
-                </select>
-            </div>
-
-            <div class="filter-group">
-                <label>Zoradiť</label>
-                <select id="sort-by">
-                    <option value="best">🌟 Najlepšie dealy</option>
-                    <option value="discount">Zľava (%)</option>
-                    <option value="price-asc">Cena (najlacnejšie)</option>
-                    <option value="year-desc">Ročník (najnovšie)</option>
-                    <option value="km-asc">Kilometre (najmenej)</option>
-                </select>
-            </div>
-
-            <div class="filter-group" style="margin-left: auto;">
-                <div id="golden-toggle" class="toggle-container">
-                    <div class="toggle-switch">
-                        <div class="toggle-knob"></div>
-                    </div>
-                    <span class="toggle-label">Len Golden Deals</span>
-                </div>
-            </div>
+                </select></div>
+            <div class="filter-group"><label>Zoradiť</label><select id="sort-by">
+                    <option value="best">🌟 Naj dealy</option>
+                    <option value="discount">Zľava %</option>
+                    <option value="year-desc">Najnovšie</option>
+                </select></div>
         </div>
     </div>
 
     <main id="listings-grid"></main>
-    <div id="pagination"
-        style="display:flex; justify-content:center; gap:10px; padding:20px; border-top:1px solid var(--border)"></div>
+    <div id="pagination" style="display: flex; justify-content: center; gap: 10px; padding: 20px;"></div>
 
-    <div id="about" class="about-section">
-        <div class="about-content">
-            <div class="about-header">
-                <h2>🛰️ O projekte AutoRadar</h2>
-                <p>AutoRadar nie je len obyčajný vyhľadávač. Je to váš inteligentný asistent, ktorý v reálnom čase
-                    monitoruje slovenský trh s ojazdenými vozidlami. Naším cieľom je vniesť transparentnosť do nákupu a
-                    predaja áut a pomôcť vám nájsť tie najlepšie ponuky skôr, než zmiznú z internetu.</p>
-            </div>
-
-            <div class="about-header" style="margin-top: 5rem; margin-bottom: 2rem;">
-                <h3 style="font-size: 1.8rem; color: var(--text-main);">Ako to funguje?</h3>
-                <p style="font-size: 1rem; opacity: 0.7;">Náš algoritmus pracuje 24 hodín denne, 7 dní v týždni. Každý
-                    inzerát prechádza prísnou analýzou:</p>
-            </div>
-
-            <div class="about-grid">
-                <div class="about-card">
-                    <h3>📊 Analýza trhovej ceny</h3>
-                    <p>Systém porovnáva každú ponuku s tisíckami podobných inzerátov na základe modelu, roku výroby,
-                        stavu kilometrov a výbavy.</p>
-                </div>
-                <div class="about-card">
-                    <h3>✨ Identifikácia „Golden Deals“</h3>
-                    <p>Naše unikátne označenie získavajú len vozidlá, ktorých cena je výrazne nižšia oproti aktuálnemu
-                        trhovému priemeru.</p>
-                </div>
-                <div class="about-card">
-                    <h3>⚡ Okamžité vyhodnotenie</h3>
-                    <p>Už nemusíte manuálne porovnávať desiatky stránok. AutoRadar vám povie percentuálnu zľavu a
-                        potenciálnu úsporu v priebehu sekúnd.</p>
-                </div>
-            </div>
-
-            <div class="about-header" style="margin-top: 6rem; margin-bottom: 2rem;">
-                <h3 style="font-size: 1.8rem; color: var(--text-main);">Prečo používať AutoRadar?</h3>
-            </div>
-
-            <div class="about-grid" style="margin-top: 0;">
-                <div class="about-card">
-                    <h3>🚀 Rýchlosť</h3>
-                    <p>Na trhu, kde sa najlepšie autá predajú v priebehu hodín, vám dávame potrebný náskok.</p>
-                </div>
-                <div class="about-card">
-                    <h3>📉 Dáta namiesto pocitov</h3>
-                    <p>Naše odporúčania sú založené na číslach a štatistike, nie na subjektívnom odhade.</p>
-                </div>
-                <div class="about-card">
-                    <h3>🛡️ Súkromie a bezpečnosť</h3>
-                    <p>AutoRadar nespracováva vaše osobné údaje ani kontaktné údaje predajcov. Sme čistý analytický most
-                        medzi vami a vaším budúcim autom.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 AutoRadar Slovakia. Všetky práva vyhradené.</p>
-        <p style="margin-top:10px; opacity:0.5; font-size:0.75rem;">Dáta sú čerpané z verejne dostupných zdrojov a sú
-            pravidelne aktualizované.</p>
-    </footer>
-
-    <script src="scored_listings_data.js"></script>
     <script>
+        let currentUser = null;
+        let isRegisterMode = false;
+        let allListings = [];
         let currentPage = 1;
-        let totalPages = 1;
+        const $ = id => document.getElementById(id);
 
         async function init() {
-            try {
-                // Populate makes initially (maybe from a separate API later, for now we can use a subset or static)
-                populateInitialFilters();
-                await fetchListings();
-                $('loader').style.display = 'none';
-            } catch (error) {
-                console.error(error);
-                $('loader').style.display = 'none';
-            }
+            populateFilters();
+            await checkAuth();
+            await fetchListings();
+            $('loader').style.display = 'none';
         }
 
-        async function populateInitialFilters() {
-            // Static or semi-static makes for now
-            const makes = ['Audi', 'BMW', 'Ford', 'Hyundai', 'Mercedes-Benz', 'Opel', 'Peugeot', 'Renault', 'Škoda', 'Tesla', 'Toyota', 'Volkswagen'];
-            const select = $('filter-make');
-            makes.forEach(m => {
-                const opt = document.createElement('option');
-                opt.value = m;
-                opt.textContent = m;
-                select.appendChild(opt);
-            });
+        async function checkAuth() {
+            try {
+                const res = await fetch('/api/me');
+                if (res.ok) {
+                    const data = await res.json();
+                    currentUser = data.user;
+                }
+            } catch (e) { currentUser = null; }
+            renderUserMenu();
+        }
+
+        function renderUserMenu() {
+            const menu = $('user-menu');
+            if (currentUser) {
+                const isPremium = currentUser.subscription === 'premium';
+                menu.innerHTML = `
+                    <div style="font-size:0.9rem;">
+                        👤 <b>${currentUser.username}</b> 
+                        <span style="color:${isPremium ? 'var(--golden)' : '#999'}">(${isPremium ? 'PREMIUM 👑' : 'Basic'})</span>
+                    </div>
+                    ${!isPremium ? '<button class="btn-auth btn-premium" onclick="buyPremium()">UPGRADE 💎</button>' : ''}
+                    <button class="btn-auth" onclick="logout()">Odhlásiť</button>
+                `;
+            } else {
+                menu.innerHTML = `<button class="btn-auth" onclick="openModal()">Prihlásiť sa</button>`;
+            }
         }
 
         async function fetchListings(page = 1) {
@@ -838,264 +482,119 @@
                 search: $('search').value,
                 make: $('filter-make').value,
                 fuel: $('filter-fuel').value,
-                trans: $('filter-transmission').value,
-                drive: $('filter-drive').value,
-                minYear: $('year-min').value,
-                maxYear: $('year-max').value,
-                minPrice: $('price-min').value,
-                maxPrice: $('price-max').value,
-                onlyGolden: $('golden-toggle').classList.contains('active'),
                 sort: $('sort-by').value
             });
 
-            try {
-                const response = await fetch(`/api/listings?${params.toString()}`);
-                const data = await response.json();
+            const res = await fetch(`/api/listings?${params}`);
+            const data = await res.json();
+            allListings = data.listings;
 
-                allListings = data.listings;
-                totalPages = data.pages;
+            // Re-sync user state from API response if provided
+            if (data.user) { currentUser = data.user; renderUserMenu(); }
 
-                renderListings();
-                renderPagination();
-            } catch (err) {
-                console.error('Fetch failed', err);
-            }
-        }
-
-        function renderListings() {
             const grid = $('listings-grid');
             grid.innerHTML = allListings.map(l => createCard(l)).join('');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
 
-        function renderPagination() {
-            const container = $('pagination');
-            let html = '';
-
-            if (totalPages > 1) {
-                html += `<button class="btn" onclick="fetchListings(${Math.max(1, currentPage - 1)})" ${currentPage === 1 ? 'disabled style="opacity:0.5"' : ''}>Predchádzajúca</button>`;
-                html += `<span style="align-self:center">Strana ${currentPage} z ${totalPages}</span>`;
-                html += `<button class="btn" onclick="fetchListings(${Math.min(totalPages, currentPage + 1)})" ${currentPage === totalPages ? 'disabled style="opacity:0.5"' : ''}>Nasledujúca</button>`;
-            }
-
-            container.innerHTML = html;
+            renderPagination(data.pages);
         }
 
         function createCard(l) {
+            const isLocked = l.isLocked;
             const badgeClass = l.dealType ? l.dealType.toLowerCase().split(' ')[0] : 'fair';
-            const isAwd = (l.drive || '').toLowerCase().includes('4x4') || (l.features && l.features.includes('4x4'));
 
-            // Visual warning classes
-            let extraClass = '';
-            if (l.isSold) extraClass = 'card-sold';
-            else if (l.mileageWarning) {
-                if (l.mileageWarning.includes('💀')) extraClass = 'card-zombie';
-                else extraClass = 'card-warning';
-            }
-
-            if (l.risk && l.risk.score > 60) extraClass += ' risk-high-alert';
-
-            let featuresHtml = (l.features || []).map(f => `<span class="feature-tag">${f}</span>`).join('');
-            if (!featuresHtml) featuresHtml = '<span class="feature-tag" style="opacity:0.3">Základná výbava</span>';
-
-            const price = (l.price || 0).toLocaleString();
-            const median = (l.correctedMedian || 0).toLocaleString();
+            // If locked, we blur the content div
+            const contentClass = isLocked ? 'blur-content' : '';
 
             return `
-                <div class="card ${extraClass}">
-                    ${l.isSold ? `<div class="sold-label">🚀 PREDANÉ RÝCHLO</div>` : (l.discount >= 10 ? `<div class="discount-label">-${l.discount}%</div>` : '')}
-                    <div class="card-header">
-                        <span class="badge badge-${badgeClass}">${l.dealType || 'FAIR PRICE'}</span>
+                <div class="card">
+                    ${isLocked ? `
+                        <div class="lock-overlay">
+                            <div class="lock-icon">🔒</div>
+                            <div class="lock-text">PREMIUM DEAL</div>
+                            <button class="btn-unlock" onclick="buyPremium()">Odomknúť</button>
+                        </div>
+                    ` : ''}
+                    
+                    ${l.discount >= 10 && !isLocked ? `<div style="position:absolute; top:20px; right:0; background:#ef4444; color:white; padding:4px 12px; border-radius:10px 0 0 10px; font-weight:700;">-${l.discount}%</div>` : ''}
+                    
+                    <div class="card-header ${contentClass}">
+                        <span class="badge badge-${badgeClass}">${l.dealType || 'Locked'}</span>
                         <h3 class="title">${l.title}</h3>
                         <div class="meta">
-                            <span>📅 ${l.year || '?'}</span> <span>🛣️ ${l.km ? l.km.toLocaleString() : '?'} km</span> <span>📍 ${l.location || '?'}</span>
+                            <span>📅 ${l.year}</span> <span>🛣️ ${l.km ? l.km.toLocaleString() : '?'} km</span>
                         </div>
-                        <div class="meta" style="margin-top:-8px; font-weight:600; color:var(--text-main)">
-                            <span>⛽ ${l.fuel || '?'}</span> <span>⚙️ ${l.transmission || '?'}</span>
-                            ${isAwd ? '<span style="color:var(--accent)">☸️ 4x4</span>' : ''}
+                        <div class="meta">
+                             <span>⛽ ${l.fuel || '?'}</span> <span>📍 ${l.location || '?'}</span>
                         </div>
-                        ${l.dealReason ? `<div class="deal-reason" style="font-size: 0.75rem; color: var(--accent); margin-top: 5px; font-weight: 600;">💡 ${l.dealReason}</div>` : ''}
-                        ${l.priceTrend && l.priceTrend.isDropping ? `<div class="trend-label" style="font-size: 0.75rem; color: #00ff88; margin-top: 3px; font-weight: 700;">${l.priceTrend.label}</div>` : ''}
-                        ${l.mileageWarning ? `<div class="mileage-warning" style="font-size: 0.75rem; color: #ff4d4d; margin-top: 3px; font-weight: 700;">${l.mileageWarning}</div>` : ''}
-                        ${l.isSold && l.soldTimeStr ? `<div style="font-size: 0.75rem; color: #00ff88; margin-top: 4px; font-weight: 700;">⏱️ Zmizlo z trhu za ${l.soldTimeStr}</div>` : ''}
-                        
-                        ${l.seller ? `
-                        <div style="display: flex; align-items: center; gap: 8px; margin-top: 10px; padding: 6px 10px; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
-                            <span style="font-size: 1rem;">${l.seller.icon || (l.seller_type && l.seller_type.includes('Súkrom') ? '👤' : '🏭')}</span>
-                            <div>
-                                <div style="font-size: 0.7rem; font-weight: 700; color: ${l.seller.color || (l.seller_type && l.seller_type.includes('Súkrom') ? '#00ff88' : '#3498db')}">
-                                    ${l.seller_type || l.seller.type} 
-                                    ${l.seller_name ? `<span style="color:var(--text-main); font-weight:400;"> • ${l.seller_name}</span>` : ''}
-                                </div>
-                                ${l.phone ? `<div style="font-size: 0.6rem; color: var(--accent); opacity: 0.9;">📞 ${l.phone}</div>` : ''}
-                                <div style="font-size: 0.6rem; color: var(--text-muted); opacity: 0.8;">Aktívnych inzerátov: ${l.seller.listingsCount || '?'}</div>
-                            </div>
-                        </div>
-                        ` : (l.seller_name || l.phone ? `
-                        <div style="display: flex; align-items: center; gap: 8px; margin-top: 10px; padding: 6px 10px; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
-                            <span style="font-size: 1rem;">${l.seller_type && l.seller_type.includes('Súkrom') ? '👤' : '🏭'}</span>
-                            <div>
-                                <div style="font-size: 0.7rem; font-weight: 700; color: ${l.seller_type && l.seller_type.includes('Súkrom') ? '#00ff88' : '#3498db'}">
-                                    ${l.seller_type || 'Predajca'} 
-                                    ${l.seller_name ? `<span style="color:var(--text-main); font-weight:400;"> • ${l.seller_name}</span>` : ''}
-                                </div>
-                                ${l.phone ? `<div style="font-size: 0.6rem; color: var(--accent); opacity: 0.9;">📞 ${l.phone}</div>` : ''}
-                            </div>
-                        </div>
-                        ` : '')}
                     </div>
-                    <div class="features">${featuresHtml}</div>
+                    
                     <div class="price-row">
-                        <div class="price">
-                            ${price} €
-                            ${l.freshDiscount ? `<span class="fresh-discount-tag">🔥 ČERSTVÁ ZĽAVA</span>` : ''}
-                            ${l.priceTrend ? `
-                                <span style="font-size: 0.8rem; color: ${l.priceTrend.color}; margin-left: 5px;" title="${l.priceTrend.label}">
-                                    ${l.priceTrend.icon} ${l.priceTrend.diff}%
-                                </span>
-                            ` : ''}
-                        </div>
-                        <div class="median">Trhová hodnota <span>${median} €</span></div>
+                        <div class="price">${l.price.toLocaleString()} €</div>
+                        <div style="font-size:0.8rem; color:#888;">Trh: ${l.correctedMedian ? l.correctedMedian.toLocaleString() : '?'} €</div>
                     </div>
 
-                    ${l.liquidity ? `
-                    <div class="liquidity-box" style="padding: 12px 20px; border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.15)">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                            <span style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Predajná Likvidita</span>
-                            <span style="font-size: 0.7rem; font-weight: 700; color: ${l.liquidity.color}">${l.liquidity.label}</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 6px;">
-                            <div style="flex-grow: 1; height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden;">
-                                <div style="width: ${l.liquidity.score}%; height: 100%; background: ${l.liquidity.color}; box-shadow: 0 0 8px ${l.liquidity.color}55;"></div>
-                            </div>
-                            <span style="font-size: 0.65rem; color: var(--text-muted); min-width: 20px; text-align: right;">${l.liquidity.score}%</span>
-                        </div>
-                        <p style="font-size: 0.6rem; color: var(--text-muted); margin-top: 2px; opacity: 0.7;">⏱️ Odhad: <b>${l.liquidity.estimate}</b></p>
-                        
-                        ${l.risk ? `
-                        <div style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed rgba(255,255,255,0.1);">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <span style="font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Riziko kúpy</span>
-                                <span style="font-size: 0.7rem; font-weight: 700; color: ${l.risk.color}">${l.risk.level} (${l.risk.score}%)</span>
-                            </div>
-                            <div style="margin-top: 4px; height: 3px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden;">
-                                <div style="width: ${l.risk.score}%; height: 100%; background: ${l.risk.color};"></div>
-                            </div>
-                        </div>
-                        ` : ''}
-
-                        <div style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed rgba(255,255,255,0.1);">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <span style="font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Potenciál zjednávania</span>
-                                <span style="font-size: 0.7rem; font-weight: 700; color: ${l.negotiationScore >= 70 ? '#00ff88' : (l.negotiationScore >= 40 ? '#fdda25' : '#ff4d4d')}">${l.negotiationScore}%</span>
-                            </div>
-                            <div style="margin-top: 4px; height: 3px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden;">
-                                <div style="width: ${l.negotiationScore}%; height: 100%; background: ${l.negotiationScore >= 70 ? '#00ff88' : (l.negotiationScore >= 40 ? '#fdda25' : '#ff4d4d')};"></div>
-                            </div>
-                        </div>
-                    </div>
-                    ` : ''}
-                    <div class="card-footer">
-                        <div style="display: flex; gap: 10px; align-items: center;">
-                            <div class="portal-name">${l.portal || 'Bazos'}</div>
-                            <button class="btn-history" onclick="toggleHistory('${l.id}')">📊 História</button>
-                        </div>
-                        <a href="${l.url}" target="_blank" class="btn">Pozrieť</a>
-                    </div>
-                    <div id="history-${l.id}" class="history-chart-container">
-                        <canvas id="canvas-${l.id}"></canvas>
-                        <p id="msg-${l.id}" style="font-size: 0.65rem; color: var(--text-muted); text-align: center; margin-top: 5px;"></p>
+                    <div class="card-footer ${contentClass}">
+                        <div style="color: #666;">${l.portal}</div>
+                        ${l.url ? `<a href="${l.url}" target="_blank" class="btn">Pozrieť</a>` : '<button class="btn" disabled style="opacity:0.5; cursor:not-allowed;">Odkaz skrytý</button>'}
                     </div>
                 </div>
             `;
         }
 
-        document.querySelectorAll('input, select').forEach(el => el.oninput = () => fetchListings(1));
-
-        $('golden-toggle').onclick = () => {
-            $('golden-toggle').classList.toggle('active');
-            fetchListings(1);
-        };
-
-        const charts = {};
-
-        async function toggleHistory(id) {
-            const container = $(`history-${id}`);
-            if (container.style.display === 'block') {
-                container.style.display = 'none';
-                return;
-            }
-
-            container.style.display = 'block';
-            const msg = $(`msg-${id}`);
-
-            // 1. Skúsime nájsť dáta v už načítaných listingoch (pre GitHub Pages)
-            const listing = allListings.find(l => l.id === id);
-            let history = listing ? listing.priceHistory : null;
-
-            // 2. Ak dáta nie sú v JSONe, skúsime API (pre lokálny development)
-            if (!history || history.length === 0) {
-                msg.innerText = 'Načítavam históriu z API...';
-                try {
-                    const baseUrl = window.location.protocol === 'file:' ? 'http://localhost:3000' : '';
-                    const response = await fetch(`${baseUrl}/api/listings/${id}/history`);
-                    if (response.ok) history = await response.json();
-                } catch (err) { console.warn('API History Fetch failed', err); }
-            }
-
-            if (!history || history.length < 1) {
-                msg.innerText = 'História nie je k dispozícii.';
-                return;
-            }
-
-            if (history.length === 1) {
-                msg.innerText = 'Cena stabilná od pridania.';
-            } else {
-                msg.innerText = '';
-            }
-
-            renderChart(id, history);
+        function populateFilters() {
+            const makes = ['Audi', 'BMW', 'Ford', 'Hyundai', 'Mercedes-Benz', 'Opel', 'Peugeot', 'Renault', 'Škoda', 'Tesla', 'Toyota', 'Volkswagen'];
+            makes.forEach(m => { const o = document.createElement('option'); o.value = m; o.text = m; $('filter-make').add(o); });
+            document.querySelectorAll('select, input').forEach(el => el.oninput = () => fetchListings(1));
         }
 
-        function renderChart(id, history) {
-            const ctx = document.getElementById(`canvas-${id}`).getContext('2d');
+        function renderPagination(totalPages) {
+            $('pagination').innerHTML = totalPages > 1 ?
+                `<button class="btn" onclick="fetchListings(${Math.max(1, currentPage - 1)})">Predošlá</button> <span>${currentPage} / ${totalPages}</span> <button class="btn" onclick="fetchListings(${Math.min(totalPages, currentPage + 1)})">Ďalšia</button>` : '';
+        }
 
-            if (charts[id]) charts[id].destroy();
+        // AUTH HANDLERS
+        function openModal() { $('auth-modal').style.display = 'flex'; }
+        function closeModal() { $('auth-modal').style.display = 'none'; }
+        function toggleAuthMode() {
+            isRegisterMode = !isRegisterMode;
+            $('modal-title').innerText = isRegisterMode ? 'Registrácia' : 'Prihlásenie';
+            document.querySelector('.toggle-auth').innerText = isRegisterMode ? 'Máš účet? Prihlás sa' : 'Nemáš účet? Zaregistruj sa';
+        }
 
-            charts[id] = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: history.map(h => new Date(h.date).toLocaleDateString('sk-SK')),
-                    datasets: [{
-                        label: 'Cena (€)',
-                        data: history.map(h => h.price),
-                        borderColor: '#fdda25',
-                        backgroundColor: 'rgba(253, 218, 37, 0.1)',
-                        borderWidth: 2,
-                        tension: 0.3,
-                        fill: true,
-                        pointRadius: 3,
-                        pointBackgroundColor: '#fdda25'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: { display: false }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: false,
-                            grid: { color: 'rgba(255,255,255,0.05)' },
-                            ticks: { color: '#94a3b8', font: { size: 10 } }
-                        },
-                        x: {
-                            grid: { display: false },
-                            ticks: { color: '#94a3b8', font: { size: 9 } }
-                        }
-                    }
-                }
+        async function handleAuth() {
+            const u = $('username').value;
+            const p = $('password').value;
+            const endpoint = isRegisterMode ? '/api/register' : '/api/login';
+
+            const res = await fetch(endpoint, {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username: u, password: p })
             });
+            const data = await res.json();
+
+            if (res.ok) {
+                closeModal();
+                Swal.fire('Úspech', data.message, 'success');
+                checkAuth();
+                fetchListings(); // Refresh to unlock if premium
+            } else {
+                Swal.fire('Chyba', data.error, 'error');
+            }
+        }
+
+        async function logout() {
+            await fetch('/api/logout', { method: 'POST' });
+            currentUser = null;
+            renderUserMenu();
+            fetchListings(); // Refresh to lock content
+        }
+
+        async function buyPremium() {
+            if (!currentUser) { openModal(); return; }
+            const res = await fetch('/api/create-checkout-session', { method: 'POST' });
+            const data = await res.json();
+            if (data.url) window.location.href = data.url;
+            else Swal.fire('Chyba', 'Nepodarilo sa vytvoriť platbu', 'error');
         }
 
         init();

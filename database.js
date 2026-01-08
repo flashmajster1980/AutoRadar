@@ -65,6 +65,15 @@ function initializeSchema() {
             date DATE DEFAULT CURRENT_DATE
         )`);
 
+        // Table users: Používatelia a predplatné
+        db.run(`CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            username TEXT UNIQUE,
+            password TEXT,
+            subscription_status TEXT DEFAULT 'basic',
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )`);
+
         console.log('✅ Database schema initialized.');
     });
 }
