@@ -301,6 +301,6 @@ setTimeout(runScraperInBackground, 60000);
 // Schedule every 10 minutes
 setInterval(runScraperInBackground, 10 * 60 * 1000);
 
-app.listen(PORT, () => {
-    console.log(`🚀 AutoRadar Server running at http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`🚀 AutoRadar Server running at http://0.0.0.0:${PORT}`);
 });
