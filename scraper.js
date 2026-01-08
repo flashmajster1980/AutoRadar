@@ -234,6 +234,25 @@ async function run() {
         cars.sort((a, b) => a.price - b.price);
         fs.writeFileSync(path.join(__dirname, 'scraped_data.json'), JSON.stringify(cars.slice(0, 5), null, 2));
         console.log("💽 Results saved to scraped_data.json");
+
+        // ALSO SAVE TO DATABASE
+        const { upsertListing } = require('./database');
+        for (const car of cars) {
+            // Map scraper format to database format
+            const dbListing = {
+                id: car.link.split('/').filter(Boolean).pop() || Math.random().toString(36).substr(2, 9),
+                url: car.link,
+                portal: 'AutoScout24',
+                title: car.title,
+                price: car.price,
+                year: car.year,
+                km: car.km,
+                location: 'DE',
+                seller_type: car.is_private ? 'Privat' : 'Händler'
+            };
+            await upsertListing(dbListing);
+        }
+        console.log(`💾 Processed ${cars.length} listings from DE market into database.`);
     } else {
         console.log("⚠️ No cars found. Content might be blocked or selectors changed.");
     }

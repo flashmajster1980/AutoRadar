@@ -239,6 +239,7 @@ function filterExtremes(listings, year) {
 // ========================================
 
 function updateHistory(marketValues) {
+    const { saveMarketStat } = require('./database');
     let history = {};
     if (fs.existsSync(CONFIG.HISTORY_FILE)) {
         try {
@@ -257,7 +258,7 @@ function updateHistory(marketValues) {
             for (const [year, stats] of Object.entries(years)) {
                 if (!history[make][model][year]) history[make][model][year] = [];
 
-                // Add new entry
+                // Add to JSON history
                 history[make][model][year].push({
                     date: timestamp,
                     median: stats.medianPrice,
@@ -268,12 +269,15 @@ function updateHistory(marketValues) {
                 if (history[make][model][year].length > 30) {
                     history[make][model][year] = history[make][model][year].slice(-30);
                 }
+
+                // ALSO SAVE TO SQL DATABASE
+                saveMarketStat(`${make} ${model}`, parseInt(year), stats.medianPrice);
             }
         }
     }
 
     fs.writeFileSync(CONFIG.HISTORY_FILE, JSON.stringify(history, null, 2));
-    console.log(`📈 History updated in ${CONFIG.HISTORY_FILE}`);
+    console.log(`📈 History updated in ${CONFIG.HISTORY_FILE} and Database.`);
 }
 
 // ========================================

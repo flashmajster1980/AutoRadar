@@ -104,18 +104,13 @@ async function scrapeAutovia(searchConfig = null) {
     }
 
     if (allNewListings.length > 0) {
-        const existingData = fs.existsSync(CONFIG.LISTINGS_FILE) ? JSON.parse(fs.readFileSync(CONFIG.LISTINGS_FILE, 'utf-8')) : [];
-        const existingIds = new Set(existingData.map(l => l.id));
+        const { upsertListing } = require('./database');
         let newCount = 0;
-        allNewListings.forEach(l => {
-            if (!existingIds.has(l.id)) {
-                existingData.push(l);
-                existingIds.add(l.id);
-                newCount++;
-            }
-        });
-        fs.writeFileSync(CONFIG.LISTINGS_FILE, JSON.stringify(existingData, null, 2));
-        console.log(`💾 Saved ${newCount} new listings. Total in DB: ${existingData.length}`);
+        for (const l of allNewListings) {
+            await upsertListing(l);
+            newCount++;
+        }
+        console.log(`💾 Processed ${newCount} listings from Autovia.sk into database.`);
     }
 }
 

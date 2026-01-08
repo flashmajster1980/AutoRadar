@@ -15,7 +15,6 @@
             --bg-body: #0a0c10;
             --bg-card: #161a22;
             --accent: #fdda25;
-            /* Bazos yellow */
             --accent-glow: rgba(253, 218, 37, 0.2);
             --text-main: #e2e8f0;
             --text-muted: #94a3b8;
@@ -68,7 +67,6 @@
             font-size: 1.4rem;
             font-weight: 700;
             color: var(--accent);
-            letter-spacing: -1px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -76,7 +74,7 @@
 
         .stats {
             display: flex;
-            gap: 20px;
+            gap: 15px;
         }
 
         .stat-item {
@@ -111,7 +109,7 @@
         }
 
         .filter-group label {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
             font-weight: 700;
             color: var(--text-muted);
@@ -147,7 +145,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            padding: 6px 14px;
+            padding: 8px 16px;
             background: rgba(255, 215, 0, 0.05);
             border: 1px solid rgba(255, 215, 0, 0.1);
             border-radius: 50px;
@@ -162,13 +160,14 @@
         }
 
         .toggle-container.active {
-            background: rgba(255, 215, 0, 0.12);
+            background: rgba(255, 215, 0, 0.15);
             border-color: var(--golden);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
         }
 
         .toggle-switch {
-            width: 34px;
-            height: 18px;
+            width: 40px;
+            height: 20px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             position: relative;
@@ -180,25 +179,27 @@
         }
 
         .toggle-knob {
-            width: 14px;
-            height: 14px;
+            width: 16px;
+            height: 16px;
             background: white;
             border-radius: 50%;
             position: absolute;
             top: 2px;
             left: 2px;
             transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         .toggle-container.active .toggle-knob {
-            left: 18px;
+            left: 22px;
         }
 
         .toggle-label {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             font-weight: 700;
             color: var(--text-main);
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .toggle-container.active .toggle-label {
@@ -215,7 +216,7 @@
 
         .card {
             background: var(--bg-card);
-            border-radius: 20px;
+            border-radius: 18px;
             overflow: hidden;
             border: 1px solid var(--border);
             transition: transform 0.3s, box-shadow 0.3s;
@@ -257,7 +258,6 @@
             filter: grayscale(1);
             opacity: 0.6;
             pointer-events: none;
-            /* De-emphasize further */
         }
 
         .sold-label {
@@ -267,11 +267,11 @@
             transform: translate(-50%, -50%) rotate(-15deg);
             background: #ff4d4d;
             color: white;
-            padding: 10px 20px;
+            padding: 8px 16px;
             font-weight: 900;
-            font-size: 1.2rem;
-            border: 4px solid white;
-            border-radius: 10px;
+            font-size: 1rem;
+            border: 3px solid white;
+            border-radius: 8px;
             z-index: 10;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             white-space: nowrap;
@@ -285,7 +285,6 @@
 
         .badge {
             font-size: 0.7rem;
-            text-transform: uppercase;
             font-weight: 700;
             padding: 4px 10px;
             border-radius: 20px;
@@ -303,20 +302,10 @@
             color: #fff;
         }
 
-        .badge-fair {
-            background: var(--fair);
-            color: #fff;
-        }
-
-        .badge-over {
-            background: var(--over);
-            color: #fff;
-        }
-
         .title {
             font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             display: -webkit-box;
             line-clamp: 2;
             -webkit-line-clamp: 2;
@@ -332,7 +321,7 @@
             gap: 10px;
             font-size: 0.85rem;
             color: var(--text-muted);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .price-row {
@@ -344,14 +333,14 @@
         }
 
         .price {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: var(--accent);
         }
 
         .median {
             text-align: right;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
         }
 
@@ -359,7 +348,7 @@
             display: block;
             font-size: 0.9rem;
             color: var(--text-main);
-            opacity: 0.9;
+            font-weight: 600;
         }
 
         .features {
@@ -367,14 +356,14 @@
             display: flex;
             flex-wrap: wrap;
             gap: 5px;
-            min-height: 60px;
+            min-height: 55px;
         }
 
         .feature-tag {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.04);
             padding: 3px 8px;
             border-radius: 6px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             border: 1px solid var(--border);
         }
 
@@ -387,25 +376,14 @@
             align-items: center;
         }
 
-        .portal-name {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--text-muted);
-        }
-
         .btn {
             background: var(--accent);
             color: #000;
             text-decoration: none;
             padding: 8px 16px;
             border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: transform 0.2s;
-        }
-
-        .btn:hover {
-            transform: scale(1.05);
+            font-size: 0.8rem;
+            font-weight: 700;
         }
 
         .discount-label {
@@ -419,16 +397,8 @@
             border-bottom-left-radius: 10px;
             font-weight: 700;
             font-size: 0.9rem;
-            box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.3);
         }
 
-        .other-portals {
-            padding: 5px 20px 15px;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-        }
-
-        /* LOADING */
         #loader {
             position: fixed;
             inset: 0;
@@ -440,10 +410,10 @@
         }
 
         .spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid rgba(253, 218, 37, 0.1);
-            border-top: 5px solid var(--accent);
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(253, 218, 37, 0.1);
+            border-top: 4px solid var(--accent);
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
@@ -452,24 +422,6 @@
             100% {
                 transform: rotate(360deg);
             }
-        }
-
-        /* SCROLLBAR */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-body);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #333;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #444;
         }
 
         /* ABOUT SECTION */
@@ -576,6 +528,10 @@
                 font-size: 1.1rem;
             }
 
+            .stats {
+                gap: 5px;
+            }
+
             .stat-item {
                 padding: 2px 6px;
                 font-size: 0.65rem;
@@ -583,6 +539,12 @@
 
             .nav-link {
                 display: none;
+                /* Hide 'O nas' on very small mobile to save space */
+            }
+
+            .filter-row {
+                flex-direction: column;
+                align-items: stretch;
             }
 
             .about-header h2 {
@@ -597,35 +559,49 @@
                 margin: 10px 0;
             }
         }
+
+        @keyframes risk-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+            }
+        }
+
+        .risk-high-alert {
+            animation: risk-pulse 2s infinite;
+            border-color: #ef4444 !important;
+        }
     </style>
 </head>
 
 <body>
-
     <div id="loader">
         <div class="spinner"></div>
     </div>
 
     <header>
-        <div class="logo">
-            <span>📡</span> AutoRadar
-        </div>
+        <div class="logo"><span>📡</span> AutoRadar</div>
         <nav>
             <div class="stats" id="stats-summary"
-                style="display:inline-flex; vertical-align:middle; margin-right:20px;">
-                <!-- Stats will be injected here -->
-            </div>
+                style="display:inline-flex; vertical-align:middle; margin-right:20px;"></div>
             <a href="#about" class="nav-link">O nás</a>
         </nav>
     </header>
 
     <div class="filters-container">
-        <div class="filter-row main-search">
+        <div class="filter-row">
             <input type="text" id="search" class="search-box"
                 placeholder="Hľadať v inzerátoch (model, motor, lokalita... )">
         </div>
 
-        <div class="filter-row second-row">
+        <div class="filter-row">
             <div class="filter-group">
                 <label>Značka</label>
                 <select id="filter-make">
@@ -636,26 +612,17 @@
             <div class="filter-group">
                 <label>Rok od-do</label>
                 <div style="display:flex; gap:5px;">
-                    <input type="number" id="year-min" placeholder="Od" style="width:80px; padding:6px 10px;">
-                    <input type="number" id="year-max" placeholder="Do" style="width:80px; padding:6px 10px;">
+                    <input type="number" id="year-min" placeholder="Od" style="width:75px;">
+                    <input type="number" id="year-max" placeholder="Do" style="width:75px;">
                 </div>
             </div>
 
             <div class="filter-group">
                 <label>Cena od-do</label>
                 <div style="display:flex; gap:5px;">
-                    <input type="number" id="price-min" placeholder="Min €" style="width:90px; padding:6px 10px;">
-                    <input type="number" id="price-max" placeholder="Max €" style="width:90px; padding:6px 10px;">
+                    <input type="number" id="price-min" placeholder="Min €" style="width:90px;">
+                    <input type="number" id="price-max" placeholder="Max €" style="width:90px;">
                 </div>
-            </div>
-
-            <div class="filter-group">
-                <label>Prevodovka</label>
-                <select id="filter-transmission">
-                    <option value="all">Hocičo</option>
-                    <option value="Automat">Automat</option>
-                    <option value="Manuál">Manuál</option>
-                </select>
             </div>
 
             <div class="filter-group">
@@ -670,21 +637,21 @@
             </div>
 
             <div class="filter-group">
+                <label>Prevodovka</label>
+                <select id="filter-transmission">
+                    <option value="all">Hocičo</option>
+                    <option value="Automat">Automat</option>
+                    <option value="Manuál">Manuál</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
                 <label>Pohon</label>
                 <select id="filter-drive">
                     <option value="all">Hocičo</option>
                     <option value="4x4">4x4 / AWD</option>
                     <option value="Predný">Predný</option>
                     <option value="Zadný">Zadný</option>
-                </select>
-            </div>
-
-            <div class="filter-group">
-                <label>Deal Type</label>
-                <select id="filter-deal">
-                    <option value="all">Všetky ponuky</option>
-                    <option value="GOLDEN DEAL">🌟 Golden Deals</option>
-                    <option value="GOOD DEAL">✅ Good Deals</option>
                 </select>
             </div>
 
@@ -710,9 +677,7 @@
         </div>
     </div>
 
-    <main id="listings-grid">
-        <!-- Listings will be injected here -->
-    </main>
+    <main id="listings-grid"></main>
 
     <div id="about" class="about-section">
         <div class="about-content">
@@ -778,17 +743,13 @@
     <script src="scored_listings_data.js"></script>
     <script>
         let allListings = [];
-
-        // UI Helpers
         const $ = id => document.getElementById(id);
 
         async function init() {
             try {
-                // Prioritize fetching fresh JSON with cache buster on GitHub
                 const isGitHub = window.location.hostname.includes('github.io');
 
                 if (isGitHub) {
-                    console.log('Force fetching fresh data from JSON (GitHub)...');
                     const response = await fetch('scored_listings.json?t=' + Date.now());
                     allListings = await response.json();
                 } else if (window.scoredListingsData) {
@@ -798,24 +759,20 @@
                     allListings = await response.json();
                 }
 
-                // If data is still empty, throw error
-                if (!allListings || allListings.length === 0) {
-                    throw new Error('Data set is empty or not found.');
-                }
+                if (!allListings || allListings.length === 0) throw new Error('Data empty');
 
                 populateMakeFilter();
                 updateStats();
                 renderListings();
-
-                document.getElementById('loader').style.display = 'none';
+                $('loader').style.display = 'none';
             } catch (error) {
-                console.error('Error:', error);
-                document.getElementById('loader').style.display = 'none';
+                console.error(error);
+                $('loader').style.display = 'none';
                 $('listings-grid').innerHTML = `
                     <div style="grid-column: 1/-1; text-align: center; padding: 50px;">
-                        <h2>Ups! Niečo sa nepodarilo.</h2>
+                        <h2>Ups! Dáta sa nenačítali.</h2>
                         <p style="color:var(--text-muted); margin-top:10px;">Chyba: ${error.message}</p>
-                        <p style="margin-top:20px;">Skúste prosím <b>vynútiť obnovenie (Ctrl + F5)</b> alebo skontrolujte konzolu prehliadača.</p>
+                        <p style="margin-top:20px;">Skúste prosím <b>vynútiť obnovenie (Ctrl + F5)</b>.</p>
                     </div>
                 `;
             }
@@ -837,7 +794,6 @@
             let goldenFound = allListings.filter(l => l.dealType === 'GOLDEN DEAL').length;
 
             try {
-                // Try to get global metadata for real-time vibe
                 const metaResp = await fetch('scored_listings_metadata.json?t=' + Date.now());
                 if (metaResp.ok) {
                     const meta = await metaResp.json();
@@ -859,9 +815,8 @@
             const grid = $('listings-grid');
             const search = $('search').value.toLowerCase();
             const make = $('filter-make').value;
-            const deal = $('filter-deal').value;
-            const trans = $('filter-transmission').value;
             const fuel = $('filter-fuel').value;
+            const trans = $('filter-transmission').value;
             const drive = $('filter-drive').value;
             const sort = $('sort-by').value;
             const minYear = parseInt($('year-min').value) || 0;
@@ -872,23 +827,15 @@
 
             let filtered = allListings.filter(l => {
                 const matchesGolden = !onlyGolden || l.dealType === 'GOLDEN DEAL';
-                const matchesSearch = !search ||
-                    l.title.toLowerCase().includes(search) ||
-                    (l.engine && l.engine.toLowerCase().includes(search)) ||
-                    (l.location && l.location.toLowerCase().includes(search));
-
+                const matchesSearch = !search || l.title.toLowerCase().includes(search);
                 const matchesMake = make === 'all' || l.make === make;
-                const matchesDeal = deal === 'all' || l.dealType === deal;
-
                 const matchesFuel = fuel === 'all' || (l.fuel || '').includes(fuel);
 
-                // Transmission normalization
                 const lTrans = (l.transmission || '').toLowerCase();
                 const matchesTrans = trans === 'all' ||
                     (trans === 'Automat' && lTrans.includes('auto')) ||
                     (trans === 'Manuál' && lTrans.includes('man'));
 
-                // Drive normalization
                 const lDrive = (l.drive || '').toLowerCase();
                 const isAwd = lDrive.includes('4x4') || lDrive.includes('awd') || lDrive.includes('quattro') || (l.features && l.features.includes('4x4'));
                 const matchesDrive = drive === 'all' ||
@@ -899,7 +846,7 @@
                 const matchesYear = l.year >= minYear && l.year <= maxYear;
                 const matchesPrice = l.price >= minPrice && l.price <= maxPrice;
 
-                return matchesGolden && matchesSearch && matchesMake && matchesDeal && matchesTrans && matchesFuel && matchesDrive && matchesYear && matchesPrice && !l.isFiltered;
+                return matchesGolden && matchesSearch && matchesMake && matchesFuel && matchesTrans && matchesDrive && matchesYear && matchesPrice && !l.isFiltered;
             });
 
             if (sort === 'best') {
@@ -918,7 +865,7 @@
         }
 
         function createCard(l) {
-            const badgeClass = l.dealType.toLowerCase().split(' ')[0];
+            const badgeClass = l.dealType ? l.dealType.toLowerCase().split(' ')[0] : 'fair';
             const isAwd = (l.drive || '').toLowerCase().includes('4x4') || (l.features && l.features.includes('4x4'));
 
             // Visual warning classes
@@ -928,6 +875,8 @@
                 if (l.mileageWarning.includes('💀')) extraClass = 'card-zombie';
                 else extraClass = 'card-warning';
             }
+
+            if (l.risk && l.risk.score > 60) extraClass += ' risk-high-alert';
 
             let featuresHtml = (l.features || []).map(f => `<span class="feature-tag">${f}</span>`).join('');
             if (!featuresHtml) featuresHtml = '<span class="feature-tag" style="opacity:0.3">Základná výbava</span>';
@@ -939,86 +888,104 @@
                 <div class="card ${extraClass}">
                     ${l.isSold ? `<div class="sold-label">🚀 PREDANÉ RÝCHLO</div>` : (l.discount >= 10 ? `<div class="discount-label">-${l.discount}%</div>` : '')}
                     <div class="card-header">
-                        <span class="badge badge-${badgeClass}">${l.dealType}</span>
+                        <span class="badge badge-${badgeClass}">${l.dealType || 'FAIR PRICE'}</span>
                         <h3 class="title">${l.title}</h3>
                         <div class="meta">
-                            <span>📅 ${l.year || 'N/A'}</span>
-                            <span>🛣️ ${l.km ? l.km.toLocaleString() + ' km' : 'N/A'}</span>
-                            <span>📍 ${l.location || 'N/A'}</span>
+                            <span>📅 ${l.year || '?'}</span> <span>🛣️ ${l.km ? l.km.toLocaleString() : '?'} km</span> <span>📍 ${l.location || '?'}</span>
                         </div>
-                        <div class="meta" style="margin-top:-10px; font-weight:600; color:var(--text-main)">
-                            <span>⛽ ${l.fuel || 'N/A'}</span>
-                            <span>⚙️ ${l.transmission || 'N/A'}</span>
+                        <div class="meta" style="margin-top:-8px; font-weight:600; color:var(--text-main)">
+                            <span>⛽ ${l.fuel || '?'}</span> <span>⚙️ ${l.transmission || '?'}</span>
                             ${isAwd ? '<span style="color:var(--accent)">☸️ 4x4</span>' : ''}
                         </div>
-                        ${l.dealReason ? `<div class="deal-reason" style="font-size: 0.8rem; color: var(--accent); margin-top: 8px; font-weight: 600;">💡 ${l.dealReason}</div>` : ''}
-                        ${l.mileageWarning ? `<div class="mileage-warning" style="font-size: 0.8rem; color: #ff4d4d; margin-top: 5px; font-weight: 700;">${l.mileageWarning}</div>` : ''}
-                        ${l.isSold && l.soldTimeStr ? `<div style="font-size: 0.8rem; color: #00ff88; margin-top: 5px; font-weight: 700;">⏱️ Zmizlo z trhu za ${l.soldTimeStr}</div>` : ''}
+                        ${l.dealReason ? `<div class="deal-reason" style="font-size: 0.75rem; color: var(--accent); margin-top: 5px; font-weight: 600;">💡 ${l.dealReason}</div>` : ''}
+                        ${l.priceTrend && l.priceTrend.isDropping ? `<div class="trend-label" style="font-size: 0.75rem; color: #00ff88; margin-top: 3px; font-weight: 700;">${l.priceTrend.label}</div>` : ''}
+                        ${l.mileageWarning ? `<div class="mileage-warning" style="font-size: 0.75rem; color: #ff4d4d; margin-top: 3px; font-weight: 700;">${l.mileageWarning}</div>` : ''}
+                        ${l.isSold && l.soldTimeStr ? `<div style="font-size: 0.75rem; color: #00ff88; margin-top: 4px; font-weight: 700;">⏱️ Zmizlo z trhu za ${l.soldTimeStr}</div>` : ''}
                         
                         ${l.seller ? `
                         <div style="display: flex; align-items: center; gap: 8px; margin-top: 10px; padding: 6px 10px; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
-                            <span style="font-size: 1.1rem;">${l.seller.icon}</span>
+                            <span style="font-size: 1rem;">${l.seller.icon || (l.seller_type && l.seller_type.includes('Súkrom') ? '👤' : '🏭')}</span>
                             <div>
-                                <div style="font-size: 0.75rem; font-weight: 700; color: ${l.seller.color}">${l.seller.type}</div>
-                                <div style="font-size: 0.65rem; color: var(--text-muted);">Aktívnych inzerátov: ${l.seller.listingsCount}</div>
+                                <div style="font-size: 0.7rem; font-weight: 700; color: ${l.seller.color || (l.seller_type && l.seller_type.includes('Súkrom') ? '#00ff88' : '#3498db')}">
+                                    ${l.seller_type || l.seller.type} 
+                                    ${l.seller_name ? `<span style="color:var(--text-main); font-weight:400;"> • ${l.seller_name}</span>` : ''}
+                                </div>
+                                ${l.phone ? `<div style="font-size: 0.6rem; color: var(--accent); opacity: 0.9;">📞 ${l.phone}</div>` : ''}
+                                <div style="font-size: 0.6rem; color: var(--text-muted); opacity: 0.8;">Aktívnych inzerátov: ${l.seller.listingsCount || '?'}</div>
                             </div>
                         </div>
-                        ` : ''}
-                    </div>
-
-                    <div class="features">
-                        ${featuresHtml}
-                    </div>
-
-                    <div class="price-row">
-                        <div class="price">${price} €</div>
-                        <div class="median">
-                            Trhová hodnota
-                            <span>${median} €</span>
+                        ` : (l.seller_name || l.phone ? `
+                        <div style="display: flex; align-items: center; gap: 8px; margin-top: 10px; padding: 6px 10px; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                            <span style="font-size: 1rem;">${l.seller_type && l.seller_type.includes('Súkrom') ? '👤' : '🏭'}</span>
+                            <div>
+                                <div style="font-size: 0.7rem; font-weight: 700; color: ${l.seller_type && l.seller_type.includes('Súkrom') ? '#00ff88' : '#3498db'}">
+                                    ${l.seller_type || 'Predajca'} 
+                                    ${l.seller_name ? `<span style="color:var(--text-main); font-weight:400;"> • ${l.seller_name}</span>` : ''}
+                                </div>
+                                ${l.phone ? `<div style="font-size: 0.6rem; color: var(--accent); opacity: 0.9;">📞 ${l.phone}</div>` : ''}
+                            </div>
                         </div>
+                        ` : '')}
+                    </div>
+                    <div class="features">${featuresHtml}</div>
+                    <div class="price-row">
+                        <div class="price">
+                            ${price} €
+                            ${l.priceTrend ? `
+                                <span style="font-size: 0.8rem; color: ${l.priceTrend.color}; margin-left: 5px;" title="${l.priceTrend.label}">
+                                    ${l.priceTrend.icon} ${l.priceTrend.diff}%
+                                </span>
+                            ` : ''}
+                        </div>
+                        <div class="median">Trhová hodnota <span>${median} €</span></div>
                     </div>
 
                     ${l.liquidity ? `
-                    <div class="liquidity-box" style="padding: 15px 20px; border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.15)">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Likvidita (Predaj)</span>
-                            <span style="font-size: 0.75rem; font-weight: 700; color: ${l.liquidity.color}">${l.liquidity.label}</span>
+                    <div class="liquidity-box" style="padding: 12px 20px; border-top: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.15)">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                            <span style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Predajná Likvidita</span>
+                            <span style="font-size: 0.7rem; font-weight: 700; color: ${l.liquidity.color}">${l.liquidity.label}</span>
                         </div>
-                        <div style="margin-top: 6px; display: flex; align-items: center; gap: 8px;">
-                            <div style="flex-grow: 1; height: 5px; background: rgba(255,255,255,0.05); border-radius: 3px; overflow: hidden;">
-                                <div style="width: ${l.liquidity.score}%; height: 100%; background: ${l.liquidity.color}; transition: width 1s ease-out; box-shadow: 0 0 10px ${l.liquidity.color}44;"></div>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <div style="flex-grow: 1; height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden;">
+                                <div style="width: ${l.liquidity.score}%; height: 100%; background: ${l.liquidity.color}; box-shadow: 0 0 8px ${l.liquidity.color}55;"></div>
                             </div>
-                            <span style="font-size: 0.7rem; color: var(--text-muted); min-width: 25px; text-align: right;">${l.liquidity.score}%</span>
+                            <span style="font-size: 0.65rem; color: var(--text-muted); min-width: 20px; text-align: right;">${l.liquidity.score}%</span>
                         </div>
-                        <div style="font-size: 0.65rem; color: var(--text-muted); margin-top: 4px; opacity: 0.8;">
-                             ⏱️ Odhadovaný čas predaja: <b>${l.liquidity.estimate}</b>
-                        </div>
+                        <p style="font-size: 0.6rem; color: var(--text-muted); margin-top: 2px; opacity: 0.7;">⏱️ Odhad: <b>${l.liquidity.estimate}</b></p>
                         
-                        <div style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed rgba(255,255,255,0.1);">
+                        ${l.risk ? `
+                        <div style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed rgba(255,255,255,0.1);">
                             <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Potenciál zjednávania</span>
-                                <span style="font-size: 0.75rem; font-weight: 700; color: ${l.negotiationScore >= 70 ? '#00ff88' : (l.negotiationScore >= 40 ? '#fdda25' : '#ff4d4d')}">${l.negotiationScore}%</span>
+                                <span style="font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Riziko kúpy</span>
+                                <span style="font-size: 0.7rem; font-weight: 700; color: ${l.risk.color}">${l.risk.level} (${l.risk.score}%)</span>
                             </div>
-                            <div style="margin-top: 4px; height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden;">
+                            <div style="margin-top: 4px; height: 3px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden;">
+                                <div style="width: ${l.risk.score}%; height: 100%; background: ${l.risk.color};"></div>
+                            </div>
+                        </div>
+                        ` : ''}
+
+                        <div style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed rgba(255,255,255,0.1);">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Potenciál zjednávania</span>
+                                <span style="font-size: 0.7rem; font-weight: 700; color: ${l.negotiationScore >= 70 ? '#00ff88' : (l.negotiationScore >= 40 ? '#fdda25' : '#ff4d4d')}">${l.negotiationScore}%</span>
+                            </div>
+                            <div style="margin-top: 4px; height: 3px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden;">
                                 <div style="width: ${l.negotiationScore}%; height: 100%; background: ${l.negotiationScore >= 70 ? '#00ff88' : (l.negotiationScore >= 40 ? '#fdda25' : '#ff4d4d')};"></div>
                             </div>
                         </div>
                     </div>
                     ` : ''}
-
                     <div class="card-footer">
                         <div class="portal-name">${l.portal}</div>
-                        <a href="${l.url}" target="_blank" class="btn">Detail inzerátu</a>
+                        <a href="${l.url}" target="_blank" class="btn">Pozrieť</a>
                     </div>
                 </div>
             `;
         }
 
-        // Listeners for all filter inputs
-        document.querySelectorAll('.filters-container input, .filters-container select').forEach(el => {
-            el.addEventListener('input', renderListings);
-            el.addEventListener('change', renderListings);
-        });
+        document.querySelectorAll('input, select').forEach(el => el.oninput = renderListings);
 
         $('golden-toggle').onclick = () => {
             $('golden-toggle').classList.toggle('active');

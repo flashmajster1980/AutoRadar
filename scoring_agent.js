@@ -323,22 +323,115 @@ function calculateNegotiationScore(listing, seller, discount, isGoldenDeal) {
     return Math.min(100, score);
 }
 
+function calculateRiskScore(listing, medianPrice) {
+    let riskPoints = 0;
+
+    // 1. Missing VIN (+30 points)
+    if (!listing.vin || listing.vin.length < 17) {
+        riskPoints += 30;
+    }
+
+    // 2. Price anomaly (+40 points if price > 35% below median)
+    if (medianPrice && listing.price < medianPrice * 0.65) {
+        riskPoints += 40;
+    }
+
+    // 3. Suspicious mileage (+25 points)
+    // If year < 2018, km < 100k, and no mention of service book
+    const hasServiceBook = (listing.description || '').toLowerCase().match(/servisn(á|a) kni(ž|z)ka|serviska|uplna servisna/);
+    if (listing.year < 2018 && listing.km < 100000 && !hasServiceBook) {
+        riskPoints += 25;
+    }
+
+    // 4. Anonymný predajca / Suspicious seller (+20 points)
+    // If seller_type is Bazár but pretending to be private, or no name
+    const isDealerPretending = (listing.seller_type === 'Bazár/Kšeftár' && !listing.seller_name);
+    if (isDealerPretending || !listing.seller_name) {
+        riskPoints += 20;
+    }
+
+    // Clamp score 0-100
+    riskPoints = Math.min(100, riskPoints);
+
+    let level = 'Nízke';
+    let color = '#00ff88'; // Green
+    if (riskPoints > 60) {
+        level = 'VYSOKÉ';
+        color = '#ff4d4d'; // Red
+    } else if (riskPoints > 30) {
+        level = 'Stredné';
+        color = '#fdda25'; // Orange
+    }
+
+    return { score: riskPoints, level, color };
+}
+
 // ========================================
 // SCORING LOGIC
 // ========================================
 
-function scoreListings(listings, marketValues) {
+async function scoreListings(listings, marketValues, dbAsync) {
     console.log(`📊 Scoring ${listings.length} listings with advanced criteria...\n`);
 
     const scoredListings = [];
     let goldenDeals = 0;
     let goodDeals = 0;
     let filtered = 0;
+    const marketHistoryData = await dbAsync.all(`
+        SELECT model, year, median_price, date 
+        FROM market_stats 
+        WHERE date >= date('now', '-30 days')
+    `);
+
+    // Group history for quick lookup
+    const historyMap = {};
+    marketHistoryData.forEach(row => {
+        const key = `${row.model}|${row.year}`;
+        if (!historyMap[key]) historyMap[key] = [];
+        historyMap[key].push(row.median_price);
+    });
+
     const currentYear = new Date().getFullYear();
+    const weekAgo = new Date();
+    weekAgo.setDate(weekAgo.getDate() - 7);
+    const weekAgoStr = weekAgo.toISOString().split('T')[0];
+
+    const recentHistory = await dbAsync.all(`
+        SELECT model, year, median_price 
+        FROM market_stats 
+        WHERE date >= ?
+    `, [weekAgoStr]);
+
+    const weekHistoryMap = {};
+    recentHistory.forEach(row => {
+        const key = `${row.model}|${row.year}`;
+        if (!weekHistoryMap[key]) weekHistoryMap[key] = [];
+        weekHistoryMap[key].push(row.median_price);
+    });
 
     for (const listing of listings) {
         const { make, model } = extractMakeModel(listing.title);
         if (!make || !model || !listing.year) continue;
+
+        // --- TREND CALCULATION ---
+        const historyKey = `${make} ${model}|${listing.year}`;
+        const last30Days = historyMap[historyKey] || [];
+        const avg30DayPrice = last30Days.length > 0
+            ? last30Days.reduce((a, b) => a + b, 0) / last30Days.length
+            : null;
+
+        let priceTrend = null;
+        if (avg30DayPrice) {
+            const diff = ((listing.price - avg30DayPrice) / avg30DayPrice) * 100;
+            priceTrend = {
+                diff: Math.round(diff * 10) / 10,
+                label: diff <= -5 ? '📉 Cena klesá' : (diff >= 5 ? '📈 Cena stúpa' : '⚖️ Stabilná'),
+                color: diff <= -5 ? '#00ff88' : (diff >= 5 ? '#ff4d4d' : '#94a3b8'),
+                icon: diff <= -5 ? '↓' : (diff >= 5 ? '↑' : '→'),
+                isDropping: diff <= -5
+            };
+        }
+        // -------------------------
 
         const engine = extractEngine(listing);
         const equip = extractEquipmentScore(listing);
@@ -510,6 +603,8 @@ function scoreListings(listings, marketValues) {
             mileageWarning = '⚠️ Vysoký nájazd – preverte servisnú históriu';
         }
 
+        const risk = calculateRiskScore(listing, correctedMedian);
+
         scoredListings.push({
             ...listing,
             make, model, engine,
@@ -527,6 +622,8 @@ function scoreListings(listings, marketValues) {
             seller,
             negotiationScore,
             dealType: dealInfo.type,
+            priceTrend,
+            risk,
             score: finalScore,
             isFiltered: keywordCheck.isFiltered,
             scoredAt: new Date().toISOString()
@@ -543,14 +640,9 @@ function scoreListings(listings, marketValues) {
 // MAIN FUNCTION
 // ========================================
 
-function run() {
+async function run() {
     console.log('🤖 Scoring Agent - STARTED\n');
-
-    // Load listings
-    if (!fs.existsSync(CONFIG.LISTINGS_FILE)) {
-        console.error(`❌ Listings file not found: ${CONFIG.LISTINGS_FILE}`);
-        process.exit(1);
-    }
+    const { dbAsync } = require('./database');
 
     // Load market values
     if (!fs.existsSync(CONFIG.MARKET_VALUES_FILE)) {
@@ -559,25 +651,34 @@ function run() {
         process.exit(1);
     }
 
-    const listingsData = fs.readFileSync(CONFIG.LISTINGS_FILE, 'utf-8');
-    let listings = JSON.parse(listingsData);
+    // Load listings from Database instead of JSON
+    let listings = await dbAsync.all('SELECT * FROM listings');
 
     const marketValuesData = fs.readFileSync(CONFIG.MARKET_VALUES_FILE, 'utf-8');
     const marketValues = JSON.parse(marketValuesData);
 
-    console.log(`📁 Loaded ${listings.length} raw listings`);
+    console.log(`📁 Loaded ${listings.length} raw listings from Database`);
     console.log(`📁 Loaded market values database\n`);
 
     // Cross-portal Deduplication
     listings = deduplicateListings(listings);
 
     // Score listings
-    const { scoredListings, goldenDeals, goodDeals, filtered } = scoreListings(listings, marketValues);
+    const { scoredListings, goldenDeals, goodDeals, filtered } = await scoreListings(listings, marketValues, dbAsync);
 
     // Sort by score (highest first)
     scoredListings.sort((a, b) => b.score - a.score);
 
-    // Save scored listings
+    // Save scores back to Database
+    console.log(`💾 Saving scores back to Database...`);
+    for (const scored of scoredListings) {
+        await dbAsync.run(
+            'UPDATE listings SET deal_score = ?, liquidity_score = ?, risk_score = ? WHERE id = ?',
+            [scored.score, scored.liquidity ? scored.liquidity.score : null, scored.risk ? scored.risk.score : 0, scored.id]
+        );
+    }
+
+    // Save scored listings (for dashboard compatibility)
     fs.writeFileSync(CONFIG.SCORED_LISTINGS_FILE, JSON.stringify(scoredListings, null, 2));
 
     // Save summary metadata for dashboard statistics

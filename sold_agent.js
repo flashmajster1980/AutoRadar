@@ -35,25 +35,22 @@ async function checkListing(page, url) {
 
 async function run() {
     console.log('🤖 Sold Detection Agent - STARTED\n');
+    const { dbAsync } = require('./database');
 
-    if (!fs.existsSync(CONFIG.LISTINGS_FILE)) {
-        console.log('❌ Listings file not found.');
+    // Filter listings from DB that are NOT already marked as sold
+    const toCheck = await dbAsync.all(`
+        SELECT * FROM listings 
+        WHERE is_sold = 0 
+        ORDER BY last_checked ASC 
+        LIMIT ?
+    `, [CONFIG.CHECK_LIMIT]);
+
+    if (toCheck.length === 0) {
+        console.log('✅ No active listings to check.');
         return;
     }
 
-    let listings = JSON.parse(fs.readFileSync(CONFIG.LISTINGS_FILE, 'utf-8'));
     let scoredListings = fs.existsSync(CONFIG.SCORED_FILE) ? JSON.parse(fs.readFileSync(CONFIG.SCORED_FILE, 'utf-8')) : [];
-
-    // Filter listings that are NOT already marked as sold and were scraped more than 1 hour ago
-    // (to avoid checking brand new ones immediately)
-    const now = new Date();
-    const activeListings = listings.filter(l => !l.isSold);
-
-    // Pick listings to check: prioritze those not checked for a long time
-    // or just the oldest ones. For simplicity, let's pick up to CHECK_LIMIT.
-    const toCheck = activeListings
-        .sort((a, b) => (a.lastChecked || 0) - (b.lastChecked || 0))
-        .slice(0, CONFIG.CHECK_LIMIT);
 
     console.log(`🔍 Checking ${toCheck.length} listings for availability...`);
 
@@ -70,22 +67,28 @@ async function run() {
         process.stdout.write(`⏳ Checking [${listing.id}]... `);
         const exists = await checkListing(page, listing.url);
 
-        listing.lastChecked = new Date().getTime();
+        const now = new Date().toISOString();
 
         if (!exists) {
             console.log('🔴 SOLD');
-            listing.isSold = true;
-            listing.soldAt = new Date().toISOString();
+            await dbAsync.run(
+                'UPDATE listings SET is_sold = 1, sold_at = ?, last_checked = ? WHERE id = ?',
+                [now, now, listing.id]
+            );
             soldCount++;
 
-            // Update in scored listings too
+            // Update in scored listings too (for dashboard compatibility)
             const scoredIdx = scoredListings.findIndex(sl => sl.id === listing.id);
             if (scoredIdx !== -1) {
                 scoredListings[scoredIdx].isSold = true;
-                scoredListings[scoredIdx].soldAt = listing.soldAt;
+                scoredListings[scoredIdx].soldAt = now;
             }
         } else {
             console.log('🟢 ACTIVE');
+            await dbAsync.run(
+                'UPDATE listings SET last_checked = ? WHERE id = ?',
+                [now, listing.id]
+            );
         }
 
         // Small delay to be nice
@@ -94,8 +97,7 @@ async function run() {
 
     await browser.close();
 
-    // Save back to files
-    fs.writeFileSync(CONFIG.LISTINGS_FILE, JSON.stringify(listings, null, 2));
+    // Save back to JSON only for scoredListings (dashboard)
     if (scoredListings.length > 0) {
         fs.writeFileSync(CONFIG.SCORED_FILE, JSON.stringify(scoredListings, null, 2));
     }

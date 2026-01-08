@@ -353,29 +353,20 @@ async function scrapeBazos(searchConfig = null) {
         });
     }
 
-    // Process listings - filter duplicates
-    const existingListings = loadListings();
-    const existingIds = new Set(existingListings.map(l => l.id));
+    // Process listings - filter duplicates and save to DB
+    const { upsertListing } = require('./database');
 
     let newCount = 0;
-    allNewListings.forEach(listing => {
-        if (!existingIds.has(listing.id)) {
-            listing.scrapedAt = new Date().toISOString();
-            existingListings.push(listing);
-            existingIds.add(listing.id);
-            newCount++;
-            console.log(`✨ NEW: [${listing.id}] ${listing.title} - €${listing.price} | ${listing.year || 'N/A'} | ${listing.km ? listing.km.toLocaleString() + ' km' : 'N/A'}`);
-        } else {
-            // Don't log skips to reduce noise when scraping multiple pages
-            // console.log(`⏭️ SKIP: [${listing.id}] ${listing.title} (duplicate)`);
-        }
-    });
+    for (const listing of allNewListings) {
+        // We now rely on database for deduplication and price history
+        await upsertListing(listing);
+        newCount++;
+    }
 
     if (newCount > 0) {
-        saveListings(existingListings);
-        console.log(`\n💾 Saved ${newCount} new listing(s). Total in database: ${existingListings.length}`);
+        console.log(`\n💾 Processed ${newCount} listing(s) into database.`);
     } else {
-        console.log(`\n📊 No new listings found across ${MAX_PAGES} pages. Total in database: ${existingListings.length}`);
+        console.log(`\n📊 No listings found across ${MAX_PAGES} pages.`);
     }
 }
 
