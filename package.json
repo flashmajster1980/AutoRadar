@@ -4,7 +4,7 @@
   "description": "Bazos.sk scraper agent with anti-detection",
   "main": "scraper_agent.js",
   "scripts": {
-    "start": "node scraper_agent.js",
+    "start": "node server.js",
     "test": "node scraper_agent.js --test"
   },
   "keywords": [
