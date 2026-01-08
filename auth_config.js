@@ -49,11 +49,16 @@ passport.use(new LocalStrategy(async (username, password, done) => {
 // 3. GOOGLE STRATEGY
 // ==========================================
 if (process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET) {
+    // Determine Callback URL securely
+    const productionURL = 'https://autoradar-gs8y.onrender.com/auth/google/callback';
+    const callbackURL = process.env.GOOGLE_CALLBACK_URL ||
+        (process.env.NODE_ENV === 'production' ? productionURL : '/auth/google/callback');
+
     passport.use(new GoogleStrategy({
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: process.env.GOOGLE_CALLBACK_URL || '/auth/google/callback',
-        proxy: true // Important for Render/Heroku to force HTTPS
+        callbackURL: callbackURL,
+        proxy: true
     },
         async (accessToken, refreshToken, profile, done) => {
             try {
