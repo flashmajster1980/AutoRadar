@@ -766,6 +766,7 @@ ${cons.length > 0 ? cons.map(c => `- ${c}`).join('\n') : '- Bez zjavných rizík
         // -----------------------
 
         const risk = calculateRiskScore(listing, correctedMedian);
+        const aiRiskLevel = Math.round(risk.score / 10); // Scale 0-100 to 0-10
 
         scoredListings.push({
             ...listing,
@@ -788,6 +789,7 @@ ${cons.length > 0 ? cons.map(c => `- ${c}`).join('\n') : '- Bez zjavných rizík
             freshDiscount,
             priceHistory: historyEntries,
             risk,
+            aiRiskLevel, // ADDED
             aiVerdict: expertAnalysis,
             score: finalScore,
             isFiltered: keywordCheck.isFiltered,
