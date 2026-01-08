@@ -23,6 +23,8 @@ try {
 }
 
 const app = express();
+// Trust Render's proxy to handle HTTPS correctly
+app.set('trust proxy', 1);
 
 // **CRITICAL STARTUP SECTION**
 const PORT = 10000;
