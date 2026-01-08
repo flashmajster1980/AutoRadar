@@ -28,6 +28,8 @@ function initializeSchema() {
             price INTEGER,
             fuel TEXT,
             power TEXT,
+            engine TEXT,
+            equip_level TEXT,
             transmission TEXT,
             drive TEXT,
             vin TEXT,
@@ -107,7 +109,7 @@ async function identifySellerType(sellerName, phone, dbAsync) {
     }
 
     if (count >= 3) {
-        return 'Bazár/Kšeftár';
+        return '🏢 Bazár / Predajca';
     }
 
     // 2. Name check for civilian-like names
@@ -118,7 +120,7 @@ async function identifySellerType(sellerName, phone, dbAsync) {
         return '👤 Súkromná osoba';
     }
 
-    return count > 1 ? 'Malý predajca' : '👤 Súkromná osoba';
+    return count > 1 ? '🏢 Malý predajca' : '👤 Súkromná osoba';
 }
 
 /**
@@ -146,9 +148,11 @@ async function upsertListing(listing) {
                         price = ?, 
                         deal_score = ?, 
                         liquidity_score = ?, 
+                        engine = ?,
+                        equip_level = ?,
                         updated_at = CURRENT_TIMESTAMP 
                     WHERE id = ?`,
-                    [listing.price, listing.deal_score || null, listing.liquidity_score || null, listing.id]
+                    [listing.price, listing.deal_score || null, listing.liquidity_score || null, listing.engine || null, listing.equip_level || null, listing.id]
                 );
 
                 // Add to history
@@ -157,8 +161,18 @@ async function upsertListing(listing) {
                     [listing.id, listing.price]
                 );
             } else {
-                // Just update updated_at to show it's still active
-                await dbAsync.run('UPDATE listings SET updated_at = CURRENT_TIMESTAMP WHERE id = ?', [listing.id]);
+                // Update listing price and updated_at
+                await dbAsync.run(
+                    `UPDATE listings SET 
+                        price = ?, 
+                        deal_score = ?, 
+                        liquidity_score = ?, 
+                        engine = ?,
+                        equip_level = ?,
+                        updated_at = CURRENT_TIMESTAMP 
+                    WHERE id = ?`,
+                    [listing.price, listing.deal_score || null, listing.liquidity_score || null, listing.engine || null, listing.equip_level || null, listing.id]
+                );
             }
         } else {
             // Identify seller type
@@ -169,14 +183,14 @@ async function upsertListing(listing) {
             await dbAsync.run(
                 `INSERT INTO listings (
                     id, url, portal, title, description, make, model, 
-                    year, km, price, fuel, power, transmission, drive, 
+                    year, km, price, fuel, power, engine, equip_level, transmission, drive, 
                     vin, location, seller_name, phone, seller_type, deal_score, liquidity_score
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
                 [
                     listing.id, listing.url, listing.portal, listing.title, listing.description || null,
                     listing.make, listing.model, listing.year, listing.km, listing.price,
-                    listing.fuel || null, listing.power || null, listing.transmission || null,
-                    listing.drive || null, listing.vin || null, listing.location || null,
+                    listing.fuel || null, listing.power || null, listing.engine || null, listing.equip_level || null,
+                    listing.transmission || null, listing.drive || null, listing.vin || null, listing.location || null,
                     listing.seller_name || null, listing.phone || null, listing.seller_type || null,
                     listing.deal_score || null, listing.liquidity_score || null
                 ]

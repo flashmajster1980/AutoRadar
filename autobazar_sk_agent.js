@@ -8,13 +8,16 @@ puppeteer.use(StealthPlugin());
 const CONFIG = {
     BASE_URL: 'https://www.autobazar.sk/',
     LISTINGS_FILE: path.join(__dirname, 'listings.json'),
-    MAX_PAGES: 3,
+    MAX_PAGES: 8,
     SEARCH_CONFIGS_FILE: path.join(__dirname, 'search_configs.json'),
 };
 
 const USER_AGENTS = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0'
 ];
 
 async function scrapeAutobazarSK(searchConfig = null) {
@@ -28,7 +31,16 @@ async function scrapeAutobazarSK(searchConfig = null) {
 
     try {
         const page = await browser.newPage();
-        await page.setViewport({ width: 1440, height: 900 });
+
+        // Random viewport
+        const viewports = [
+            { width: 1920, height: 1080 },
+            { width: 1440, height: 900 },
+            { width: 1366, height: 768 },
+            { width: 1536, height: 864 }
+        ];
+        await page.setViewport(viewports[Math.floor(Math.random() * viewports.length)]);
+
         await page.setUserAgent(USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)]);
 
         // Block images
@@ -55,12 +67,19 @@ async function scrapeAutobazarSK(searchConfig = null) {
             console.log(`🌐 [Page ${pageNum}/${CONFIG.MAX_PAGES}] Navigating to: ${searchUrl}`);
 
             try {
-                await page.goto(searchUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
+                await page.goto(searchUrl, { waitUntil: 'networkidle2', timeout: 60000 });
             } catch (e) {
                 console.log(`⚠️ Navigation timeout, attempting to continue...`);
             }
 
-            await new Promise(r => setTimeout(r, 5000));
+            // Random human-like wait
+            await new Promise(r => setTimeout(r, 4000 + Math.random() * 4000));
+
+            // Random scroll
+            await page.evaluate(() => {
+                window.scrollBy(0, Math.floor(Math.random() * 500) + 200);
+            });
+            await new Promise(r => setTimeout(r, 1000 + Math.random() * 2000));
 
             // Handle cookie banner
             await page.evaluate(() => {
@@ -100,27 +119,44 @@ async function scrapeAutobazarSK(searchConfig = null) {
                         }
                         if (!price || price < 500 || price > 500000) return;
 
-                        // Metadata from text content
+                        // Specific selectors for attributes
+                        const tags = Array.from(card.querySelectorAll('.tagName, .tag-location, .tags span'));
+
+                        let year = null;
+                        let km = null;
+                        let location = null;
+
+                        tags.forEach(tag => {
+                            const text = tag.innerText.trim();
+                            if (text.startsWith('r.')) year = parseInt(text.replace('r.', '').trim());
+                            else if (text.endsWith('km')) km = parseInt(text.replace(/\s/g, '').replace('km', ''));
+                            else if (tag.classList.contains('tag-location') || text.includes('kraj')) location = text;
+                        });
+
+                        // Fallback to regex if selectors failed
                         const teaserText = card.innerText;
+                        if (!year) {
+                            const yearMatch = teaserText.match(/r\.\s*(20\d{2}|19\d{2})/);
+                            if (yearMatch) year = parseInt(yearMatch[1]);
+                        }
+                        if (!km) {
+                            const kmMatch = teaserText.match(/(\d[\d\s]*)\s*km/);
+                            if (kmMatch) km = parseInt(kmMatch[1].replace(/\s/g, ''));
+                        }
+                        if (!location) {
+                            const locMatch = teaserText.match(/([A-ZŽŠČŤŽ]{2})\s*kraj/i);
+                            if (locMatch) location = locMatch[0];
+                        }
 
-                        // Year
-                        const yearMatch = teaserText.match(/r\.\s*(20\d{2}|19\d{2})/);
-                        const year = yearMatch ? parseInt(yearMatch[1]) : null;
+                        // Seller Type
+                        let sellerType = '👤 Súkromná osoba';
+                        const isPrivate = card.querySelector('.ico-user');
+                        const hasLogo = card.querySelector('.logo-wrapper, img[src*="logo"]');
+                        const dealerLink = card.querySelector('a[href*="/predajca/"]');
 
-                        // KM
-                        const kmMatch = teaserText.match(/(\d[\d\s]*)\s*km/);
-                        const km = kmMatch ? parseInt(kmMatch[1].replace(/\s/g, '')) : null;
-
-                        // Location
-                        const locMatch = teaserText.match(/([A-ZŽŠČŤŽ]{2})\s*kraj/i);
-                        const location = locMatch ? locMatch[0] : null;
-
-                        // Fuel
-                        let fuel = null;
-                        if (teaserText.match(/Diesel/i)) fuel = 'Diesel';
-                        else if (teaserText.match(/Benzín|Benzin/i)) fuel = 'Benzín';
-                        else if (teaserText.match(/Elektro|Electric/i)) fuel = 'Elektro';
-                        else if (teaserText.match(/Hybrid/i)) fuel = 'Hybrid';
+                        if (!isPrivate || hasLogo || dealerLink) {
+                            sellerType = '🏢 Bazár/Dealer';
+                        }
 
                         results.push({
                             id,
@@ -131,6 +167,7 @@ async function scrapeAutobazarSK(searchConfig = null) {
                             url,
                             fuel,
                             location,
+                            seller_type: sellerType,
                             portal: 'Autobazar.sk',
                             scrapedAt: new Date().toISOString()
                         });
@@ -138,6 +175,42 @@ async function scrapeAutobazarSK(searchConfig = null) {
                 });
                 return results;
             });
+
+            // ENRICHMENT: Visit detail pages for incomplete listings or to get City
+            for (const listing of extracted) {
+                const needsCity = listing.location && listing.location.includes('kraj');
+                const isIncomplete = !listing.year || !listing.km || !listing.location;
+
+                if (isIncomplete || needsCity) {
+                    console.log(`🔍 [Enriching] ${listing.title}...`);
+                    try {
+                        const detailPage = await browser.newPage();
+                        await detailPage.setUserAgent(USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)]);
+                        await detailPage.goto(listing.url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+
+                        const detailData = await detailPage.evaluate(() => {
+                            const locElem = document.querySelector('.location-box, .contact-location, [class*="Location"]');
+                            const sellerName = document.querySelector('.seller-name, [class*="SellerName"]')?.innerText.trim();
+
+                            // Specific tags in detail
+                            const detailTags = Array.from(document.querySelectorAll('.info-table td, .params-table .val'));
+
+                            return {
+                                locationDetail: locElem ? locElem.innerText.trim() : null,
+                                sellerNameDetail: sellerName
+                            };
+                        });
+
+                        if (detailData.locationDetail) listing.location = detailData.locationDetail;
+                        if (detailData.sellerNameDetail && !listing.seller_name) listing.seller_name = detailData.sellerNameDetail;
+
+                        await detailPage.close();
+                        await new Promise(r => setTimeout(r, 1000 + Math.random() * 2000));
+                    } catch (err) {
+                        console.log(`⚠️ Enrichment failed for ${listing.id}: ${err.message}`);
+                    }
+                }
+            }
 
             console.log(`✅ Found ${extracted.length} listings.`);
             allNewListings.push(...extracted);

@@ -1,109 +1,144 @@
-const axios = require('axios');
-const cheerio = require('cheerio');
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const fs = require('fs');
 const path = require('path');
+
+puppeteer.use(StealthPlugin());
 
 const CONFIG = {
     BASE_URL: 'https://www.autovia.sk/',
     LISTINGS_FILE: path.join(__dirname, 'listings.json'),
-    MAX_PAGES: 3,
+    MAX_PAGES: 8,
     SEARCH_CONFIGS_FILE: path.join(__dirname, 'search_configs.json'),
 };
 
-const HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-    'Accept-Language': 'sk-SK,sk;q=0.9,en;q=0.8'
-};
+const USER_AGENTS = [
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0'
+];
 
 async function scrapeAutovia(searchConfig = null) {
     const queryName = searchConfig ? searchConfig.name : 'Latest Cars';
     console.log(`\n🚀 [Autovia.sk] Starting scrape for: ${queryName}...`);
 
-    let allNewListings = [];
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-blink-features=AutomationControlled']
+    });
 
-    for (let pageNum = 1; pageNum <= CONFIG.MAX_PAGES; pageNum++) {
-        let searchUrl = `${CONFIG.BASE_URL}vysledky/osobne-vozidla/`;
-        if (searchConfig && searchConfig.query) {
-            const q = searchConfig.query.toLowerCase();
-            // Map common brands to their Autovia path
-            if (q.includes('tesla')) searchUrl += 'tesla/model-3/';
-            else if (q.includes('skoda')) searchUrl += 'skoda/octavia/';
-            else if (q.includes('volkswagen')) searchUrl += 'volkswagen/tiguan/';
-            else if (q.includes('bmw')) searchUrl += 'bmw/x5/';
-        }
+    try {
+        const page = await browser.newPage();
 
-        if (pageNum > 1) {
-            searchUrl += `${searchUrl.endsWith('/') ? '' : '/'}?page=${pageNum}`;
-        }
+        // Random viewport
+        const viewports = [
+            { width: 1920, height: 1080 },
+            { width: 1440, height: 900 },
+            { width: 1366, height: 768 },
+            { width: 1536, height: 864 }
+        ];
+        await page.setViewport(viewports[Math.floor(Math.random() * viewports.length)]);
+        await page.setUserAgent(USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)]);
 
-        console.log(`🌐 [Page ${pageNum}] Fetching: ${searchUrl}`);
+        // Block images
+        await page.setRequestInterception(true);
+        page.on('request', (req) => {
+            if (req.resourceType() === 'image') req.abort();
+            else req.continue();
+        });
 
-        try {
-            const response = await axios.get(searchUrl, { headers: HEADERS, timeout: 15000 });
-            const $ = cheerio.load(response.data);
-            const items = $('a.block.no-underline');
+        let allNewListings = [];
 
-            console.log(`📊 Found ${items.length} potential listings.`);
+        for (let pageNum = 1; pageNum <= CONFIG.MAX_PAGES; pageNum++) {
+            let searchUrl = `${CONFIG.BASE_URL}vysledky/osobne-vozidla/`;
+            if (searchConfig && searchConfig.query) {
+                const q = searchConfig.query.toLowerCase();
+                if (q.includes('tesla')) searchUrl += 'tesla/model-3/';
+                else if (q.includes('skoda')) searchUrl += 'skoda/octavia/';
+                else if (q.includes('volkswagen')) searchUrl += 'volkswagen/tiguan/';
+                else if (q.includes('bmw')) searchUrl += 'bmw/x5/';
+            }
 
-            if (items.length === 0) break;
+            if (pageNum > 1) {
+                searchUrl += `${searchUrl.endsWith('/') ? '' : '/'}?page=${pageNum}`;
+            }
 
-            items.each((i, el) => {
-                try {
-                    const item = $(el);
-                    const title = item.find('h2').text().trim();
-                    if (!title) return;
+            console.log(`🌐 [Page ${pageNum}/${CONFIG.MAX_PAGES}] Navigating to: ${searchUrl}`);
 
-                    const url = new URL(item.attr('href'), CONFIG.BASE_URL).href;
-                    const id = 'autovia_' + url.split('/').filter(Boolean).pop();
+            try {
+                await page.goto(searchUrl, { waitUntil: 'networkidle2', timeout: 60000 });
 
-                    const priceText = item.find('div.text-2xl.font-semibold').text();
-                    const price = parseInt(priceText.replace(/\s/g, '').replace('€', '').replace(/\D/g, '')) || null;
+                // Random human-like wait
+                await new Promise(r => setTimeout(r, 3000 + Math.random() * 4000));
 
-                    const yearText = item.find('span[aria-label*="Rok výroby"]').text();
-                    const yearMatch = yearText.match(/\d{4}/);
-                    const year = yearMatch ? parseInt(yearMatch[0]) : null;
+                // Random scroll
+                await page.evaluate(() => {
+                    window.scrollBy(0, Math.floor(Math.random() * 500) + 200);
+                });
+                await new Promise(r => setTimeout(r, 1000 + Math.random() * 2000));
 
-                    const kmText = item.find('span[aria-label*="Najazdené km"]').text();
-                    const km = parseInt(kmText.replace(/\s/g, '').replace('km', '').replace(/\D/g, '')) || null;
+                const extracted = await page.evaluate(() => {
+                    const results = [];
+                    const items = document.querySelectorAll('a.block.no-underline');
 
-                    const fuel = item.find('span[aria-label*="Palivo"]').text().trim() || null;
-                    const transmission = item.find('span[aria-label*="Prevodovka"]').text().trim() || null;
+                    items.forEach(item => {
+                        try {
+                            const title = item.querySelector('h2')?.innerText.trim();
+                            if (!title) return;
 
-                    // Extract location (usually the last or second to last span in the list)
-                    const infoSpans = item.find('div.flex.flex-wrap span');
-                    let location = null;
-                    infoSpans.each((j, span) => {
-                        const t = $(span).text().trim();
-                        if (t.includes('kraj') || t.includes('okres')) {
-                            location = t;
-                        }
+                            const url = item.href;
+                            const idMatch = url.split('/').filter(Boolean).pop();
+                            const id = 'autovia_' + idMatch;
+
+                            const priceElem = item.querySelector('div.text-2xl.font-semibold');
+                            const price = priceElem ? parseInt(priceElem.innerText.replace(/\s/g, '').replace('€', '').replace(/\D/g, '')) : null;
+
+                            const yearElem = item.querySelector('span[aria-label*="Rok výroby"]');
+                            const yearMatch = yearElem ? yearElem.innerText.match(/\d{4}/) : null;
+                            const year = yearMatch ? parseInt(yearMatch[0]) : null;
+
+                            const kmElem = item.querySelector('span[aria-label*="Najazdené km"]');
+                            const km = kmElem ? parseInt(kmElem.innerText.replace(/\s/g, '').replace('km', '').replace(/\D/g, '')) : null;
+
+                            const infoSpans = Array.from(item.querySelectorAll('div.flex.flex-wrap span'));
+                            let location = null;
+                            infoSpans.forEach(span => {
+                                const t = span.innerText.trim();
+                                if (t.includes('kraj') || t.includes('okres')) location = t;
+                            });
+
+                            results.push({
+                                id,
+                                title,
+                                price,
+                                year,
+                                km,
+                                location,
+                                url,
+                                portal: 'Autovia.sk',
+                                scrapedAt: new Date().toISOString(),
+                                seller_type: '👤 Súkromná osoba'
+                            });
+                        } catch (e) { }
                     });
+                    return results;
+                });
 
-                    allNewListings.push({
-                        id,
-                        title,
-                        price,
-                        year,
-                        km,
-                        location,
-                        url,
-                        fuel,
-                        transmission,
-                        portal: 'Autovia.sk',
-                        scrapedAt: new Date().toISOString()
-                    });
-                } catch (e) { }
-            });
+                console.log(`✅ Found ${extracted.length} listings.`);
+                allNewListings.push(...extracted);
 
-        } catch (error) {
-            console.error(`❌ Error fetching page ${pageNum}:`, error.message);
-            break;
+                if (extracted.length === 0) break;
+
+            } catch (err) {
+                console.error(`❌ Error fetching page ${pageNum}:`, err.message);
+                break;
+            }
+
+            await new Promise(r => setTimeout(r, 2000 + Math.random() * 3000));
         }
 
-        await new Promise(r => setTimeout(r, 1000));
-    }
-
-    if (allNewListings.length > 0) {
         const { upsertListing } = require('./database');
         let newCount = 0;
         for (const l of allNewListings) {
@@ -111,11 +146,16 @@ async function scrapeAutovia(searchConfig = null) {
             newCount++;
         }
         console.log(`💾 Processed ${newCount} listings from Autovia.sk into database.`);
+
+    } catch (error) {
+        console.error('❌ Error during Autovia.sk scraping:', error.message);
+    } finally {
+        await browser.close();
     }
 }
 
 async function run() {
-    console.log('🤖 Autovia.sk Agent (Cheerio) - STARTED');
+    console.log('🤖 Autovia.sk Agent (Puppeteer) - STARTED');
     let configs = [null];
     if (fs.existsSync(CONFIG.SEARCH_CONFIGS_FILE)) {
         try {
@@ -124,6 +164,7 @@ async function run() {
     }
     for (const config of configs) {
         await scrapeAutovia(config);
+        await new Promise(r => setTimeout(r, 5000 + Math.random() * 5000));
     }
     console.log('✅ Autovia.sk Agent - COMPLETED');
 }

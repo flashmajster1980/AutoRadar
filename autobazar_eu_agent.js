@@ -8,13 +8,16 @@ puppeteer.use(StealthPlugin());
 const CONFIG = {
     BASE_URL: 'https://www.autobazar.eu/',
     LISTINGS_FILE: path.join(__dirname, 'listings.json'),
-    MAX_PAGES: 3,
+    MAX_PAGES: 8,
     SEARCH_CONFIGS_FILE: path.join(__dirname, 'search_configs.json'),
 };
 
 const USER_AGENTS = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0'
 ];
 
 async function scrapeAutobazar(searchConfig = null) {
@@ -28,7 +31,16 @@ async function scrapeAutobazar(searchConfig = null) {
 
     try {
         const page = await browser.newPage();
-        await page.setViewport({ width: 1440, height: 900 });
+
+        // Random viewport
+        const viewports = [
+            { width: 1920, height: 1080 },
+            { width: 1440, height: 900 },
+            { width: 1366, height: 768 },
+            { width: 1536, height: 864 }
+        ];
+        await page.setViewport(viewports[Math.floor(Math.random() * viewports.length)]);
+
         await page.setUserAgent(USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)]);
 
         // Block images to save bandwidth and potentially avoid some trackers
@@ -52,8 +64,16 @@ async function scrapeAutobazar(searchConfig = null) {
 
             console.log(`🌐 [Page ${pageNum}/${CONFIG.MAX_PAGES}] Navigating to: ${searchUrl}`);
 
-            await page.goto(searchUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
-            await new Promise(r => setTimeout(r, 5000));
+            await page.goto(searchUrl, { waitUntil: 'networkidle2', timeout: 60000 });
+
+            // Random human-like wait
+            await new Promise(r => setTimeout(r, 4000 + Math.random() * 4000));
+
+            // Random scroll
+            await page.evaluate(() => {
+                window.scrollBy(0, Math.floor(Math.random() * 500) + 200);
+            });
+            await new Promise(r => setTimeout(r, 1000 + Math.random() * 2000));
 
             // Handle cookie banner - look for "Prijať všetko"
             await page.evaluate(() => {
@@ -128,6 +148,16 @@ async function scrapeAutobazar(searchConfig = null) {
                         else if (/Elektro|Electric|Elektromotor/i.test(containerText)) fuel = 'Elektro';
                         else if (/Hybrid/i.test(containerText)) fuel = 'Hybrid';
 
+                        // Seller Type Identification
+                        let sellerType = '🏢 Bazár/Dealer';
+                        if (containerText.includes('Súkromný predajca') || container.querySelector('.ico-user')) {
+                            sellerType = '👤 Súkromná osoba';
+                        }
+                        const hasLogo = container.querySelector('img[src*="logo"], .dealer-logo');
+                        if (hasLogo && !container.querySelector('.ico-user')) {
+                            sellerType = '🏢 Bazár/Dealer';
+                        }
+
                         results.push({
                             id,
                             title,
@@ -138,6 +168,7 @@ async function scrapeAutobazar(searchConfig = null) {
                             url,
                             transmission,
                             fuel,
+                            seller_type: sellerType,
                             portal: 'Autobazar.eu',
                             scrapedAt: new Date().toISOString()
                         });
@@ -155,6 +186,42 @@ async function scrapeAutobazar(searchConfig = null) {
                 });
                 return unique;
             });
+
+            // ENRICHMENT: Visit detail pages for incomplete listings
+            for (const listing of extracted) {
+                const isIncomplete = !listing.year || !listing.km || !listing.location || listing.location?.includes('kraj');
+                if (isIncomplete) {
+                    console.log(`🔍 [Enriching] ${listing.title}...`);
+                    try {
+                        const detailPage = await browser.newPage();
+                        await detailPage.setUserAgent(USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)]);
+                        await detailPage.goto(listing.url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+
+                        const detailData = await detailPage.evaluate(() => {
+                            const bodyText = document.body.innerText;
+                            const locElem = document.querySelector('.location, .contact-info, [class*="Location"]');
+                            const sellerName = document.querySelector('.seller-name, [class*="SellerName"]')?.innerText.trim();
+
+                            return {
+                                yearDetail: bodyText.match(/Rok výroby:\s*(\d{4})/)?.[1],
+                                kmDetail: bodyText.match(/Najazdené km:\s*([\d\s]+)/)?.[1],
+                                locationDetail: locElem ? locElem.innerText.split('\n')[0].trim() : null,
+                                sellerNameDetail: sellerName
+                            };
+                        });
+
+                        if (!listing.year && detailData.yearDetail) listing.year = parseInt(detailData.yearDetail);
+                        if (!listing.km && detailData.kmDetail) listing.km = parseInt(detailData.kmDetail.replace(/\s/g, ''));
+                        if (detailData.locationDetail) listing.location = detailData.locationDetail;
+                        if (detailData.sellerNameDetail && !listing.seller_name) listing.seller_name = detailData.sellerNameDetail;
+
+                        await detailPage.close();
+                        await new Promise(r => setTimeout(r, 1500));
+                    } catch (err) {
+                        console.log(`⚠️ Enrichment failed for ${listing.id}: ${err.message}`);
+                    }
+                }
+            }
 
             console.log(`✅ Found ${extracted.length} listings.`);
             allNewListings.push(...extracted);

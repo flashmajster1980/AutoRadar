@@ -58,21 +58,47 @@ jobs:
             bazos-data-
       
       - name: Create .env file
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          echo "TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}" >> .env
-          echo "TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}" >> .env
+          echo "TELEGRAM_BOT_TOKEN=$TELEGRAM_BOT_TOKEN" >> .env
+          echo "TELEGRAM_CHAT_ID=$TELEGRAM_CHAT_ID" >> .env
       
-      - name: Run scraper (single pass)
+      - name: Run Bazoš scraper
         timeout-minutes: 10
         run: |
-          # Modify scraper to run once instead of loop
-          timeout 300 node scraper_agent.js || true
-      
+          node scraper_agent.js --once
+        continue-on-error: true
+
+      - name: Wait 1 minute
+        run: sleep 60
+
+      - name: Run Autobazar.sk scraper
+        run: node autobazar_sk_agent.js
+        continue-on-error: true
+
+      - name: Wait 1 minute
+        run: sleep 60
+
+      - name: Run Autobazar.eu scraper
+        run: node autobazar_eu_agent.js
+        continue-on-error: true
+
+      - name: Wait 1 minute
+        run: sleep 60
+
+      - name: Run Autovia.sk scraper
+        run: node autovia_agent.js
+        continue-on-error: true
+
       - name: Analyze market values
         run: node market_value_agent.js
-      
+        continue-on-error: true
+
       - name: Score listings and notify
         run: node scoring_agent.js
+        continue-on-error: true
       
       - name: Upload artifacts
         uses: actions/upload-artifact@v4

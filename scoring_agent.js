@@ -695,8 +695,8 @@ async function run() {
     console.log(`💾 Saving scores back to Database...`);
     for (const scored of scoredListings) {
         await dbAsync.run(
-            'UPDATE listings SET deal_score = ?, liquidity_score = ?, risk_score = ? WHERE id = ?',
-            [scored.score, scored.liquidity ? scored.liquidity.score : null, scored.risk ? scored.risk.score : 0, scored.id]
+            'UPDATE listings SET deal_score = ?, liquidity_score = ?, risk_score = ?, engine = ?, equip_level = ? WHERE id = ?',
+            [scored.score, scored.liquidity ? scored.liquidity.score : null, scored.risk ? scored.risk.score : 0, scored.engine, scored.equipLevel, scored.id]
         );
     }
 

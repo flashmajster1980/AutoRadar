@@ -738,6 +738,8 @@
     </div>
 
     <main id="listings-grid"></main>
+    <div id="pagination"
+        style="display:flex; justify-content:center; gap:10px; padding:20px; border-top:1px solid var(--border)"></div>
 
     <div id="about" class="about-section">
         <div class="about-content">
@@ -802,44 +804,24 @@
 
     <script src="scored_listings_data.js"></script>
     <script>
-        let allListings = [];
-        const $ = id => document.getElementById(id);
+        let currentPage = 1;
+        let totalPages = 1;
 
         async function init() {
             try {
-                const isGitHub = window.location.hostname.includes('github.io');
-
-                if (isGitHub) {
-                    const response = await fetch('scored_listings.json?t=' + Date.now());
-                    allListings = await response.json();
-                } else if (window.scoredListingsData) {
-                    allListings = window.scoredListingsData;
-                } else {
-                    const response = await fetch('scored_listings.json');
-                    allListings = await response.json();
-                }
-
-                if (!allListings || allListings.length === 0) throw new Error('Data empty');
-
-                populateMakeFilter();
-                updateStats();
-                renderListings();
+                // Populate makes initially (maybe from a separate API later, for now we can use a subset or static)
+                populateInitialFilters();
+                await fetchListings();
                 $('loader').style.display = 'none';
             } catch (error) {
                 console.error(error);
                 $('loader').style.display = 'none';
-                $('listings-grid').innerHTML = `
-                    <div style="grid-column: 1/-1; text-align: center; padding: 50px;">
-                        <h2>Ups! Dáta sa nenačítali.</h2>
-                        <p style="color:var(--text-muted); margin-top:10px;">Chyba: ${error.message}</p>
-                        <p style="margin-top:20px;">Skúste prosím <b>vynútiť obnovenie (Ctrl + F5)</b>.</p>
-                    </div>
-                `;
             }
         }
 
-        function populateMakeFilter() {
-            const makes = [...new Set(allListings.map(l => l.make))].filter(Boolean).sort();
+        async function populateInitialFilters() {
+            // Static or semi-static makes for now
+            const makes = ['Audi', 'BMW', 'Ford', 'Hyundai', 'Mercedes-Benz', 'Opel', 'Peugeot', 'Renault', 'Škoda', 'Tesla', 'Toyota', 'Volkswagen'];
             const select = $('filter-make');
             makes.forEach(m => {
                 const opt = document.createElement('option');
@@ -849,79 +831,54 @@
             });
         }
 
-        async function updateStats() {
-            let totalAnalyzed = allListings.length;
-            let goldenFound = allListings.filter(l => l.dealType === 'GOLDEN DEAL').length;
+        async function fetchListings(page = 1) {
+            currentPage = page;
+            const params = new URLSearchParams({
+                page: page,
+                search: $('search').value,
+                make: $('filter-make').value,
+                fuel: $('filter-fuel').value,
+                trans: $('filter-transmission').value,
+                drive: $('filter-drive').value,
+                minYear: $('year-min').value,
+                maxYear: $('year-max').value,
+                minPrice: $('price-min').value,
+                maxPrice: $('price-max').value,
+                onlyGolden: $('golden-toggle').classList.contains('active'),
+                sort: $('sort-by').value
+            });
 
             try {
-                const metaResp = await fetch('scored_listings_metadata.json?t=' + Date.now());
-                if (metaResp.ok) {
-                    const meta = await metaResp.json();
-                    totalAnalyzed = meta.totalAnalyzed || totalAnalyzed;
-                    goldenFound = meta.goldenFound || goldenFound;
-                } else if (window.scoredListingsMetadata) {
-                    totalAnalyzed = window.scoredListingsMetadata.totalAnalyzed;
-                    goldenFound = window.scoredListingsMetadata.goldenFound;
-                }
-            } catch (e) { }
+                const response = await fetch(`/api/listings?${params.toString()}`);
+                const data = await response.json();
 
-            $('stats-summary').innerHTML = `
-                <div class="stat-item">Analyzovaných <b>${totalAnalyzed.toLocaleString()}</b> inzerátov</div>
-                <div class="stat-item" style="color:var(--golden)">Nájdených len <b>${goldenFound}</b> Zlatých dealov</div>
-            `;
+                allListings = data.listings;
+                totalPages = data.pages;
+
+                renderListings();
+                renderPagination();
+            } catch (err) {
+                console.error('Fetch failed', err);
+            }
         }
 
         function renderListings() {
             const grid = $('listings-grid');
-            const search = $('search').value.toLowerCase();
-            const make = $('filter-make').value;
-            const fuel = $('filter-fuel').value;
-            const trans = $('filter-transmission').value;
-            const drive = $('filter-drive').value;
-            const sort = $('sort-by').value;
-            const minYear = parseInt($('year-min').value) || 0;
-            const maxYear = parseInt($('year-max').value) || 9999;
-            const minPrice = parseInt($('price-min').value) || 0;
-            const maxPrice = parseInt($('price-max').value) || 999999;
-            const onlyGolden = $('golden-toggle').classList.contains('active');
+            grid.innerHTML = allListings.map(l => createCard(l)).join('');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
-            let filtered = allListings.filter(l => {
-                const matchesGolden = !onlyGolden || l.dealType === 'GOLDEN DEAL';
-                const matchesSearch = !search || l.title.toLowerCase().includes(search);
-                const matchesMake = make === 'all' || l.make === make;
-                const matchesFuel = fuel === 'all' || (l.fuel || '').includes(fuel);
+        function renderPagination() {
+            const container = $('pagination');
+            let html = '';
 
-                const lTrans = (l.transmission || '').toLowerCase();
-                const matchesTrans = trans === 'all' ||
-                    (trans === 'Automat' && lTrans.includes('auto')) ||
-                    (trans === 'Manuál' && lTrans.includes('man'));
+            if (totalPages > 1) {
+                html += `<button class="btn" onclick="fetchListings(${Math.max(1, currentPage - 1)})" ${currentPage === 1 ? 'disabled style="opacity:0.5"' : ''}>Predchádzajúca</button>`;
+                html += `<span style="align-self:center">Strana ${currentPage} z ${totalPages}</span>`;
+                html += `<button class="btn" onclick="fetchListings(${Math.min(totalPages, currentPage + 1)})" ${currentPage === totalPages ? 'disabled style="opacity:0.5"' : ''}>Nasledujúca</button>`;
+            }
 
-                const lDrive = (l.drive || '').toLowerCase();
-                const isAwd = lDrive.includes('4x4') || lDrive.includes('awd') || lDrive.includes('quattro') || (l.features && l.features.includes('4x4'));
-                const matchesDrive = drive === 'all' ||
-                    (drive === '4x4' && isAwd) ||
-                    (drive === 'Predný' && lDrive.includes('pred')) ||
-                    (drive === 'Zadný' && lDrive.includes('zad'));
-
-                const matchesYear = l.year >= minYear && l.year <= maxYear;
-                const matchesPrice = l.price >= minPrice && l.price <= maxPrice;
-
-                return matchesGolden && matchesSearch && matchesMake && matchesFuel && matchesTrans && matchesDrive && matchesYear && matchesPrice && !l.isFiltered;
-            });
-
-            if (sort === 'best') {
-                filtered.sort((a, b) => {
-                    if (a.dealType === 'GOLDEN DEAL' && b.dealType !== 'GOLDEN DEAL') return -1;
-                    if (a.dealType !== 'GOLDEN DEAL' && b.dealType === 'GOLDEN DEAL') return 1;
-                    if (b.discount !== a.discount) return b.discount - a.discount;
-                    return (b.liquidity?.score || 0) - (a.liquidity?.score || 0);
-                });
-            } else if (sort === 'discount') filtered.sort((a, b) => b.discount - a.discount);
-            else if (sort === 'price-asc') filtered.sort((a, b) => a.price - b.price);
-            else if (sort === 'year-desc') filtered.sort((a, b) => b.year - a.year);
-            else if (sort === 'km-asc') filtered.sort((a, b) => (a.km || 999999) - (b.km || 999999));
-
-            grid.innerHTML = filtered.map(l => createCard(l)).join('');
+            container.innerHTML = html;
         }
 
         function createCard(l) {
@@ -1053,11 +1010,11 @@
             `;
         }
 
-        document.querySelectorAll('input, select').forEach(el => el.oninput = renderListings);
+        document.querySelectorAll('input, select').forEach(el => el.oninput = () => fetchListings(1));
 
         $('golden-toggle').onclick = () => {
             $('golden-toggle').classList.toggle('active');
-            renderListings();
+            fetchListings(1);
         };
 
         const charts = {};

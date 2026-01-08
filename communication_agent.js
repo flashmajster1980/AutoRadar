@@ -50,32 +50,51 @@ function extractLocation(url, title) {
     return 'Slovensko';
 }
 function formatMessage(deal) {
-    const location = extractLocation(deal.url, deal.title);
     const date = new Date().toLocaleDateString('sk-SK');
     const kmText = deal.km ? `${deal.km.toLocaleString()} km` : 'Neznáme km';
-    const sellerInfo = deal.seller ? `${deal.seller.icon} ${deal.seller.type}` : '';
-    const negScore = deal.negotiationScore ? `🤝 Potenciál zjednávania: ${deal.negotiationScore}%` : '';
-    const liquidityInfo = deal.liquidity ? `${deal.liquidity.label} (Odhad: ${deal.liquidity.estimate})` : '';
+    const location = deal.location || 'Slovensko';
 
-    let portalsLine = `📍 Portály: ${deal.portal}`;
-    if (deal.otherPortals && deal.otherPortals.length > 0) {
-        const others = deal.otherPortals.map(p => p.portal).join(', ');
-        portalsLine += ` + ${others}`;
+    const titleHeader = `${deal.make || ''} ${deal.model || ''}`.trim() || deal.title;
+    const discountText = Math.round(deal.discount);
+    const liquidityLabel = deal.liquidity ? deal.liquidity.label : 'Neznáma';
+    const isAwd = (deal.drive || '').toLowerCase().includes('4x4') || (deal.features && deal.features.includes('4x4'));
+
+    let message = `🌟 *GOLDEN DEAL!* -${discountText}%\n\n`;
+    message += `🚗 *${titleHeader}*\n`;
+    message += `📅 Ročník: ${deal.year || '?'}\n`;
+    message += `🛣️ Nájazd: ${kmText}\n`;
+    message += `📍 Lokalita: ${location}\n\n`;
+
+    message += `💰 Cena: *${Math.round(deal.price).toLocaleString()} €*\n`;
+    message += `📈 Trhová hodnota: ${Math.round(deal.correctedMedian).toLocaleString()} €\n\n`;
+
+    message += `⛽ Palivo: ${deal.fuel || '?'}\n`;
+    message += `⚙️ Prevodovka: ${deal.transmission || '?'}\n`;
+
+    if (isAwd) {
+        message += `☸️ Pohon: 4x4\n`;
     }
 
-    return `🌟 *GOLDEN DEAL!* -${Math.round(deal.discount)}%
-    
-🚗 *${deal.make} ${deal.model}* (${deal.year || '?'})
-💰 Cena: *€${Math.round(deal.price).toLocaleString()}*
-🛣️ ${kmText}
-⚙️ ${deal.engine} | ${deal.equipLevel} výbava
-${portalsLine}
-📍 Lokalita: ${location}
+    if (deal.equipLevel && deal.equipLevel !== 'Basic') {
+        const features = (deal.features || []).join(', ');
+        message += `✨ Výbava: ${deal.equipLevel}${features ? ` (${features})` : ''}\n`;
+    }
 
-${sellerInfo ? `👤 Predajca: ${sellerInfo}\n` : ''}${negScore ? `${negScore}\n` : ''}${liquidityInfo ? `🔥 Likvidita: ${liquidityInfo}\n` : ''}
-🔗 [OTVORIŤ INZERÁT](${deal.url})
+    message += `\n🌐 Portál: ${deal.portal}\n`;
 
-⏰ Nájdené: ${date}`;
+    if (deal.liquidity && deal.liquidity.score) {
+        message += `🔥 Likvidita: ${liquidityLabel} (${deal.liquidity.score}%)\n`;
+        message += `⏱️ Odhad predaja: ${deal.liquidity.estimate}\n`;
+    }
+
+    if (deal.negotiationScore) {
+        message += `🤝 Potenciál zjednávania: ${deal.negotiationScore}%\n`;
+    }
+
+    message += `\n🔗 [OTVORIŤ INZERÁT](${deal.url})\n`;
+    message += `\n⏰ Nájdené: ${date}`;
+
+    return message;
 }
 
 async function sendTelegramMessage(message, testMode = false) {

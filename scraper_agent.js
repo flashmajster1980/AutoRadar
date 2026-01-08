@@ -150,7 +150,7 @@ async function scrapeBazos(searchConfig = null) {
     }
 
     let allNewListings = [];
-    const MAX_PAGES = 3; // Scrape 3 pages per run
+    const MAX_PAGES = 8; // Scrape 8 pages per run
     const startPage = process.argv[2] ? parseInt(process.argv[2]) : 0;
 
     for (let pageNum = startPage; pageNum < startPage + MAX_PAGES; pageNum++) {
@@ -228,7 +228,19 @@ async function scrapeBazos(searchConfig = null) {
 
                     // Extract Location
                     const locElem = item.querySelector('div.inzeratylok');
-                    const location = locElem ? locElem.innerText.replace(/\n/g, ' ').trim() : null;
+                    let location = locElem ? locElem.innerText.replace(/\n/g, ' ').trim() : null;
+                    if (location && location.includes('<br>')) { // Sometimes innerText doesn't capture the break well
+                        location = locElem.innerHTML.replace(/<br>/g, ' ').replace(/<[^>]*>/g, '').trim();
+                    }
+
+                    // Extract Seller Name from rating link if possible
+                    let sellerName = null;
+                    const ratingElem = item.querySelector('span[onclick*="rating"]');
+                    if (ratingElem) {
+                        const onclick = ratingElem.getAttribute('onclick');
+                        const match = onclick.match(/'rating','\d+','\d+','([^']+)'/);
+                        if (match) sellerName = match[1];
+                    }
 
                     // Extract VIN
                     const vinMatch = combinedText.match(/\b[A-HJ-NPR-Z0-9]{17}\b/);
@@ -310,6 +322,7 @@ async function scrapeBazos(searchConfig = null) {
                         km,
                         url: link,
                         location,
+                        seller_name: sellerName,
                         vin,
                         transmission,
                         fuel,
@@ -325,6 +338,52 @@ async function scrapeBazos(searchConfig = null) {
 
             return results;
         });
+
+        // ENRICHMENT: Visit detail pages for incomplete listings
+        for (const listing of extracted) {
+            const isIncomplete = !listing.year || !listing.km || !listing.location;
+            if (isIncomplete) {
+                console.log(`🔍 [Enriching] ${listing.title}...`);
+                try {
+                    const detailPage = await browser.newPage();
+                    await detailPage.setUserAgent(randomUserAgent());
+                    await detailPage.goto(listing.url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+
+                    const detailData = await detailPage.evaluate(() => {
+                        const table = document.querySelector('table.listatabulka');
+                        const cells = table ? Array.from(table.rows).map(r => ({
+                            label: r.cells[0]?.innerText.toLowerCase() || '',
+                            value: r.cells[1]?.innerText || ''
+                        })) : [];
+
+                        const getVal = (label) => cells.find(c => c.label.includes(label))?.value.trim();
+
+                        // Bazos detail page often lists info in a specific table or just description
+                        const bodyText = document.body.innerText;
+
+                        return {
+                            kmDetail: bodyText.match(/(\d+[\s.]*)\s*(?:km|tis\.)/i)?.[0],
+                            yearDetail: bodyText.match(/\b(20\d{2})\b/)?.[1],
+                            locationDetail: document.querySelector('.vypis .listalok')?.innerText.trim(),
+                            sellerNameDetail: document.querySelector('.vypis .listameno a')?.innerText.trim()
+                        };
+                    });
+
+                    if (!listing.year && detailData.yearDetail) listing.year = parseInt(detailData.yearDetail);
+                    if (!listing.km && detailData.kmDetail) {
+                        const kmVal = parseInt(detailData.kmDetail.replace(/\D/g, ''));
+                        listing.km = detailData.kmDetail.toLowerCase().includes('tis') ? kmVal * 1000 : kmVal;
+                    }
+                    if (!listing.location && detailData.locationDetail) listing.location = detailData.locationDetail;
+                    if (!listing.seller_name && detailData.sellerNameDetail) listing.seller_name = detailData.sellerNameDetail;
+
+                    await detailPage.close();
+                    await randomDelay(800, 1500);
+                } catch (err) {
+                    console.log(`⚠️ Enrichment failed for ${listing.id}: ${err.message}`);
+                }
+            }
+        }
 
         console.log(`✅ Found ${extracted.length} listings on page ${pageNum + 1}`);
         allNewListings.push(...extracted);
