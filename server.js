@@ -4,7 +4,21 @@ const cors = require('cors');
 const { dbAsync } = require('./database');
 const path = require('path');
 const session = require('express-session');
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // User must provide this in .env
+const stripePackage = require('stripe');
+// Safe Stripe Initialization
+let stripe;
+try {
+    if (process.env.STRIPE_SECRET_KEY) {
+        stripe = stripePackage(process.env.STRIPE_SECRET_KEY);
+        console.log('💳 Stripe initialized successfully.');
+    } else {
+        console.warn('⚠️ STRIPE_SECRET_KEY missing. Payments will be disabled.');
+        stripe = null;
+    }
+} catch (e) {
+    console.error('❌ Failed to initialize Stripe:', e.message);
+    stripe = null;
+}
 
 const app = express();
 
@@ -154,6 +168,12 @@ app.get('/api/admin/inspect/:id', async (req, res) => {
 
 app.post('/api/create-checkout-session', async (req, res) => {
     if (!req.session.user) return res.status(401).json({ error: 'Please login first' });
+
+    // Check if Stripe is operational
+    if (!stripe) {
+        console.error('Stripe is not initialized.');
+        return res.status(503).json({ error: 'Payments are currently unavailable (Server Config Error).' });
+    }
 
     try {
         logActivity(`User ${req.session.user.username} initiated checkout.`);
