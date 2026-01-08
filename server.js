@@ -22,9 +22,22 @@ try {
 
 const app = express();
 
+// **CRITICAL STARTUP SECTION**
 const PORT = 10000;
 
-app.get('/', (req, res) => res.send('OK - Server Running'));
+// Middleware for logging
+app.use((req, res, next) => {
+    console.log(`📡 New request to: ${req.path}`);
+    next();
+});
+
+// 1. Health Check (Render pings this)
+app.get('/health', (req, res) => res.send('OK - Server Running'));
+
+// 2. Serve main dashboard at root
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dashboard.html'));
+});
 
 app.listen(PORT, '0.0.0.0', () => {
     console.log('--- SERVER IS RUNNING ON 0.0.0.0:10000 ---');
@@ -310,9 +323,7 @@ app.get('/api/listings/:id/history', async (req, res) => {
     }
 });
 
-app.get('/dashboard', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dashboard.html'));
-});
+
 
 const { exec } = require('child_process');
 
