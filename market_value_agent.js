@@ -109,8 +109,9 @@ const EQUIPMENT_KEYWORDS = {
 
 // Data Cleaning Filters
 const BAD_KEYWORDS = [
-    'odstúpim leasing', 'odstupim leasing', 'leasing',
-    'havarované', 'havarovane', 'havarovaný', 'havarovany',
+    'odstúpim leasing', 'odstupim leasing',
+    'havarované', 'havarovaný', 'havarovaná',
+    'poškodené', 'poškodený', 'poškodená',
     'na náhradné diely', 'na nahradne diely', 'na diely', 'na súčiastky', 'na suciastky',
     'rozpredám', 'rozpredam',
     'chyba motora', 'zadretý', 'zadrety',
@@ -120,7 +121,13 @@ const BAD_KEYWORDS = [
 
 function isProblematic(listing) {
     const text = (listing.title + ' ' + (listing.description || '')).toLowerCase();
-    return BAD_KEYWORDS.some(k => text.includes(k.toLowerCase()));
+
+    for (const keyword of BAD_KEYWORDS) {
+        // Use word boundaries to avoid matching "nehavarovane" with "havarovane"
+        const regex = new RegExp(`(^|[^a-záäčďéíĺľňóôŕšťúýž])${keyword.toLowerCase()}($|[^a-záäčďéíĺľňóôŕšťúýž])`, 'i');
+        if (regex.test(text)) return true;
+    }
+    return false;
 }
 
 function extractEquipmentScore(listing) {
@@ -451,20 +458,15 @@ function analyzeMarketValues(listings) {
 // MAIN FUNCTION
 // ========================================
 
-function run() {
+async function run() {
     console.log('🤖 Market Value Agent - STARTED\n');
+    const { dbAsync } = require('./database');
 
-    // Load listings
-    if (!fs.existsSync(CONFIG.LISTINGS_FILE)) {
-        console.error(`❌ Listings file not found: ${CONFIG.LISTINGS_FILE}`);
-        console.log('💡 Run scraper_agent.js first to collect listings.');
-        process.exit(1);
-    }
+    // Load listings from Database
+    console.log(`📂 Connecting to SQLite...`);
+    const listings = await dbAsync.all('SELECT * FROM listings WHERE deal_type != "FILTERED" OR deal_type IS NULL');
 
-    const listingsData = fs.readFileSync(CONFIG.LISTINGS_FILE, 'utf-8');
-    const listings = JSON.parse(listingsData);
-
-    console.log(`📁 Loaded ${listings.length} listings from ${CONFIG.LISTINGS_FILE}\n`);
+    console.log(`📁 Loaded ${listings.length} valid listings from Database\n`);
 
     // Analyze market values
     const { marketValues, modelStats } = analyzeMarketValues(listings);
@@ -504,4 +506,7 @@ function run() {
 }
 
 // Run the agent
-run();
+run().catch(err => {
+    console.error('Fatal error:', err);
+    process.exit(1);
+});

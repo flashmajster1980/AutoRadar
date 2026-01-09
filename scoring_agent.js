@@ -28,12 +28,11 @@ const BAD_KEYWORDS = [
     'na náhradné diely', 'na nahradne diely', 'na diely',
     'bez stk', 'bez ek', 'bez emisnej kontroly',
     'odpísané', 'odpisane', 'odpisany',
-    'nehavarované', // negation but often suspicious
     'vážne poškodené', 'vazne poskodene',
     'totálna škoda', 'totalna skoda',
     'po havárii', 'po havarii',
     'rozbité', 'rozbity', 'rozbitá',
-    'odstúpim leasing', 'odstupim leasing', 'leasing',
+    'odstúpim leasing', 'odstupim leasing',
     'rozpredám', 'rozpredam', 'na súčiastky',
     'chyba motora', 'puknutý blok', 'zadretý',
     'bez tp', 'bez špz', 'bez spz',
@@ -46,7 +45,7 @@ const BAD_KEYWORDS = [
     'frame damage', 'flood damage',
 
     // Czech
-    'havarované', 'po nehode', 'nehavarované',
+    'havarované', 'po nehode',
     'motor nefunguje',
     'búrané', 'burane', 'burana', 'burany', // Added based on user report
 ];
@@ -241,7 +240,10 @@ function checkBadKeywords(listing) {
     const foundKeywords = [];
 
     for (const keyword of BAD_KEYWORDS) {
-        if (text.includes(keyword.toLowerCase())) {
+        // Use word boundaries to avoid matching "nehavarovane" with "havarovane"
+        // Also handling Slovak/Czech chars by using a safe regex
+        const regex = new RegExp(`(^|[^a-záäčďéíĺľňóôŕšťúýž])${keyword.toLowerCase()}($|[^a-záäčďéíĺľňóôŕšťúýž])`, 'i');
+        if (regex.test(text)) {
             foundKeywords.push(keyword);
         }
     }
@@ -703,7 +705,11 @@ async function scoreListings(listings, marketValues, dbAsync) {
             if (anyYearData) {
                 const firstFound = Object.values(anyYearData)[0];
                 medianPrice = firstFound.medianPrice;
-                // Since we fall back to a different segment, we keep our tier's refKm
+                // FIX: If we fall back to a different segment, we must use ITS avgKm as reference
+                if (firstFound.avgKm) {
+                    refKm = firstFound.avgKm;
+                    matchAccuracy = 'fallback'; // Track this
+                }
             }
         }
 
