@@ -232,17 +232,56 @@ function extractMakeModel(title) {
         }
     }
 
+
+
     if (make) {
         const words = title.split(' ');
-        if (words.length >= 2) {
-            if (words[1] && words[2]) {
-                const twoWords = words[1] + ' ' + words[2];
-                if (twoWords.match(/model [a-z0-9]/i) || twoWords.match(/[a-z] trieda/i)) {
-                    model = twoWords;
-                }
+
+        // --- BMW SPECIAL HANDLING ---
+        if (make === 'BMW') {
+            const lowerTitle = title.toLowerCase();
+            // 1. "Rad X" / "Series X" (e.g. BMW Rad 1, BMW Series 3)
+            const seriesMatch = lowerTitle.match(/\b(rad|series)\s?(\d)\b/);
+
+            // 2. Gran Tourer / Active Tourer handling for Rad 2 
+            // (Some listings just say BMW Gran Tourer, some BMW Rad 2 Gran Tourer)
+            const tourerMatch = lowerTitle.match(/\b(gran|active)\s?tourer\b/);
+
+            if (seriesMatch) {
+                model = `Rad ${seriesMatch[2]}`;
+                if (tourerMatch) model += ' ' + (tourerMatch[1] === 'gran' ? 'Gran' : 'Active') + ' Tourer';
             }
-            if (!model && words[1] && words[1].length > 1) {
+            else if (tourerMatch) {
+                // Often implies Rad 2 if not stated
+                model = `Rad 2 ${tourerMatch[1] === 'gran' ? 'Gran' : 'Active'} Tourer`;
+            }
+            // 3. X Models (X1, X3, X5...)
+            else if (lowerTitle.match(/\bx[1-7]\b/)) {
+                const xMatch = lowerTitle.match(/\b(x[1-7])\b/);
+                model = xMatch[1].toUpperCase();
+            }
+            // 4. i Models (i3, i8, iX)
+            else if (lowerTitle.match(/\bi[384x]\b/)) {
+                const iMatch = lowerTitle.match(/\b(i[384x])\b/);
+                model = iMatch[1].toLowerCase();
+            }
+            // Default word fallback
+            else if (words.length >= 2 && words[1].length > 1) {
                 model = words[1];
+            }
+        }
+        // --- STANDARD LOGIC ---
+        else {
+            if (words.length >= 2) {
+                if (words[1] && words[2]) {
+                    const twoWords = words[1] + ' ' + words[2];
+                    if (twoWords.match(/model [a-z0-9]/i) || twoWords.match(/[a-z] trieda/i)) {
+                        model = twoWords;
+                    }
+                }
+                if (!model && words[1] && words[1].length > 1) {
+                    model = words[1];
+                }
             }
         }
     }
