@@ -817,8 +817,9 @@ async function scoreListings(listings, marketValues, dbAsync) {
         // 7. Calculate Final Score & Deal Type (existing logic)
         let finalScore = dealInfo.score;
         if (keywordCheck.isFiltered) {
-            finalScore = Math.max(0, finalScore - 50);
+            finalScore = 0; // STRICT FILTERING: 0 score for bad keywords
             filtered++;
+            dealInfo = { type: 'FILTERED', emoji: '🚫', score: 0 }; // Update deal type too
         }
 
         // Explanation string

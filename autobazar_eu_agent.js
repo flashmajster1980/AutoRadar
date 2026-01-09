@@ -222,11 +222,18 @@ async function scrapeAutobazar(searchConfig = null) {
 
                             const sellerName = document.querySelector('.seller-name, .b-detail-seller__name, h2.uk-h4')?.innerText.trim();
 
+                            // CHECK FOR DAMAGES/ACCIDENTS
+                            let damageInfo = '';
+                            if (bodyText.match(/havarovan(é|e|ý)|poškoden(é|e|ý)|búran(é|e|ý)|po nehode/i)) {
+                                damageInfo = ' STAV: HAVAROVANÉ / POŠKODENÉ';
+                            }
+
                             return {
                                 yearDetail: bodyText.match(/Rok výroby:\s*(\d{4})/)?.[1],
                                 kmDetail: bodyText.match(/Najazdené km:\s*([\d\s]+)/)?.[1],
                                 locationDetail: loc ? loc.split('\n')[0].trim() : null,
-                                sellerNameDetail: sellerName
+                                sellerNameDetail: sellerName,
+                                damageDetail: damageInfo
                             };
                         });
 
@@ -234,6 +241,7 @@ async function scrapeAutobazar(searchConfig = null) {
                         if (!listing.km && detailData.kmDetail) listing.km = parseInt(detailData.kmDetail.replace(/\s/g, ''));
                         if (detailData.locationDetail) listing.location = detailData.locationDetail;
                         if (detailData.sellerNameDetail && !listing.seller_name) listing.seller_name = detailData.sellerNameDetail;
+                        if (detailData.damageDetail) listing.description = (listing.description || '') + detailData.damageDetail;
 
                         await detailPage.close();
                         await new Promise(r => setTimeout(r, 1500));
