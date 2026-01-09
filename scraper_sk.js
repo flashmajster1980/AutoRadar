@@ -228,36 +228,36 @@ async function run() {
         return results;
     }, yearFrom, yearTo);
 
-}, yearFrom, yearTo);
 
-console.log(`✅ Extracted ${cars.length} raw candidates. Normalizing data...`);
 
-// Normalize Data using the unified service
-cars = cars.map(car => {
-    // Create a minimal object structure expected by NormalizationService if needed, 
-    // or just pass the car object if keys match (title, description/text, fuel, km, etc.)
-    // Scraper output matches: title, fuel, km, transmission, drive.
-    // It doesn't have 'description' but we can use 'title' or combined extraction if passed?
-    // The service uses (title + description). Scraper has 'title'.
+    console.log(`✅ Extracted ${cars.length} raw candidates. Normalizing data...`);
 
-    // Let's rely on what we have.
-    // Note: Scraper's "fuel" might be null or basic. Service verifies it.
+    // Normalize Data using the unified service
+    cars = cars.map(car => {
+        // Create a minimal object structure expected by NormalizationService if needed, 
+        // or just pass the car object if keys match (title, description/text, fuel, km, etc.)
+        // Scraper output matches: title, fuel, km, transmission, drive.
+        // It doesn't have 'description' but we can use 'title' or combined extraction if passed?
+        // The service uses (title + description). Scraper has 'title'.
 
-    NormalizationService.normalizeListing(car);
-    return car;
-});
+        // Let's rely on what we have.
+        // Note: Scraper's "fuel" might be null or basic. Service verifies it.
 
-console.log(`✅ Normalized ${cars.length} candidates.`);
+        NormalizationService.normalizeListing(car);
+        return car;
+    });
 
-if (cars.length > 0) {
-    cars.sort((a, b) => a.price - b.price);
-    fs.writeFileSync(path.join(__dirname, 'scraped_data.json'), JSON.stringify(cars, null, 2));
-    console.log("💽 Results saved to scraped_data.json");
-} else {
-    console.log("⚠️ No cars found on Bazos.sk.");
-}
+    console.log(`✅ Normalized ${cars.length} candidates.`);
 
-await browser.close();
+    if (cars.length > 0) {
+        cars.sort((a, b) => a.price - b.price);
+        fs.writeFileSync(path.join(__dirname, 'scraped_data.json'), JSON.stringify(cars, null, 2));
+        console.log("💽 Results saved to scraped_data.json");
+    } else {
+        console.log("⚠️ No cars found on Bazos.sk.");
+    }
+
+    await browser.close();
 }
 
 run();
