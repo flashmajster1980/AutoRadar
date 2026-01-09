@@ -552,11 +552,16 @@ async function scoreListings(listings, marketValues, dbAsync) {
         if (!transmission) {
             if (lowerText.match(/automat|dsg|tiptronic|s-tronic|stronic|7g-tronic|9g-tronic/)) transmission = 'Automat';
             else if (lowerText.match(/manuál|manual|6st\.|5st\./)) transmission = 'Manuál';
+
+            // Inference for Premium SUVs (almost always Auto)
+            if (!transmission && ['X5', 'X6', 'X7', 'Q7', 'Q8', 'Touareg', 'Cayenne', 'GLE', 'GLS'].includes(model)) {
+                transmission = 'Automat';
+            }
         }
 
         let drive = listing.drive;
         if (!drive) {
-            if (lowerText.match(/4x4|4wd|awd|quattro|4motion|x-drive|xdrive|allgrip/)) drive = '4x4';
+            if (lowerText.match(/4x4|4wd|awd|quattro|4motion|x-drive|xdrive|allgrip|\bdrive\b/)) drive = '4x4';
             else if (lowerText.match(/zadný|zadny|rwd/)) drive = 'Zadný';
             else drive = 'Predný';
         }
@@ -574,16 +579,18 @@ async function scoreListings(listings, marketValues, dbAsync) {
         let kmSegmentKey = 'mid';
         let kmSegmentLabel = 'Mid (100k-200k)';
 
-        if (listing.id === 'eu_AemUPKx9jfo') {
-            console.log('------------------------------------------------');
-            console.log(`DEBUG GOLF: segment=${kmSegmentKey} refKm=${refKm}`);
-            console.log(`DEBUG GOLF: Make:${make} Model:${model} Year:${listing.year} Engine:${engine} Equip:${equip.level}`);
-        }
+
 
         if (listing.id === '186656829') {
             console.log('------------------------------------------------');
             console.log(`DEBUG TIGUAN: segment=${kmSegmentKey} refKm=${refKm}`);
             console.log(`DEBUG TIGUAN: Make:${make} Model:${model} Year:${listing.year} Engine:${engine} Equip:${equip.level}`);
+        }
+
+        if (listing.id === '186789320') {
+            console.log('------------------------------------------------');
+            console.log(`DEBUG X5_2019: segment=${kmSegmentKey} refKm=${refKm}`);
+            console.log(`DEBUG X5_2019: Make:${make} Model:${model} Year:${listing.year} Engine:${engine} Equip:${equip.level} KM:${listing.km}`);
         }
 
         if (listing.km < 100000) {
@@ -611,9 +618,14 @@ async function scoreListings(listings, marketValues, dbAsync) {
             kmSegmentLabel = 'Level 400 (400k-500k)';
             refKm = 450000;
         } else {
-            kmSegmentKey = 'zombie';
             kmSegmentLabel = 'Level 500 (Zombie Tier)';
             refKm = 550000;
+        }
+
+        if (listing.id === 'eu_AeR9ranDuFUa') {
+            console.log('------------------------------------------------');
+            console.log(`DEBUG X5: segment=${kmSegmentKey} refKm=${refKm}`);
+            console.log(`DEBUG X5: Make:${make} Model:${model} Year:${listing.year} Engine:${engine} Equip:${equip.level}`);
         }
 
         // -------------------------------------------------------------
@@ -649,7 +661,12 @@ async function scoreListings(listings, marketValues, dbAsync) {
             matchAccuracy = 'specific';
         } else {
             if (broadMatch) {
-                medianPrice = broadMatch.medianPrice;
+                // FALLBACK: Use minPrice if sample size is too small (< 3) to avoid outlier skew
+                if (broadMatch.count < 3) {
+                    medianPrice = broadMatch.minPrice;
+                } else {
+                    medianPrice = broadMatch.medianPrice;
+                }
                 // matchAccuracy stays 'broad'
             }
         }
@@ -690,6 +707,8 @@ async function scoreListings(listings, marketValues, dbAsync) {
                 // Since we fall back to a different segment, we keep our tier's refKm
             }
         }
+
+
 
         if (!medianPrice) {
             // NO MARKET DATA FOUND - PUSH CLEARED RECORD
@@ -788,6 +807,19 @@ async function scoreListings(listings, marketValues, dbAsync) {
             if (equip.level === 'Full') correctedMedian *= 1.12;
             else if (equip.level === 'Medium') correctedMedian *= 1.05;
         }
+
+        // ---------------------------------------------------------
+        // WEAK ENGINE PENALTY (SUV with small petrol engine)
+        // ---------------------------------------------------------
+        const isSUV = ['Tiguan', 'X5', 'X3', 'Kodiaq', 'Karoq', 'Touareg', 'Q7', 'Q5', 'Sportage', 'Tucson'].includes(model);
+        const kw = listing.power; // Assumed parsed in standardizing
+        // If SUV and Petrol and Weak (<110kW for Tiguan/Karoq sized, or <150kW for big ones)
+        // Simple heuristic: If "Benzín" and "Mid" or "Base" engine in SUV -> Penalty
+        if (isSUV && engine.includes('Benzín') && (engine.includes('Base') || engine.includes('Mid'))) {
+            // 1.4 TSI Tiguan falls here
+            correctedMedian *= 0.80; // -20% for undesirable engine
+        }
+        // ---------------------------------------------------------
 
         // 5. YEAR SANITY CHECK
         const nextYearData = marketValues.broad?.[make]?.[model]?.[listing.year + 1]?.[kmSegmentKey];

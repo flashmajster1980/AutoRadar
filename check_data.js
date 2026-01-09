@@ -1,14 +1,7 @@
-const { Pool } = require('pg');
-const PG_CONNECTION_STRING = "postgres://autoradar_db_user:sRG7iC36WUUuSyReeCgllrLf9RwxljGH@dpg-d5fsramuk2gs738vv2l0-a.frankfurt-postgres.render.com/autoradar_db";
-const pool = new Pool({
-    connectionString: PG_CONNECTION_STRING,
-    ssl: { rejectUnauthorized: false }
-});
-async function run() {
-    try {
-        const res = await pool.query("SELECT title, corrected_median FROM listings WHERE title ILIKE '%Octavia%' LIMIT 5");
-        console.log(res.rows);
-    } catch (e) { console.error(e); }
-    process.exit(0);
+const { dbAsync } = require('./database');
+
+async function checkListing() {
+    const row = await dbAsync.get("SELECT id, title, transmission, drive, description FROM listings WHERE id = '186789320'");
+    console.log(row);
 }
-run();
+checkListing();
