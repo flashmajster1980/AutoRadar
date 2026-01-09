@@ -678,7 +678,26 @@ async function scoreListings(listings, marketValues, dbAsync) {
             // CRITICAL FIX: Do not fallback for high-mileage cars (Zombie tiers) using low-mileage data
             // This prevents comparing a 350k km car with 150k km prices.
             if (['level300', 'level400', 'zombie'].includes(kmSegmentKey)) {
-                continue; // Skip scoring this car -> No Deal Type
+                // Push as UN SCORED listing to ensure DB is cleared
+                scoredListings.push({
+                    ...listing,
+                    score: 0,
+                    dealType: null,
+                    discount: 0,
+                    make,
+                    model,
+                    engine,
+                    transmission,
+                    drive,
+                    equipLevel: equip.level,
+                    seller: null, // sellerAnalysis not available yet
+                    liquidity: null,
+                    risk: { score: 0, level: 'Nízke', color: '#00ff88' }, // riskScore not available yet
+                    aiVerdict: null,
+                    aiRiskLevel: null,
+                    isFiltered: true // Treat as filtered so it doesn't show up
+                });
+                continue;
             }
 
             const anyYearData = marketValues.broad?.[make]?.[model]?.[listing.year];
@@ -689,7 +708,28 @@ async function scoreListings(listings, marketValues, dbAsync) {
             }
         }
 
-        if (!medianPrice) continue;
+        if (!medianPrice) {
+            // NO MARKET DATA FOUND - PUSH CLEARED RECORD
+            scoredListings.push({
+                ...listing,
+                score: 0,
+                dealType: null,
+                discount: 0,
+                make,
+                model,
+                engine,
+                transmission,
+                drive,
+                equipLevel: equip.level,
+                seller: null, // sellerAnalysis not available yet
+                liquidity: null,
+                risk: { score: 0, level: 'Nízke', color: '#00ff88' }, // riskScore not available yet
+                aiVerdict: null,
+                aiRiskLevel: null,
+                isFiltered: true
+            });
+            continue;
+        }
 
         let correctedMedian = medianPrice;
         const age = Math.max(1, currentYear - listing.year);
@@ -918,7 +958,7 @@ async function run() {
                 scored.negotiationScore || 0,
                 scored.transmission,
                 scored.drive,
-                scored.seller.isPrivate ? 'Private' : 'Dealer', // Map to DB format
+                (scored.seller && scored.seller.isPrivate) ? 'Private' : 'Dealer', // Map to DB format
                 scored.make,
                 scored.model,
                 scored.id
