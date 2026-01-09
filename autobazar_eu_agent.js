@@ -109,7 +109,8 @@ async function scrapeAutobazar(searchConfig = null) {
                         const url = linkElem.href;
 
                         // ID extraction
-                        const idMatch = url.match(/\/detail.*\/([a-zA-Z0-9]+)\/$/) || url.match(/\/([a-zA-Z0-9]+)\/$/);
+                        // ID extraction - fix to include _ and -
+                        const idMatch = url.match(/\/detail.*\/([a-zA-Z0-9_\-]+)\/?$/) || url.match(/\/([a-zA-Z0-9_\-]+)\/?$/);
                         const id = 'eu_' + (idMatch ? idMatch[1] : Math.random().toString(36).substr(2, 9));
 
                         // Price - look for span with font-semibold and €
